@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <CustomerQuotation>
+    <ReferenceNo>QUHO00000000002</ReferenceNo>
+    <TxnDate>2010-12-27T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>4.41</HedDiscTotVal>
+    <ItemDiscTotVal>3.00</ItemDiscTotVal>
+    <NBTVal>0.00</NBTVal>
+    <TotalVal>142.59</TotalVal>
+    <VATVal>0.00</VATVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>3.00</Quantity>
+    <CostPrice>50.00</CostPrice>
+    <SelPrice>50.00</SelPrice>
+    <HedDiscVal>4.41</HedDiscVal>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>3.00</ItemDiscVal>
+    <NBTItemVal>0.00</NBTItemVal>
+    <NBTPer>0.00</NBTPer>
+    <TotalItemVal>142.59</TotalItemVal>
+    <VATItemVal>0.00</VATItemVal>
+    <VATPer>0.00</VATPer>
+    <ItemGrossVal>147.00</ItemGrossVal>
+  </CustomerQuotation>
+  <CustomerQuotation>
+    <ReferenceNo>QUHO00000000002</ReferenceNo>
+    <TxnDate>2010-12-27T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>4.41</HedDiscTotVal>
+    <ItemDiscTotVal>3.00</ItemDiscTotVal>
+    <NBTVal>0.00</NBTVal>
+    <TotalVal>142.59</TotalVal>
+    <VATVal>0.00</VATVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>5.00</Quantity>
+    <CostPrice>60.00</CostPrice>
+    <SelPrice>0.00</SelPrice>
+    <HedDiscVal>0.00</HedDiscVal>
+    <ItemDiscPer>4.00</ItemDiscPer>
+    <ItemDiscVal>0.00</ItemDiscVal>
+    <NBTItemVal>0.00</NBTItemVal>
+    <NBTPer>0.00</NBTPer>
+    <TotalItemVal>0.00</TotalItemVal>
+    <VATItemVal>0.00</VATItemVal>
+    <VATPer>0.00</VATPer>
+    <ItemGrossVal>0.00</ItemGrossVal>
+  </CustomerQuotation>
+</DocumentElement>

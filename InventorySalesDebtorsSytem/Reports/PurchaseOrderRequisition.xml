@@ -1,0 +1,1150 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0001           </ReferenceNo>
+    <TxnDate>2010-01-01T00:00:00+05:30</TxnDate>
+    <Remarks>Test Remarks</Remarks>
+    <ManualNo>12345</ManualNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0001           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100081             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0001           </ReferenceNo>
+        <ItemCode>0100081             </ItemCode>
+        <Quantity>10.00</Quantity>
+        <BalQty>10.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100081             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0001           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0001           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100161             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0001           </ReferenceNo>
+        <ItemCode>0100161             </ItemCode>
+        <Quantity>20.00</Quantity>
+        <BalQty>20.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100161             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0001           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>10.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0001           </ReferenceNo>
+    <TxnDate>2010-01-01T00:00:00+05:30</TxnDate>
+    <Remarks>Test Remarks</Remarks>
+    <ManualNo>12345</ManualNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0001           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100081             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0001           </ReferenceNo>
+        <ItemCode>0100081             </ItemCode>
+        <Quantity>10.00</Quantity>
+        <BalQty>10.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100081             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0001           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0001           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100161             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0001           </ReferenceNo>
+        <ItemCode>0100161             </ItemCode>
+        <Quantity>20.00</Quantity>
+        <BalQty>20.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100161             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0001           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>20.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>PRHO00000000001</ReferenceNo>
+    <TxnDate>2010-12-02T00:00:00+05:30</TxnDate>
+    <Remarks>fbdf</Remarks>
+    <ManualNo>fbdfb</ManualNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100161             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0100161             </ItemCode>
+        <Quantity>5.00</Quantity>
+        <BalQty>4.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100161             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0170632             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0170632             </ItemCode>
+        <Quantity>9.00</Quantity>
+        <BalQty>7.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0170632             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0200661             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0200661             </ItemCode>
+        <Quantity>3.00</Quantity>
+        <BalQty>3.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0200661             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>5.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0002           </ReferenceNo>
+    <TxnDate>2010-02-02T00:00:00+05:30</TxnDate>
+    <Remarks>Test Rem 2</Remarks>
+    <ManualNo>65432</ManualNo>
+    <LocationCode>BMC3      </LocationCode>
+    <LocationName>Partner Store -</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100262             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100262             </ItemCode>
+        <Quantity>15.00</Quantity>
+        <BalQty>15.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100262             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100361             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100361             </ItemCode>
+        <Quantity>25.00</Quantity>
+        <BalQty>25.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100361             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100621             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100621             </ItemCode>
+        <Quantity>30.00</Quantity>
+        <BalQty>20.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100621             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100262             </ItemCode>
+    <ItemName>Parlimentary Hinge Gri 4.1/2"</ItemName>
+    <Quantity>15.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0002           </ReferenceNo>
+    <TxnDate>2010-02-02T00:00:00+05:30</TxnDate>
+    <Remarks>Test Rem 2</Remarks>
+    <ManualNo>65432</ManualNo>
+    <LocationCode>BMC3      </LocationCode>
+    <LocationName>Partner Store -</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100262             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100262             </ItemCode>
+        <Quantity>15.00</Quantity>
+        <BalQty>15.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100262             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100361             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100361             </ItemCode>
+        <Quantity>25.00</Quantity>
+        <BalQty>25.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100361             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100621             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100621             </ItemCode>
+        <Quantity>30.00</Quantity>
+        <BalQty>20.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100621             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100361             </ItemCode>
+    <ItemName>Bradawls 6 Ins Local</ItemName>
+    <Quantity>25.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0002           </ReferenceNo>
+    <TxnDate>2010-02-02T00:00:00+05:30</TxnDate>
+    <Remarks>Test Rem 2</Remarks>
+    <ManualNo>65432</ManualNo>
+    <LocationCode>BMC3      </LocationCode>
+    <LocationName>Partner Store -</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100262             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100262             </ItemCode>
+        <Quantity>15.00</Quantity>
+        <BalQty>15.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100262             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100361             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100361             </ItemCode>
+        <Quantity>25.00</Quantity>
+        <BalQty>25.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100361             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0002           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100621             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0002           </ReferenceNo>
+        <ItemCode>0100621             </ItemCode>
+        <Quantity>30.00</Quantity>
+        <BalQty>20.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100621             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0002           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0100621             </ItemCode>
+    <ItemName>Soldering Flux Japanese</ItemName>
+    <Quantity>30.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>PRHO00000000001</ReferenceNo>
+    <TxnDate>2010-12-02T00:00:00+05:30</TxnDate>
+    <Remarks>fbdf</Remarks>
+    <ManualNo>fbdfb</ManualNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100161             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0100161             </ItemCode>
+        <Quantity>5.00</Quantity>
+        <BalQty>4.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100161             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0170632             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0170632             </ItemCode>
+        <Quantity>9.00</Quantity>
+        <BalQty>7.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0170632             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0200661             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0200661             </ItemCode>
+        <Quantity>3.00</Quantity>
+        <BalQty>3.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0200661             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0170632             </ItemCode>
+    <ItemName>Brass Wood Screws G-6,1"</ItemName>
+    <Quantity>9.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>PRHO00000000001</ReferenceNo>
+    <TxnDate>2010-12-02T00:00:00+05:30</TxnDate>
+    <Remarks>fbdf</Remarks>
+    <ManualNo>fbdfb</ManualNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0100161             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0100161             </ItemCode>
+        <Quantity>5.00</Quantity>
+        <BalQty>4.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0100161             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0170632             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0170632             </ItemCode>
+        <Quantity>9.00</Quantity>
+        <BalQty>7.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0170632             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">PRHO00000000001</Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0200661             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>PRHO00000000001</ReferenceNo>
+        <ItemCode>0200661             </ItemCode>
+        <Quantity>3.00</Quantity>
+        <BalQty>3.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0200661             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">PRHO00000000001</Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0200661             </ItemCode>
+    <ItemName>G.I. Bolts &amp; Nuts</ItemName>
+    <Quantity>3.00</Quantity>
+  </PurchaseOrderRequisition>
+  <PurchaseOrderRequisition>
+    <ReferenceNo>0004           </ReferenceNo>
+    <TxnDate>2010-12-01T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <PORequisitionDets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <PORequisitionDet>
+        <EntityKey>
+          <EntitySetName>PORequisitionDets</EntitySetName>
+          <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+          <EntityKeyValues>
+            <EntityKeyMember>
+              <Key>ReferenceNo</Key>
+              <Value xsi:type="xsd:string">0004           </Value>
+            </EntityKeyMember>
+            <EntityKeyMember>
+              <Key>ItemCode</Key>
+              <Value xsi:type="xsd:string">0202431             </Value>
+            </EntityKeyMember>
+          </EntityKeyValues>
+        </EntityKey>
+        <ReferenceNo>0004           </ReferenceNo>
+        <ItemCode>0202431             </ItemCode>
+        <Quantity>5.00</Quantity>
+        <BalQty>5.00</BalQty>
+        <ItemReference>
+          <EntityKey>
+            <EntitySetName>Items</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ItemCode</Key>
+                <Value xsi:type="xsd:string">0202431             </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </ItemReference>
+        <PORequisitionHedReference>
+          <EntityKey>
+            <EntitySetName>PORequisitionHeds</EntitySetName>
+            <EntityContainerName>InventorySalesDebtorsSystemEntities</EntityContainerName>
+            <EntityKeyValues>
+              <EntityKeyMember>
+                <Key>ReferenceNo</Key>
+                <Value xsi:type="xsd:string">0004           </Value>
+              </EntityKeyMember>
+            </EntityKeyValues>
+          </EntityKey>
+        </PORequisitionHedReference>
+      </PORequisitionDet>
+    </PORequisitionDets>
+    <ItemCode>0202431             </ItemCode>
+    <ItemName>Mild Steel 5/8" Bar-16Mm+B69</ItemName>
+    <Quantity>5.00</Quantity>
+  </PurchaseOrderRequisition>
+</DocumentElement>

@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Branches>
+    <CodeField>015       </CodeField>
+    <NameField />
+    <LinkCodeField>RM</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>016       </CodeField>
+    <NameField>Bmc Matara</NameField>
+    <LinkCodeField>MT</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>017       </CodeField>
+    <NameField>Bmc Rathnapura</NameField>
+    <LinkCodeField>RP</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>019       </CodeField>
+    <NameField>Bmc Kandy</NameField>
+    <LinkCodeField>KD</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>021       </CodeField>
+    <NameField>Bmc Badulla</NameField>
+    <LinkCodeField>BD</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>022       </CodeField>
+    <NameField />
+    <LinkCodeField>BT</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>027       </CodeField>
+    <NameField>Bmc Anuradapura</NameField>
+    <LinkCodeField>AP</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>029       </CodeField>
+    <NameField>Bmc Ambalantota</NameField>
+    <LinkCodeField>AB</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>030       </CodeField>
+    <NameField>Bmc Embilipitiya</NameField>
+    <LinkCodeField>EM</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>031       </CodeField>
+    <NameField>Bmc Galle</NameField>
+    <LinkCodeField>GL</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>087       </CodeField>
+    <NameField>Bmc Kurunduwtte</NameField>
+    <LinkCodeField>KW</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>100       </CodeField>
+    <NameField>Head Office</NameField>
+    <LinkCodeField>H2</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>110       </CodeField>
+    <NameField>Rathmalana</NameField>
+    <LinkCodeField>RT</LinkCodeField>
+    <LinkNameField />
+  </Branches>
+  <Branches>
+    <CodeField>HO        </CodeField>
+    <NameField>Head Office</NameField>
+    <LinkCodeField>HO</LinkCodeField>
+    <LinkNameField>ho@bmc.lk</LinkNameField>
+  </Branches>
+</DocumentElement>

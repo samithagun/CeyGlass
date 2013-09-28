@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <PurchaseOrder>
+    <ReferenceNo>POHO00000000001</ReferenceNo>
+    <TxnDate>2010-12-07T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>0.00</HedDiscPer>
+    <HedDiscTotVal>0.00</HedDiscTotVal>
+    <ItemDiscTotVal>0.00</ItemDiscTotVal>
+    <NBTVal>0.00</NBTVal>
+    <POReqNo>PRHO00000000001</POReqNo>
+    <TotalVal>0.00</TotalVal>
+    <VATVal>0.00</VATVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>10.00</Quantity>
+    <CostPrice>100.00</CostPrice>
+    <HedDiscVal>49.00</HedDiscVal>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>20.00</ItemDiscVal>
+    <NBTItemVal>0.00</NBTItemVal>
+    <NBTPer>0.00</NBTPer>
+    <TotalItemVal>931.00</TotalItemVal>
+    <VATItemVal>0.00</VATItemVal>
+    <VATPer>0.00</VATPer>
+    <ItemGrossVal>980.00</ItemGrossVal>
+  </PurchaseOrder>
+</DocumentElement>

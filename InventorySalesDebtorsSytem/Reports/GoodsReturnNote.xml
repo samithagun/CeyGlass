@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <GoodsReturnNote>
+    <ReferenceNo>GRHO00000000002</ReferenceNo>
+    <TxnDate>2010-12-22T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>1.48</HedDiscTotVal>
+    <ItemDiscTotVal>0.50</ItemDiscTotVal>
+    <NBTVal>0.00</NBTVal>
+    <GRNNo>GNHO00000000009</GRNNo>
+    <TotalVal>48.01</TotalVal>
+    <VATVal>0.00</VATVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>1.00</Quantity>
+    <CostPrice>50.00</CostPrice>
+    <HedDiscVal>1.48</HedDiscVal>
+    <ItemDiscPer>1.00</ItemDiscPer>
+    <ItemDiscVal>0.50</ItemDiscVal>
+    <NBTItemVal>0.00</NBTItemVal>
+    <NBTPer>0.00</NBTPer>
+    <TotalItemVal>48.01</TotalItemVal>
+    <VATItemVal>0.00</VATItemVal>
+    <VATPer>0.00</VATPer>
+    <ItemGrossVal>49.49</ItemGrossVal>
+  </GoodsReturnNote>
+</DocumentElement>

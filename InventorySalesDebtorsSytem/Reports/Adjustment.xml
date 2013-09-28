@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Adjustment>
+    <ReferenceNo>AJHO00000000001</ReferenceNo>
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-0.10</Quantity>
+    <CostPrice>91.05</CostPrice>
+  </Adjustment>
+  <Adjustment>
+    <ReferenceNo>AJHO00000000001</ReferenceNo>
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>5.00</Quantity>
+    <CostPrice>11.14</CostPrice>
+  </Adjustment>
+</DocumentElement>

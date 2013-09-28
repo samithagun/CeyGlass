@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <DebtorOutstanding>
+    <ReferenceNo>DNHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <TotalVal>115.36</TotalVal>
+    <ReceiptAmt>0.00</ReceiptAmt>
+    <AdAloAmt>5.00</AdAloAmt>
+    <CreditNoteAmt>25.00</CreditNoteAmt>
+  </DebtorOutstanding>
+  <DebtorOutstanding>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <TotalVal>382.54</TotalVal>
+    <ReceiptAmt>5.00</ReceiptAmt>
+    <AdAloAmt>10.00</AdAloAmt>
+    <CreditNoteAmt>75.00</CreditNoteAmt>
+  </DebtorOutstanding>
+  <DebtorOutstanding>
+    <ReferenceNo>INHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-11T00:00:00+05:30</TxnDate>
+    <TotalVal>260.13</TotalVal>
+    <ReceiptAmt>10.00</ReceiptAmt>
+    <AdAloAmt>15.00</AdAloAmt>
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+  </DebtorOutstanding>
+  <DebtorOutstanding>
+    <ReferenceNo>INHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-12T00:00:00+05:30</TxnDate>
+    <TotalVal>134.91</TotalVal>
+    <ReceiptAmt>20.00</ReceiptAmt>
+    <AdAloAmt>0.00</AdAloAmt>
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+  </DebtorOutstanding>
+  <DebtorOutstanding>
+    <ReferenceNo>INHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <TotalVal>562.10</TotalVal>
+    <ReceiptAmt>0.00</ReceiptAmt>
+    <AdAloAmt>0.00</AdAloAmt>
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+  </DebtorOutstanding>
+  <DebtorOutstanding>
+    <ReferenceNo>INHO00000000005</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>1000      </CustomerCode>
+    <CustomerName>Sangaraja Cheque Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <TotalVal>2553.86</TotalVal>
+    <ReceiptAmt>0.00</ReceiptAmt>
+    <AdAloAmt>0.00</AdAloAmt>
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+  </DebtorOutstanding>
+</DocumentElement>

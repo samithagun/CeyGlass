@@ -1,0 +1,159 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Brand>
+    <CodeField>ALUME     </CodeField>
+    <NameField>Alumexsgsdgs</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>AMANO     </CodeField>
+    <NameField>Amano</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>AP001     </CodeField>
+    <NameField>Arpico 1</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>AP002     </CodeField>
+    <NameField>Arpico 2</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>ARPIC     </CodeField>
+    <NameField>Arpico Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>B0001     </CodeField>
+    <NameField>Default Brand</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>CISAL     </CodeField>
+    <NameField>Cisal</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>CROCO     </CodeField>
+    <NameField>Crocadial Brand</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>DULUX     </CodeField>
+    <NameField>Dulux</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>FIORE     </CodeField>
+    <NameField>Fiore</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>GLIDN     </CodeField>
+    <NameField>Glidden</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>GUM       </CodeField>
+    <NameField>Gum Boots</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>HARIS     </CodeField>
+    <NameField>Harris</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>HUNT      </CodeField>
+    <NameField>Hunter Compant Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>IMPEL     </CodeField>
+    <NameField>Imported Elect  Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>IRON      </CodeField>
+    <NameField>Iron Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>JS001     </CodeField>
+    <NameField>H.&amp; R.Johnson Tiles</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>KC001     </CodeField>
+    <NameField>Kalani Cables</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>KELAN     </CodeField>
+    <NameField>Kelani Cable Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>LANLO     </CodeField>
+    <NameField>Lanka Loha</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>MACKP     </CodeField>
+    <NameField>Mackply</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>MB001     </CodeField>
+    <NameField>Ministry Items Brand</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>MC001     </CodeField>
+    <NameField>Ministry Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>METPO     </CodeField>
+    <NameField>Metropolitan Lightings Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>MP001     </CodeField>
+    <NameField>Metropolitan</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>NAWAL     </CodeField>
+    <NameField>Nawaloka Fencing Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>ORENG     </CodeField>
+    <NameField>Orange</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>S-LON     </CodeField>
+    <NameField>S-Lon Tank</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>San S     </CodeField>
+    <NameField>San Sen</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SANSE     </CodeField>
+    <NameField>Sansen Wooden Type Items</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SL001     </CodeField>
+    <NameField>SL</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SMA       </CodeField>
+    <NameField>Sm.A. Hardware</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SR001     </CodeField>
+    <NameField>SR</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>STC01     </CodeField>
+    <NameField>STC</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>STEEL     </CodeField>
+    <NameField>Steel Item</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SU001     </CodeField>
+    <NameField>SU</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>SWE1      </CodeField>
+    <NameField>SWE</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>TEST      </CodeField>
+    <NameField>Test Brand</NameField>
+  </Brand>
+  <Brand>
+    <CodeField>TOOLS     </CodeField>
+    <NameField>Tool Items</NameField>
+  </Brand>
+</DocumentElement>

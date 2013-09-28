@@ -1,0 +1,931 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ItemTypes>
+    <TypeCode>AHB-3     </TypeCode>
+    <TypeName>aaa</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AHB-4     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AHB-6     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AHB-8     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL000     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL002     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL003     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL004     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL005     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL006     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL007     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL008     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL009     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL010     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL011     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL012     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL013     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL014     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL015     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL016     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL017     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL018     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL019     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL020     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL021     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL022     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL023     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL024     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL025     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL026     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL027     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL028     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL029     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL030     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL031     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL032     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL033     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL034     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL035     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL036     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL037     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL038     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL039     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL040     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL041     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL042     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL043     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL044     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL045     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL046     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL047     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL048     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL049     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL050     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL051     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL052     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL053     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL054     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL055     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL056     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL057     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL058     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL059     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL060     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL061     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL062     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL063     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AL064     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ALUM      </TypeCode>
+    <TypeName>ALUMINIUM PRODUCTS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>AZS-1     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>B/VAL     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BED       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BEND      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BI/TA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BJ/MA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BLUB      </TypeCode>
+    <TypeName>BULB ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BRASS     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>BRICK     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>C/BAL     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>C/BOX     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>C/HOS     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CAP       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CB001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CEMBL     </TypeCode>
+    <TypeName>CEMENT BLOCK</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CERAM     </TypeCode>
+    <TypeName>CERAMIC ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CFL       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CHAIR     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CLAMP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CLIPP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>CUSH      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/BED     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/BEN     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/ELB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/LOC     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/SET     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/SIG     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>D/TEE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>DHLF      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>DOOR      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>Doors     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>DR/PI     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>DRAWE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>DTBIN     </TypeCode>
+    <TypeName>COMPOST AND DUST BIN</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>E/CAP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ELBOW     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ELECT     </TypeCode>
+    <TypeName>ELECTRIC ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>EQ/TE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>F/ELB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>F/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>F/SOC     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>F/TUB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>FAU/T     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>FLOAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>FTL       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>Funi      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>G/HOS     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>GR/MA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>GUTTR     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>H/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>H/TAP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>HOSE      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>HOSE/     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>HR001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>HV/MA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>IR/BO     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>IRON      </TypeCode>
+    <TypeName>IRON ITMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ISOL      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>JOIN      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>JS01      </TypeCode>
+    <TypeName>H.R.JOHNSON (INDIA) LTD.</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>K/RAC     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>K/SIN     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>K0001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>KUMAR     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>L/CUP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>L/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>LOCKE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>M0001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MAHOG     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MAT01     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MATRE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MCB       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MITYP     </TypeCode>
+    <TypeName>MINISTRY ITEMS SALES AT BMC</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MLT/M     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MP001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MPL       </TypeCode>
+    <TypeName>METROPOLITAN LIGHTINGS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>MUD/F     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>O/BOA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>O/TAB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PAINT     </TypeCode>
+    <TypeName>PAINT ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PCO/S     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PCON/     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PIPE      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PLYDR     </TypeCode>
+    <TypeName>PLYWOOD FLUSH DOORS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PLYSH     </TypeCode>
+    <TypeName>PLYWOOD SHEETS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC       </TypeCode>
+    <TypeName>PVC PIPE ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/B     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/C     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/E     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/R     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/T     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVC/V     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>PVCPI     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/BAL     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/CHA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/CLI     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/ELB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/RIN     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/SOK     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>R/TEE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>RACK      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>RCD       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>RIGIF     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>RM/SE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ROOF      </TypeCode>
+    <TypeName>ROOFING METERIAL</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>RUBBR     </TypeCode>
+    <TypeName>RUBBER ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S-LON     </TypeCode>
+    <TypeName>WATER TANK</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/BAG     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/BED     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/CEM     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/PIP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/SHE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/SOC     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S/TAP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>S0001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SANI      </TypeCode>
+    <TypeName>SANITARY WARE</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SB001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SHEET     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SL/DO     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>socke     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SOFA      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SPIRA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SPL/D     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SQGUT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>ST001     </TypeCode>
+    <TypeName>CHAIN LINK FENCING ITEM</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>STEEL     </TypeCode>
+    <TypeName>STEEL PRODUCT  ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SW/TE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SW001     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>SWITC     </TypeCode>
+    <TypeName>ORANGE</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>T/FRA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>T/TOP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>T0001     </TypeCode>
+    <TypeName>STEEL SHOVEL WITH HANDLE</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TABLE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TANK      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TAP       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TELE/     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TILE      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TOOLS     </TypeCode>
+    <TypeName>TOOL TYPE ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TOY       </TypeCode>
+    <TypeName>SAN SEN TOY ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TS/TE     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TV/ST     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TW/RA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TWB       </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>TY/CH     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>U TYP     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>V/CHA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>V/MAT     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>V/SOK     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>VEG/R     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/BED     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/BOX     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/DTA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/M/S     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/PUM     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/RAC     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>W/TVS     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>WAROB     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>WIRE      </TypeCode>
+    <TypeName>WIRING ITEMS</TypeName>
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>WP01      </TypeCode>
+    <TypeName />
+  </ItemTypes>
+  <ItemTypes>
+    <TypeCode>WT/BA     </TypeCode>
+    <TypeName />
+  </ItemTypes>
+</DocumentElement>

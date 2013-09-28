@@ -1,0 +1,408 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>1.00</Quantity>
+    <Remarks>Stock Transfer In Note</Remarks>
+    <seq>3</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-1.00</Quantity>
+    <Remarks>Stock Transfer Out Note</Remarks>
+    <seq>7</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>5.00</Quantity>
+    <Remarks>Stock Transfer In Note</Remarks>
+    <seq>3</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>3.00</Quantity>
+    <Remarks>Stock Transfer In Note</Remarks>
+    <seq>3</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-5.00</Quantity>
+    <Remarks>Stock Transfer Out Note</Remarks>
+    <seq>7</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>STHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>-3.00</Quantity>
+    <Remarks>Stock Transfer Out Note</Remarks>
+    <seq>7</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>IRHO00000000005</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>5.00</Quantity>
+    <Remarks>Invoice Return</Remarks>
+    <seq>4</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>IRHO00000000005</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>3.00</Quantity>
+    <Remarks>Invoice Return</Remarks>
+    <seq>4</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>IRHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>92.15</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>0.10</Quantity>
+    <Remarks>Invoice Return</Remarks>
+    <seq>4</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>IRHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>10.92</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>0.05</Quantity>
+    <Remarks>Invoice Return</Remarks>
+    <seq>4</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>IRHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-14T00:00:00+05:30</TxnDate>
+    <CostPrice>116.35</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>2.00</Quantity>
+    <Remarks>Invoice Return</Remarks>
+    <seq>4</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>DSHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-15.00</Quantity>
+    <Remarks>Dispatch Note</Remarks>
+    <seq>6</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>DSHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>-10.00</Quantity>
+    <Remarks>Dispatch Note</Remarks>
+    <seq>6</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>DSHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-14T00:00:00+05:30</TxnDate>
+    <CostPrice>97.93</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-0.80</Quantity>
+    <Remarks>Dispatch Note</Remarks>
+    <seq>6</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>DSHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-14T00:00:00+05:30</TxnDate>
+    <CostPrice>10.92</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>-0.50</Quantity>
+    <Remarks>Dispatch Note</Remarks>
+    <seq>6</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>DSHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-13T00:00:00+05:30</TxnDate>
+    <CostPrice>97.93</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-2.00</Quantity>
+    <Remarks>Dispatch Note</Remarks>
+    <seq>6</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-2.10</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>5</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>100.00</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>9</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>50.00</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>9</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>65.00</CostPrice>
+    <ItemCode>0100621             </ItemCode>
+    <ItemName>Soldering Flux Japanese</ItemName>
+    <Quantity>3.00</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>9</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>29.02</CostPrice>
+    <ItemCode>0101551             </ItemCode>
+    <ItemName>Metal Saddlers Type Space Bar</ItemName>
+    <Quantity>50.00</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>9</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>91.05</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>-0.10</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>5</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo>AJHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <CostPrice>11.14</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>5.00</Quantity>
+    <Remarks>Adjustment</Remarks>
+    <seq>9</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <ManualNo />
+    <TxnDate>2010-12-31T00:00:00+05:30</TxnDate>
+    <CostPrice>100.00</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>1.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+    <seq>1</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2010-12-31T00:00:00+05:30</TxnDate>
+    <CostPrice>100.45777777777777777777777778</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>1.80</Quantity>
+    <Remarks>Opening Balance</Remarks>
+    <seq>1</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <ManualNo />
+    <TxnDate>2010-12-31T00:00:00+05:30</TxnDate>
+    <CostPrice>50.00</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>1.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+    <seq>1</seq>
+  </StockMovement>
+  <StockMovement>
+    <ReferenceNo />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <TxnDate>2010-12-31T00:00:00+05:30</TxnDate>
+    <CostPrice>10.92</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>0.40</Quantity>
+    <Remarks>Opening Balance</Remarks>
+    <seq>1</seq>
+  </StockMovement>
+</DocumentElement>

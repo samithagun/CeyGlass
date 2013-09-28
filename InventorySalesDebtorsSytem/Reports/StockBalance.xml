@@ -1,0 +1,94 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <CostPrice>92.84</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <GroupCode>3          - 3A        </GroupCode>
+    <GroupName>Steel - Angle Iron $ Flat Iron</GroupName>
+    <Quantity>5.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <CostPrice>91.61984687868080094228504122</CostPrice>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <GroupCode>3          - 3A        </GroupCode>
+    <GroupName>Steel - Angle Iron $ Flat Iron</GroupName>
+    <Quantity>84.90</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <CostPrice>20.855</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <GroupCode>4          - 4S        </GroupCode>
+    <GroupName>Electric - </GroupName>
+    <Quantity>4.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <CostPrice>11.14024471635150166852057842</CostPrice>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <GroupCode>4          - 4S        </GroupCode>
+    <GroupName>Electric - </GroupName>
+    <Quantity>44.95</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <CostPrice>65.00</CostPrice>
+    <ItemCode>0100621             </ItemCode>
+    <ItemName>Soldering Flux Japanese</ItemName>
+    <GroupCode>4          - 4S        </GroupCode>
+    <GroupName>Electric - </GroupName>
+    <Quantity>3.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <CostPrice>29.02</CostPrice>
+    <ItemCode>0101551             </ItemCode>
+    <ItemName>Metal Saddlers Type Space Bar</ItemName>
+    <GroupCode>4          - 4S        </GroupCode>
+    <GroupName>Electric - </GroupName>
+    <Quantity>50.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+  <StockBalance>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <CostPrice>234.14285714285714285714285714</CostPrice>
+    <ItemCode>Test                </ItemCode>
+    <ItemName>Test Item</ItemName>
+    <GroupCode>0          - 0S        </GroupCode>
+    <GroupName>Other - </GroupName>
+    <Quantity>70.00</Quantity>
+    <Remarks>Opening Balance</Remarks>
+  </StockBalance>
+</DocumentElement>

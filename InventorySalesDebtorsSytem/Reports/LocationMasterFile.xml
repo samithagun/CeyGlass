@@ -1,0 +1,192 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Location>
+    <LocationCode>BMC02     </LocationCode>
+    <LocationName>Special Items Stores For The Ministry (Bmc05)</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC05     </LocationCode>
+    <LocationName>Partner Store 05</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC1      </LocationCode>
+    <LocationName>Store No 05 (Sangaraja)</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC15     </LocationCode>
+    <LocationName>Rathmalana  15</LocationName>
+    <LocationEmail />
+    <BranchCode>110       </BranchCode>
+    <BranchName>Rathmalana</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC16     </LocationCode>
+    <LocationName>Matara</LocationName>
+    <LocationEmail />
+    <BranchCode>016       </BranchCode>
+    <BranchName>Bmc Matara</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC17     </LocationCode>
+    <LocationName>Bmc Rathnapura</LocationName>
+    <LocationEmail />
+    <BranchCode>017       </BranchCode>
+    <BranchName>Bmc Rathnapura</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC19     </LocationCode>
+    <LocationName>Bmc Kandy</LocationName>
+    <LocationEmail />
+    <BranchCode>019       </BranchCode>
+    <BranchName>Bmc Kandy</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC2      </LocationCode>
+    <LocationName>Store No 51 (Sangaraja )</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC21     </LocationCode>
+    <LocationName>Bmc Badulla</LocationName>
+    <LocationEmail />
+    <BranchCode>021       </BranchCode>
+    <BranchName>Bmc Badulla</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC29     </LocationCode>
+    <LocationName>Bmc Ambalantota</LocationName>
+    <LocationEmail />
+    <BranchCode>029       </BranchCode>
+    <BranchName>Bmc Ambalantota</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC3      </LocationCode>
+    <LocationName>Partner Store -</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC30     </LocationCode>
+    <LocationName>Bmc Embilipitiya</LocationName>
+    <LocationEmail />
+    <BranchCode>030       </BranchCode>
+    <BranchName>Bmc Embilipitiya</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC31     </LocationCode>
+    <LocationName>Bmc Galle</LocationName>
+    <LocationEmail />
+    <BranchCode>031       </BranchCode>
+    <BranchName>Bmc Galle</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC44     </LocationCode>
+    <LocationName>Rathmalana 44</LocationName>
+    <LocationEmail />
+    <BranchCode>110       </BranchCode>
+    <BranchName>Rathmalana</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC87     </LocationCode>
+    <LocationName>Bmc Kurunduwatte</LocationName>
+    <LocationEmail />
+    <BranchCode>087       </BranchCode>
+    <BranchName>Bmc Kurunduwtte</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>BMC99     </LocationCode>
+    <LocationName>Ex-Factory (A.C.I. Ltd.)</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR15      </LocationCode>
+    <LocationName>Partnet Stores Ratmalana</LocationName>
+    <LocationEmail />
+    <BranchCode>110       </BranchCode>
+    <BranchName>Rathmalana</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR16      </LocationCode>
+    <LocationName>Partner Stores Matara</LocationName>
+    <LocationEmail />
+    <BranchCode>016       </BranchCode>
+    <BranchName>Bmc Matara</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR17      </LocationCode>
+    <LocationName>Partner Stores Ratnapura</LocationName>
+    <LocationEmail />
+    <BranchCode>017       </BranchCode>
+    <BranchName>Bmc Rathnapura</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR19      </LocationCode>
+    <LocationName>Partner Stores Kandy</LocationName>
+    <LocationEmail />
+    <BranchCode>019       </BranchCode>
+    <BranchName>Bmc Kandy</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR21      </LocationCode>
+    <LocationName>Partner Stores Badulla</LocationName>
+    <LocationEmail />
+    <BranchCode>021       </BranchCode>
+    <BranchName>Bmc Badulla</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR29      </LocationCode>
+    <LocationName>Partner Stores Ambalantota</LocationName>
+    <LocationEmail />
+    <BranchCode>029       </BranchCode>
+    <BranchName>Bmc Ambalantota</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR30      </LocationCode>
+    <LocationName>Partner Stores Embilipitiya</LocationName>
+    <LocationEmail />
+    <BranchCode>030       </BranchCode>
+    <BranchName>Bmc Embilipitiya</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR31      </LocationCode>
+    <LocationName>Partner Stores Galle</LocationName>
+    <LocationEmail />
+    <BranchCode>031       </BranchCode>
+    <BranchName>Bmc Galle</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>PR87      </LocationCode>
+    <LocationName>Partner Stores Kurunduwatta</LocationName>
+    <LocationEmail />
+    <BranchCode>087       </BranchCode>
+    <BranchName>Bmc Kurunduwtte</BranchName>
+  </Location>
+  <Location>
+    <LocationCode>TEMP      </LocationCode>
+    <LocationName>Temparay Locations For Goods Transfer (Outstation)</LocationName>
+    <LocationEmail />
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+  </Location>
+</DocumentElement>

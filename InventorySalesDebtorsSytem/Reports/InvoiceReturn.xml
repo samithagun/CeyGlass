@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <InvoiceReturn>
+    <ReferenceNo>IRHO00000000003</ReferenceNo>
+    <TxnDate>2011-01-14T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <InvoiceNo>INHO00000000003</InvoiceNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>5.00</HedDiscPer>
+    <HedDiscTotVal>5.88</HedDiscTotVal>
+    <ItemDiscTotVal>2.40</ItemDiscTotVal>
+    <NBTVal>5.59</NBTVal>
+    <TotalVal>134.91</TotalVal>
+    <VATVal>17.60</VATVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>2.00</Quantity>
+    <CostPrice>116.35</CostPrice>
+    <SelPrice>60.00</SelPrice>
+    <HedDiscVal>5.88</HedDiscVal>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>2.40</ItemDiscVal>
+    <NBTItemVal>5.59</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <TotalItemVal>134.91</TotalItemVal>
+    <VATItemVal>17.60</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <ItemGrossVal>117.60</ItemGrossVal>
+  </InvoiceReturn>
+</DocumentElement>

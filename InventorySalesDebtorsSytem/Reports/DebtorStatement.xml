@@ -1,0 +1,163 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <DebtorStatement>
+    <ReferenceNo>DNHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <TotalVal>115.36</TotalVal>
+    <CreditNoteNo>CNHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-18T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark>Credit Note: </CreditNoteRemark>
+    <CreditNoteAmt>25.00</CreditNoteAmt>
+    <TotCreditNoteAmt>30.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>DNHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <TotalVal>115.36</TotalVal>
+    <CreditNoteNo>ALHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark />
+    <CreditNoteAmt>5.00</CreditNoteAmt>
+    <TotCreditNoteAmt>30.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <TotalVal>382.54</TotalVal>
+    <CreditNoteNo>CNHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-18T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark>Credit Note: </CreditNoteRemark>
+    <CreditNoteAmt>75.00</CreditNoteAmt>
+    <TotCreditNoteAmt>90.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <TotalVal>382.54</TotalVal>
+    <CreditNoteNo>REHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark>Receipt - Cash Payment</CreditNoteRemark>
+    <CreditNoteAmt>5.00</CreditNoteAmt>
+    <TotCreditNoteAmt>90.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <TotalVal>382.54</TotalVal>
+    <CreditNoteNo>ALHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark />
+    <CreditNoteAmt>10.00</CreditNoteAmt>
+    <TotCreditNoteAmt>90.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-11T00:00:00+05:30</TxnDate>
+    <TotalVal>260.13</TotalVal>
+    <CreditNoteNo>REHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark>Receipt - Cash Payment</CreditNoteRemark>
+    <CreditNoteAmt>10.00</CreditNoteAmt>
+    <TotCreditNoteAmt>25.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-11T00:00:00+05:30</TxnDate>
+    <TotalVal>260.13</TotalVal>
+    <CreditNoteNo>ALHO00000000001</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark />
+    <CreditNoteAmt>15.00</CreditNoteAmt>
+    <TotCreditNoteAmt>25.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-12T00:00:00+05:30</TxnDate>
+    <TotalVal>134.91</TotalVal>
+    <CreditNoteNo>REHO00000000002</CreditNoteNo>
+    <CreditNoteDate>2011-01-19T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark>Receipt - Credit Card: ABC CREDIT CARD</CreditNoteRemark>
+    <CreditNoteAmt>20.00</CreditNoteAmt>
+    <TotCreditNoteAmt>20.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <TotalVal>562.10</TotalVal>
+    <CreditNoteNo />
+    <CreditNoteDate>0001-01-01T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark />
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+    <TotCreditNoteAmt>0.00</TotCreditNoteAmt>
+  </DebtorStatement>
+  <DebtorStatement>
+    <ReferenceNo>INHO00000000005</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>1000      </CustomerCode>
+    <CustomerName>Sangaraja Cheque Customer</CustomerName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <TxnDate>2011-01-23T00:00:00+05:30</TxnDate>
+    <TotalVal>2553.86</TotalVal>
+    <CreditNoteNo />
+    <CreditNoteDate>0001-01-01T00:00:00+05:30</CreditNoteDate>
+    <CreditNoteRemark />
+    <CreditNoteAmt>0.00</CreditNoteAmt>
+    <TotCreditNoteAmt>0.00</TotCreditNoteAmt>
+  </DebtorStatement>
+</DocumentElement>

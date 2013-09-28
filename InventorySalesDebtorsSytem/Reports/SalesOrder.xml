@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <SalesOrder>
+    <ReferenceNo>SOHO00000000006</ReferenceNo>
+    <TxnDate>2011-01-04T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <QuotationNo>QUHO00000000005</QuotationNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>55.26</HedDiscTotVal>
+    <ItemDiscTotVal>78.00</ItemDiscTotVal>
+    <NBTVal>89.34</NBTVal>
+    <TotalVal>2157.49</TotalVal>
+    <VATVal>281.41</VATVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>10.00</Quantity>
+    <CostPrice>97.93</CostPrice>
+    <SelPrice>60.00</SelPrice>
+    <HedDiscVal>17.64</HedDiscVal>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>12.00</ItemDiscVal>
+    <NBTItemVal>28.52</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <TotalItemVal>688.71</TotalItemVal>
+    <VATItemVal>89.83</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <ItemGrossVal>588.00</ItemGrossVal>
+  </SalesOrder>
+  <SalesOrder>
+    <ReferenceNo>SOHO00000000006</ReferenceNo>
+    <TxnDate>2011-01-04T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <QuotationNo>QUHO00000000005</QuotationNo>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>55.26</HedDiscTotVal>
+    <ItemDiscTotVal>78.00</ItemDiscTotVal>
+    <NBTVal>89.34</NBTVal>
+    <TotalVal>2157.49</TotalVal>
+    <VATVal>281.41</VATVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>12.00</Quantity>
+    <CostPrice>10.92</CostPrice>
+    <SelPrice>110.00</SelPrice>
+    <HedDiscVal>37.62</HedDiscVal>
+    <ItemDiscPer>5.00</ItemDiscPer>
+    <ItemDiscVal>66.00</ItemDiscVal>
+    <NBTItemVal>60.82</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <TotalItemVal>1468.78</TotalItemVal>
+    <VATItemVal>191.58</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <ItemGrossVal>1254.00</ItemGrossVal>
+  </SalesOrder>
+</DocumentElement>

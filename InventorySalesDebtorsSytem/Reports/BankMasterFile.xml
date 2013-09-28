@@ -1,0 +1,907 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Bank>
+    <BankCode>A01         </BankCode>
+    <BankName>Pan Asia Bank</BankName>
+    <Branch>Panchikawatte Branch</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B01         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Colombo -01</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B02         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Katubedda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B12         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Trincomalee</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B14         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Kalutara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B16         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Matara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B17         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Ratnapura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B18         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Nittambuwa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B19         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Kandy</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B20         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Nuwaraeliya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B21         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Badulla</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B22         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Batticaloa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B23         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Kekirawa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B25         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Jaffna</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B26         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Dikwella</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B27         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Anuradhapura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B29         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Ambalantoda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B31         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Galle</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B32         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Kegalle</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B34         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Amparai</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B35         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Kurunegala</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B37         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Hatton</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B38         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Rambukkana</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B40         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Gampaha</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B41         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Bank Of Cey-Bandarawella</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B43         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Bank Of Cey - Kanthankudi</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B46         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Bank Of Ceylon Kataragama</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B47         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Mannar</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B49         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Homagama Bank Of Ceylon</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B52         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Matala</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>B53         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Vavuniya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>BHP         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch>Hydepark, Colombo 2</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>BOC         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>BZZ         </BankCode>
+    <BankName>Bank Of Ceylon</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>C01         </BankCode>
+    <BankName>Commercial Bank</BankName>
+    <Branch>Colombo</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>COM         </BankCode>
+    <BankName>Commercials Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>H01         </BankCode>
+    <BankName>Hatton National Bank</BankName>
+    <Branch>Panchikawatte Branch</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>H10         </BankCode>
+    <BankName>Hatton National Bank</BankName>
+    <Branch>Nugegoda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>H41         </BankCode>
+    <BankName>Hatton National Bank</BankName>
+    <Branch>Bandarawela</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>H61         </BankCode>
+    <BankName>Hatton National Bank</BankName>
+    <Branch>Mt.Leviniya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>HNB         </BankCode>
+    <BankName>Haton National Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P01         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Sangaraja Mawatha Cmb-10</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P02         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Katubedda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P03         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Sri Sangaraja Mawatha</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P04         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Sangarajamawatha (New)</Branch>
+    <BankAddress1>COLOMBO</BankAddress1>
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P11         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Tissamaharama</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P12         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Trincomalee</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P14         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kalutara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P16         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Matara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P17         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Ratnapura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P18         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Nittambuwa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P19         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kandy</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P20         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Nuwaraeliya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P21         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Badulla</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P22         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Batticaloa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P23         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kakirawa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P25         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Jaffna</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P26         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Dickwella</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P27         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Anuradapura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P29         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Ambalantota</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P30         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Embilipitiya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P31         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Galle</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P32         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kegalle</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P33         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Deniyaya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P34         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Ampara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P35         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kurunegala</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P36         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Talawakele</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P37         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Hatton</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P38         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Rambukkana</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P3T         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Talawakele</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P40         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Gampaha</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P41         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Bandarawela</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P43         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kattankudi</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P45         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Polonnaruwa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P46         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Katharagama</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P47         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Mannar</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P48         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Polgahawela</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P49         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Homagama</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P50         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Wariyapola</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P52         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Mathale</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P53         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Vauniya</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P55         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Maho</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P56         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Panadura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P57         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Tangalle</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P58         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Kalmunai</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P59         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Balangoda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P62         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Erraur</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>P92         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PABC        </BankCode>
+    <BankName>Pan Asia Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PB          </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PBG         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Balangoda</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PCH         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Chilaw</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PDA         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Mahara</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PHB         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Ahangama</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PHK         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Hasalaka</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PMI         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Mahiyangana</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PMO         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Monaragala</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PMW         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Mawanella</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PPD         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Panadura</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PWN         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Wennappuwa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PWT         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Wattala</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>PYN         </BankCode>
+    <BankName>Peoples Bank</BankName>
+    <Branch>Pilimatalawa</Branch>
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>SELAN       </BankCode>
+    <BankName>Selan Bank</BankName>
+    <Branch />
+    <BankAddress1 />
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>TEST        </BankCode>
+    <BankName>Test Bank</BankName>
+    <Branch>Test Branch</Branch>
+    <BankAddress1>Add1</BankAddress1>
+    <BankAddress2>Add2</BankAddress2>
+    <CompanyBank>true</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X02         </BankCode>
+    <BankName>Rathmalana Cash Customer</BankName>
+    <Branch>Rathmalana</Branch>
+    <BankAddress1>MALIGAWA ROAD, RATHMALANA</BankAddress1>
+    <BankAddress2 />
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X16         </BankCode>
+    <BankName>Matara Cash Customer</BankName>
+    <Branch>Matara</Branch>
+    <BankAddress1>NO. 17, STATION ROAD, MATARA.</BankAddress1>
+    <BankAddress2>TEL. 041-2232366</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X17         </BankCode>
+    <BankName>Rathnapura Cash Customer</BankName>
+    <Branch>Rathnapura</Branch>
+    <BankAddress1>NO. 11, SHAVIYA ROAD, RATHNAPURA.</BankAddress1>
+    <BankAddress2>TEL. 045-2226180</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X19         </BankCode>
+    <BankName>Kandy Cash Customer</BankName>
+    <Branch>Kandy</Branch>
+    <BankAddress1>NO. 144, KATUGASTOTA ROAD, MAHAYYAWA.,</BankAddress1>
+    <BankAddress2>TEL. 081- 2223855</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X21         </BankCode>
+    <BankName>Badulla Cash Customer</BankName>
+    <Branch>Badulla</Branch>
+    <BankAddress1>NO. 61,MALIGASTENNA ROAD, BADULLA.</BankAddress1>
+    <BankAddress2>TEL. 055-2222390</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X29         </BankCode>
+    <BankName>Ambalantota Cash Customer</BankName>
+    <Branch>Ambalantota</Branch>
+    <BankAddress1>MAIN STREET, AMBALANTOTA.</BankAddress1>
+    <BankAddress2>TEL. 047-225395</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X30         </BankCode>
+    <BankName>Embilipitiya Cash Customer</BankName>
+    <Branch>Embilipitiya</Branch>
+    <BankAddress1>NEW TOWN, EMBILIPTIYA.</BankAddress1>
+    <BankAddress2>TEL. 047-2261620</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X31         </BankCode>
+    <BankName>Galle Cash Customer</BankName>
+    <Branch>Galle</Branch>
+    <BankAddress1>NO. 47, PETTIGALAWATTE, GALLE.</BankAddress1>
+    <BankAddress2>TEL. 091-2248070</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+  <Bank>
+    <BankCode>X87         </BankCode>
+    <BankName>Kurunduwatte Cash Customer</BankName>
+    <Branch>Kurunduwatte</Branch>
+    <BankAddress1>KURUNDUWATTE BAZZAR STREET, GAMPOLA.</BankAddress1>
+    <BankAddress2>TEL. 081-2351181</BankAddress2>
+    <CompanyBank>false</CompanyBank>
+  </Bank>
+</DocumentElement>

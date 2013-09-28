@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <StockTransferNote>
+    <ReferenceNo>AJHO00000000004</ReferenceNo>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCodeF>BMC4      </LocationCodeF>
+    <LocationNameF>Store No 04  (Sangaraja )</LocationNameF>
+    <BranchCodeF>100       </BranchCodeF>
+    <BranchNameF>Head Office</BranchNameF>
+    <LocationCodeT>BMC1      </LocationCodeT>
+    <LocationNameT>Store No 05 (Sangaraja)</LocationNameT>
+    <BranchCodeT>100       </BranchCodeT>
+    <BranchNameT>Head Office</BranchNameT>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Quantity>3.00</Quantity>
+    <CostPrice>91.05</CostPrice>
+  </StockTransferNote>
+  <StockTransferNote>
+    <ReferenceNo>AJHO00000000004</ReferenceNo>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <Remarks />
+    <ManualNo />
+    <LocationCodeF>BMC4      </LocationCodeF>
+    <LocationNameF>Store No 04  (Sangaraja )</LocationNameF>
+    <BranchCodeF>100       </BranchCodeF>
+    <BranchNameF>Head Office</BranchNameF>
+    <LocationCodeT>BMC1      </LocationCodeT>
+    <LocationNameT>Store No 05 (Sangaraja)</LocationNameT>
+    <BranchCodeT>100       </BranchCodeT>
+    <BranchNameT>Head Office</BranchNameT>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Quantity>5.00</Quantity>
+    <CostPrice>11.14</CostPrice>
+  </StockTransferNote>
+</DocumentElement>

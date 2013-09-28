@@ -1,0 +1,390 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <NetSales>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>9.80</HedDiscTotVal>
+    <ItemDiscTotVal>13.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>15.84</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>SOHO00000000006</ReferenceNo2>
+    <TotalVal>382.54</TotalVal>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <VATVal>49.90</VATVal>
+    <CostPrice>97.93</CostPrice>
+    <HedDiscVal>3.53</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>2.40</ItemDiscVal>
+    <NBTItemVal>5.70</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>2.00</Quantity>
+    <SelPrice>60.00</SelPrice>
+    <TotalItemVal>137.74</TotalItemVal>
+    <VATItemVal>17.97</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>INHO00000000001</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>9.80</HedDiscTotVal>
+    <ItemDiscTotVal>13.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>15.84</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>SOHO00000000006</ReferenceNo2>
+    <TotalVal>382.54</TotalVal>
+    <TxnDate>2011-01-06T00:00:00+05:30</TxnDate>
+    <VATVal>49.90</VATVal>
+    <CostPrice>10.92</CostPrice>
+    <HedDiscVal>6.27</HedDiscVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <ItemDiscPer>5.00</ItemDiscPer>
+    <ItemDiscVal>11.00</ItemDiscVal>
+    <NBTItemVal>10.14</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>2.00</Quantity>
+    <SelPrice>110.00</SelPrice>
+    <TotalItemVal>244.80</TotalItemVal>
+    <VATItemVal>31.93</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>INHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>6.67</HedDiscTotVal>
+    <ItemDiscTotVal>7.90</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>10.77</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>SOHO00000000006</ReferenceNo2>
+    <TotalVal>260.13</TotalVal>
+    <TxnDate>2011-01-11T00:00:00+05:30</TxnDate>
+    <VATVal>33.93</VATVal>
+    <CostPrice>97.93</CostPrice>
+    <HedDiscVal>3.53</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>2.40</ItemDiscVal>
+    <NBTItemVal>5.70</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>2.00</Quantity>
+    <SelPrice>60.00</SelPrice>
+    <TotalItemVal>137.74</TotalItemVal>
+    <VATItemVal>17.97</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>INHO00000000002</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>6.67</HedDiscTotVal>
+    <ItemDiscTotVal>7.90</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>10.77</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>SOHO00000000006</ReferenceNo2>
+    <TotalVal>260.13</TotalVal>
+    <TxnDate>2011-01-11T00:00:00+05:30</TxnDate>
+    <VATVal>33.93</VATVal>
+    <CostPrice>10.92</CostPrice>
+    <HedDiscVal>3.14</HedDiscVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <ItemDiscPer>5.00</ItemDiscPer>
+    <ItemDiscVal>5.50</ItemDiscVal>
+    <NBTItemVal>5.07</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>1.00</Quantity>
+    <SelPrice>110.00</SelPrice>
+    <TotalItemVal>122.39</TotalItemVal>
+    <VATItemVal>15.96</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>INHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>5.00</HedDiscPer>
+    <HedDiscTotVal>5.88</HedDiscTotVal>
+    <ItemDiscTotVal>2.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>5.59</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2 xml:space="preserve">               </ReferenceNo2>
+    <TotalVal>134.91</TotalVal>
+    <TxnDate>2011-01-12T00:00:00+05:30</TxnDate>
+    <VATVal>17.60</VATVal>
+    <CostPrice>97.93</CostPrice>
+    <HedDiscVal>5.88</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>2.40</ItemDiscVal>
+    <NBTItemVal>5.59</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>2.00</Quantity>
+    <SelPrice>60.00</SelPrice>
+    <TotalItemVal>134.91</TotalItemVal>
+    <VATItemVal>17.60</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>INHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>0.00</HedDiscPer>
+    <HedDiscTotVal>24.50</HedDiscTotVal>
+    <ItemDiscTotVal>10.00</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>23.28</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2 xml:space="preserve">               </ReferenceNo2>
+    <TotalVal>562.10</TotalVal>
+    <TxnDate>2011-01-16T00:00:00+05:30</TxnDate>
+    <VATVal>73.32</VATVal>
+    <CostPrice>91.05</CostPrice>
+    <HedDiscVal>24.50</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>10.00</ItemDiscVal>
+    <NBTItemVal>23.28</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>10.00</Quantity>
+    <SelPrice>50.00</SelPrice>
+    <TotalItemVal>562.10</TotalItemVal>
+    <VATItemVal>73.32</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>IN</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>IRHO00000000003</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>5.00</HedDiscPer>
+    <HedDiscTotVal>-5.88</HedDiscTotVal>
+    <ItemDiscTotVal>-2.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>-5.59</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>INHO00000000003</ReferenceNo2>
+    <TotalVal>-134.91</TotalVal>
+    <TxnDate>2011-01-14T00:00:00+05:30</TxnDate>
+    <VATVal>-17.60</VATVal>
+    <CostPrice>116.35</CostPrice>
+    <HedDiscVal>-5.88</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>-2.40</ItemDiscVal>
+    <NBTItemVal>-5.59</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>-2.00</Quantity>
+    <SelPrice>60.00</SelPrice>
+    <TotalItemVal>-134.91</TotalItemVal>
+    <VATItemVal>-17.60</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>SR</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>IRHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>-0.34</HedDiscTotVal>
+    <ItemDiscTotVal>-0.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>-0.53</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>INHO00000000002</ReferenceNo2>
+    <TotalVal>-12.99</TotalVal>
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <VATVal>-1.70</VATVal>
+    <CostPrice>92.15</CostPrice>
+    <HedDiscVal>-0.18</HedDiscVal>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <ItemDiscPer>2.00</ItemDiscPer>
+    <ItemDiscVal>-0.12</ItemDiscVal>
+    <NBTItemVal>-0.28</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>-0.10</Quantity>
+    <SelPrice>60.00</SelPrice>
+    <TotalItemVal>-6.88</TotalItemVal>
+    <VATItemVal>-0.90</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>SR</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+  <NetSales>
+    <ReferenceNo>IRHO00000000004</ReferenceNo>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <HedDiscPer>3.00</HedDiscPer>
+    <HedDiscTotVal>-0.34</HedDiscTotVal>
+    <ItemDiscTotVal>-0.40</ItemDiscTotVal>
+    <LocationCode>BMC4      </LocationCode>
+    <LocationName>Store No 04  (Sangaraja )</LocationName>
+    <ManualNo />
+    <NBTVal>-0.53</NBTVal>
+    <Remarks />
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <ReferenceNo2>INHO00000000002</ReferenceNo2>
+    <TotalVal>-12.99</TotalVal>
+    <TxnDate>2011-01-15T00:00:00+05:30</TxnDate>
+    <VATVal>-1.70</VATVal>
+    <CostPrice>10.92</CostPrice>
+    <HedDiscVal>-0.16</HedDiscVal>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <ItemDiscPer>5.00</ItemDiscPer>
+    <ItemDiscVal>-0.28</ItemDiscVal>
+    <NBTItemVal>-0.25</NBTItemVal>
+    <NBTPer>5.00</NBTPer>
+    <Quantity>-0.05</Quantity>
+    <SelPrice>110.00</SelPrice>
+    <TotalItemVal>-6.11</TotalItemVal>
+    <VATItemVal>-0.80</VATItemVal>
+    <VATPer>15.00</VATPer>
+    <TxnType>SR</TxnType>
+    <GroupingField />
+    <GroupingFieldDesc />
+    <Field1C />
+    <Field1N />
+    <Field2C />
+    <Field2N />
+    <Field3C />
+    <Field3N />
+  </NetSales>
+</DocumentElement>

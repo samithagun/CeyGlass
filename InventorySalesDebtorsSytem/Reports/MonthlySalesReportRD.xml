@@ -1,0 +1,219 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="MonthlySales" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="MonthlySales">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BranchCode" type="xs:string" minOccurs="0" />
+                <xs:element name="BranchName" type="xs:string" minOccurs="0" />
+                <xs:element name="RepCode" type="xs:string" minOccurs="0" />
+                <xs:element name="RepName" type="xs:string" minOccurs="0" />
+                <xs:element name="CustomerCode" type="xs:string" minOccurs="0" />
+                <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+                <xs:element name="ItemCode" type="xs:string" minOccurs="0" />
+                <xs:element name="ItemName" type="xs:string" minOccurs="0" />
+                <xs:element name="Qty1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty4" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal4" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty5" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal5" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty6" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal6" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty7" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal7" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty8" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal8" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty9" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal9" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty10" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal10" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty11" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal11" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Qty12" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalVal12" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <MonthlySales>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Qty1>13.90</Qty1>
+    <TotalVal1>830.70</TotalVal1>
+    <Qty2>0.00</Qty2>
+    <TotalVal2>0.00</TotalVal2>
+    <Qty3>0.00</Qty3>
+    <TotalVal3>0.00</TotalVal3>
+    <Qty4>0.00</Qty4>
+    <TotalVal4>0.00</TotalVal4>
+    <Qty5>0.00</Qty5>
+    <TotalVal5>0.00</TotalVal5>
+    <Qty6>0.00</Qty6>
+    <TotalVal6>0.00</TotalVal6>
+    <Qty7>0.00</Qty7>
+    <TotalVal7>0.00</TotalVal7>
+    <Qty8>0.00</Qty8>
+    <TotalVal8>0.00</TotalVal8>
+    <Qty9>0.00</Qty9>
+    <TotalVal9>0.00</TotalVal9>
+    <Qty10>0.00</Qty10>
+    <TotalVal10>0.00</TotalVal10>
+    <Qty11>0.00</Qty11>
+    <TotalVal11>0.00</TotalVal11>
+    <Qty12>0.00</Qty12>
+    <TotalVal12>0.00</TotalVal12>
+  </MonthlySales>
+  <MonthlySales>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Qty1>2.95</Qty1>
+    <TotalVal1>361.08</TotalVal1>
+    <Qty2>0.00</Qty2>
+    <TotalVal2>0.00</TotalVal2>
+    <Qty3>0.00</Qty3>
+    <TotalVal3>0.00</TotalVal3>
+    <Qty4>0.00</Qty4>
+    <TotalVal4>0.00</TotalVal4>
+    <Qty5>0.00</Qty5>
+    <TotalVal5>0.00</TotalVal5>
+    <Qty6>0.00</Qty6>
+    <TotalVal6>0.00</TotalVal6>
+    <Qty7>0.00</Qty7>
+    <TotalVal7>0.00</TotalVal7>
+    <Qty8>0.00</Qty8>
+    <TotalVal8>0.00</TotalVal8>
+    <Qty9>0.00</Qty9>
+    <TotalVal9>0.00</TotalVal9>
+    <Qty10>0.00</Qty10>
+    <TotalVal10>0.00</TotalVal10>
+    <Qty11>0.00</Qty11>
+    <TotalVal11>0.00</TotalVal11>
+    <Qty12>0.00</Qty12>
+    <TotalVal12>0.00</TotalVal12>
+  </MonthlySales>
+  <MonthlySales>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <CustomerCode>1000      </CustomerCode>
+    <CustomerName>Sangaraja Cheque Customer</CustomerName>
+    <ItemCode>0100081             </ItemCode>
+    <ItemName>Wooden Board 8 X 6" Halmilla</ItemName>
+    <Qty1>15.00</Qty1>
+    <TotalVal1>896.56</TotalVal1>
+    <Qty2>0.00</Qty2>
+    <TotalVal2>0.00</TotalVal2>
+    <Qty3>0.00</Qty3>
+    <TotalVal3>0.00</TotalVal3>
+    <Qty4>0.00</Qty4>
+    <TotalVal4>0.00</TotalVal4>
+    <Qty5>0.00</Qty5>
+    <TotalVal5>0.00</TotalVal5>
+    <Qty6>0.00</Qty6>
+    <TotalVal6>0.00</TotalVal6>
+    <Qty7>0.00</Qty7>
+    <TotalVal7>0.00</TotalVal7>
+    <Qty8>0.00</Qty8>
+    <TotalVal8>0.00</TotalVal8>
+    <Qty9>0.00</Qty9>
+    <TotalVal9>0.00</TotalVal9>
+    <Qty10>0.00</Qty10>
+    <TotalVal10>0.00</TotalVal10>
+    <Qty11>0.00</Qty11>
+    <TotalVal11>0.00</TotalVal11>
+    <Qty12>0.00</Qty12>
+    <TotalVal12>0.00</TotalVal12>
+  </MonthlySales>
+  <MonthlySales>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <CustomerCode>1000      </CustomerCode>
+    <CustomerName>Sangaraja Cheque Customer</CustomerName>
+    <ItemCode>0100161             </ItemCode>
+    <ItemName>Cable Plugs 30A</ItemName>
+    <Qty1>12.00</Qty1>
+    <TotalVal1>1086.75</TotalVal1>
+    <Qty2>0.00</Qty2>
+    <TotalVal2>0.00</TotalVal2>
+    <Qty3>0.00</Qty3>
+    <TotalVal3>0.00</TotalVal3>
+    <Qty4>0.00</Qty4>
+    <TotalVal4>0.00</TotalVal4>
+    <Qty5>0.00</Qty5>
+    <TotalVal5>0.00</TotalVal5>
+    <Qty6>0.00</Qty6>
+    <TotalVal6>0.00</TotalVal6>
+    <Qty7>0.00</Qty7>
+    <TotalVal7>0.00</TotalVal7>
+    <Qty8>0.00</Qty8>
+    <TotalVal8>0.00</TotalVal8>
+    <Qty9>0.00</Qty9>
+    <TotalVal9>0.00</TotalVal9>
+    <Qty10>0.00</Qty10>
+    <TotalVal10>0.00</TotalVal10>
+    <Qty11>0.00</Qty11>
+    <TotalVal11>0.00</TotalVal11>
+    <Qty12>0.00</Qty12>
+    <TotalVal12>0.00</TotalVal12>
+  </MonthlySales>
+  <MonthlySales>
+    <BranchCode>100       </BranchCode>
+    <BranchName>Head Office</BranchName>
+    <RepCode>R0001     </RepCode>
+    <RepName>Sales Rep 1</RepName>
+    <CustomerCode>10100     </CustomerCode>
+    <CustomerName>Cash Customer</CustomerName>
+    <ItemCode>Test                </ItemCode>
+    <ItemName>Test Item</ItemName>
+    <Qty1>20.00</Qty1>
+    <TotalVal1>5442.83</TotalVal1>
+    <Qty2>0.00</Qty2>
+    <TotalVal2>0.00</TotalVal2>
+    <Qty3>0.00</Qty3>
+    <TotalVal3>0.00</TotalVal3>
+    <Qty4>0.00</Qty4>
+    <TotalVal4>0.00</TotalVal4>
+    <Qty5>0.00</Qty5>
+    <TotalVal5>0.00</TotalVal5>
+    <Qty6>0.00</Qty6>
+    <TotalVal6>0.00</TotalVal6>
+    <Qty7>0.00</Qty7>
+    <TotalVal7>0.00</TotalVal7>
+    <Qty8>0.00</Qty8>
+    <TotalVal8>0.00</TotalVal8>
+    <Qty9>0.00</Qty9>
+    <TotalVal9>0.00</TotalVal9>
+    <Qty10>0.00</Qty10>
+    <TotalVal10>0.00</TotalVal10>
+    <Qty11>0.00</Qty11>
+    <TotalVal11>0.00</TotalVal11>
+    <Qty12>0.00</Qty12>
+    <TotalVal12>0.00</TotalVal12>
+  </MonthlySales>
+</NewDataSet>
