@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB6BE8FF-A150-4BC3-965E-ED49EF99780F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBLayer</RootNamespace>
+    <AssemblyName>DBLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\Transactions\AdjustmentHed.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Branch.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Brand.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Bank.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Customer.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\CreditCardType.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\CustomerGroup.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\CustomerType.cs" />
+    <Compile Include="BusinessLogic\Transactions\CusAdAllocationHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\CusAdvance.cs" />
+    <Compile Include="BusinessLogic\Transactions\CusCreditNoteHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\CusDebitNote.cs" />
+    <Compile Include="BusinessLogic\Transactions\CusReceiptHed.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="BusinessLogic\IMasterFile.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Item.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\ItemCategory.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\ItemGroup.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\ItemSubCategory.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\ItemType.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\Location.cs" />
+    <Compile Include="BusinessLogic\ITransaction.cs" />
+    <Compile Include="BusinessLogic\Transactions\DispatchHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\GRNHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\GRRNHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\InvoiceHed.cs" />
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\Transactions\POHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\PORequisitionHed.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusinessLogic\Transactions\QuotationHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\SalesOrderHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\SalesReturnHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\TransferHed.cs" />
+    <Compile Include="BusinessLogic\MasterFiles\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\InventorySalesDebtorsSystemEntities.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
