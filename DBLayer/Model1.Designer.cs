@@ -14820,7 +14820,8 @@ namespace DBLayer
         /// <param name="userID">Initial value of the UserID property.</param>
         /// <param name="addedDate">Initial value of the AddedDate property.</param>
         /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
-        public static Item CreateItem(global::System.String itemCode, global::System.String itemName, global::System.String typeCode, global::System.String subCatCode, global::System.String brandCode, global::System.String groupCode, global::System.Decimal selPrice, global::System.Decimal costPrice, global::System.String uOM, global::System.Decimal reOrderLevel, global::System.Decimal reOrderQty, global::System.String status, global::System.Decimal discountPer, global::System.Decimal vATPer, global::System.Decimal nBTPer, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
+        /// <param name="isRawMaterial">Initial value of the IsRawMaterial property.</param>
+        public static Item CreateItem(global::System.String itemCode, global::System.String itemName, global::System.String typeCode, global::System.String subCatCode, global::System.String brandCode, global::System.String groupCode, global::System.Decimal selPrice, global::System.Decimal costPrice, global::System.String uOM, global::System.Decimal reOrderLevel, global::System.Decimal reOrderQty, global::System.String status, global::System.Decimal discountPer, global::System.Decimal vATPer, global::System.Decimal nBTPer, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo, global::System.Boolean isRawMaterial)
         {
             Item item = new Item();
             item.ItemCode = itemCode;
@@ -14841,6 +14842,7 @@ namespace DBLayer
             item.UserID = userID;
             item.AddedDate = addedDate;
             item.AddedMachineInfo = addedMachineInfo;
+            item.IsRawMaterial = isRawMaterial;
             return item;
         }
 
@@ -15330,6 +15332,30 @@ namespace DBLayer
         private Nullable<global::System.Decimal> _AvgMonCon;
         partial void OnAvgMonConChanging(Nullable<global::System.Decimal> value);
         partial void OnAvgMonConChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean IsRawMaterial
+        {
+            get
+            {
+                return _IsRawMaterial;
+            }
+            set
+            {
+                OnIsRawMaterialChanging(value);
+                ReportPropertyChanging("IsRawMaterial");
+                _IsRawMaterial = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IsRawMaterial");
+                OnIsRawMaterialChanged();
+            }
+        }
+        private global::System.Boolean _IsRawMaterial;
+        partial void OnIsRawMaterialChanging(global::System.Boolean value);
+        partial void OnIsRawMaterialChanged();
 
         #endregion
 

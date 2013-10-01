@@ -1133,6 +1133,7 @@
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
           <Property Name="MaximumQty" Type="numeric" Precision="7" Scale="4" />
           <Property Name="AvgMonCon" Type="numeric" Precision="7" Scale="4" />
+          <Property Name="IsRawMaterial" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ItemCategory">
           <Key>
@@ -4138,6 +4139,7 @@
           <NavigationProperty Name="AdjustmentDets" Relationship="InventorySalesDebtorsSystemModel.FK_AdjustmentDet_Item" FromRole="Item" ToRole="AdjustmentDet" />
           <Property Type="Decimal" Name="MaximumQty" Precision="7" Scale="4" />
           <Property Type="Decimal" Name="AvgMonCon" Precision="7" Scale="4" />
+          <Property Type="Boolean" Name="IsRawMaterial" Nullable="false" />
         </EntityType>
         <EntityType Name="ItemCategory">
           <Key>
@@ -6956,7 +6958,8 @@
             <ScalarProperty Name="TotalItemVal" ColumnName="TotalItemVal" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Items"><EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.Item"><MappingFragment StoreEntitySet="Item">
-            <ScalarProperty Name="AvgMonCon" ColumnName="AvgMonCon" />
+            <ScalarProperty Name="IsRawMaterial" ColumnName="IsRawMaterial" />
+                <ScalarProperty Name="AvgMonCon" ColumnName="AvgMonCon" />
                 <ScalarProperty Name="MaximumQty" ColumnName="MaximumQty" />
                 <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
                 <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />

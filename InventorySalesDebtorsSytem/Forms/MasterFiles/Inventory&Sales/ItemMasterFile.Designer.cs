@@ -48,7 +48,6 @@
             System.Windows.Forms.Label avgMonConLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemMasterFile));
             this.itemBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -80,6 +79,8 @@
             this.masterFileToolBar1 = new InventorySalesDebtorsSytem.MasterFileToolBar();
             this.maximumQtyTextBox = new System.Windows.Forms.TextBox();
             this.avgMonConTextBox = new System.Windows.Forms.TextBox();
+            this.IsRawMaterialChkBox = new System.Windows.Forms.CheckBox();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             costPriceLabel = new System.Windows.Forms.Label();
             discountPerLabel = new System.Windows.Forms.Label();
             itemCodeLabel = new System.Windows.Forms.Label();
@@ -282,11 +283,6 @@
             this.itemBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.itemBindingNavigator.Size = new System.Drawing.Size(202, 28);
             this.itemBindingNavigator.TabIndex = 0;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataSource = typeof(DBLayer.Item);
-            this.itemBindingSource.CurrentChanged += new System.EventHandler(this.tableBindingSource_CurrentChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -564,12 +560,29 @@
             this.avgMonConTextBox.Size = new System.Drawing.Size(100, 20);
             this.avgMonConTextBox.TabIndex = 51;
             // 
+            // IsRawMaterialChkBox
+            // 
+            this.IsRawMaterialChkBox.AutoSize = true;
+            this.IsRawMaterialChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.itemBindingSource, "IsRawMaterial", true));
+            this.IsRawMaterialChkBox.Location = new System.Drawing.Point(320, 118);
+            this.IsRawMaterialChkBox.Name = "IsRawMaterialChkBox";
+            this.IsRawMaterialChkBox.Size = new System.Drawing.Size(88, 17);
+            this.IsRawMaterialChkBox.TabIndex = 54;
+            this.IsRawMaterialChkBox.Text = "Raw Material";
+            this.IsRawMaterialChkBox.UseVisualStyleBackColor = true;
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(DBLayer.Item);
+            this.itemBindingSource.CurrentChanged += new System.EventHandler(this.tableBindingSource_CurrentChanged);
+            // 
             // ItemMasterFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(566, 383);
+            this.Controls.Add(this.IsRawMaterialChkBox);
             this.Controls.Add(avgMonConLabel);
             this.Controls.Add(this.avgMonConTextBox);
             this.Controls.Add(MaximumQtyLabel);
@@ -665,6 +678,7 @@
         private MasterFileToolBar masterFileToolBar1;
         private System.Windows.Forms.TextBox maximumQtyTextBox;
         private System.Windows.Forms.TextBox avgMonConTextBox;
+        private System.Windows.Forms.CheckBox IsRawMaterialChkBox;
     }
 }
 
