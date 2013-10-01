@@ -23412,7 +23412,8 @@ namespace DBLayer
         /// <param name="userID">Initial value of the UserID property.</param>
         /// <param name="addedDate">Initial value of the AddedDate property.</param>
         /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
-        public static SalesOrderHed CreateSalesOrderHed(global::System.String referenceNo, global::System.String quotationNo, global::System.DateTime txnDate, global::System.String customerCode, global::System.String repCode, global::System.String branchCode, global::System.String locationCode, global::System.String manualNo, global::System.String remarks, global::System.Decimal itemDiscTotVal, global::System.Decimal hedDiscPer, global::System.Decimal hedDiscTotVal, global::System.Decimal nBTVal, global::System.Decimal vATVal, global::System.Decimal totalVal, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
+        /// <param name="delieveryDate">Initial value of the DelieveryDate property.</param>
+        public static SalesOrderHed CreateSalesOrderHed(global::System.String referenceNo, global::System.String quotationNo, global::System.DateTime txnDate, global::System.String customerCode, global::System.String repCode, global::System.String branchCode, global::System.String locationCode, global::System.String manualNo, global::System.String remarks, global::System.Decimal itemDiscTotVal, global::System.Decimal hedDiscPer, global::System.Decimal hedDiscTotVal, global::System.Decimal nBTVal, global::System.Decimal vATVal, global::System.Decimal totalVal, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo, global::System.DateTime delieveryDate)
         {
             SalesOrderHed salesOrderHed = new SalesOrderHed();
             salesOrderHed.ReferenceNo = referenceNo;
@@ -23433,6 +23434,7 @@ namespace DBLayer
             salesOrderHed.UserID = userID;
             salesOrderHed.AddedDate = addedDate;
             salesOrderHed.AddedMachineInfo = addedMachineInfo;
+            salesOrderHed.DelieveryDate = delieveryDate;
             return salesOrderHed;
         }
 
@@ -23874,6 +23876,30 @@ namespace DBLayer
         private global::System.String _AddedMachineInfo;
         partial void OnAddedMachineInfoChanging(global::System.String value);
         partial void OnAddedMachineInfoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DelieveryDate
+        {
+            get
+            {
+                return _DelieveryDate;
+            }
+            set
+            {
+                OnDelieveryDateChanging(value);
+                ReportPropertyChanging("DelieveryDate");
+                _DelieveryDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DelieveryDate");
+                OnDelieveryDateChanged();
+            }
+        }
+        private global::System.DateTime _DelieveryDate;
+        partial void OnDelieveryDateChanging(global::System.DateTime value);
+        partial void OnDelieveryDateChanged();
 
         #endregion
 

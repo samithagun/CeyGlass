@@ -1481,6 +1481,7 @@
           <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="AddedDate" Type="datetime" Nullable="false" />
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
+          <Property Name="DelieveryDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="SalesRep">
           <Key>
@@ -5928,6 +5929,7 @@
           <NavigationProperty Name="SalesOrderDets" Relationship="InventorySalesDebtorsSystemModel.FK_SalesOrderDet_SalesOrderHed" FromRole="SalesOrderHed" ToRole="SalesOrderDet" />
           <NavigationProperty Name="SalesRep" Relationship="InventorySalesDebtorsSystemModel.FK_SalesOrderHed_SalesRep" FromRole="SalesOrderHed" ToRole="SalesRep" />
           <NavigationProperty Name="User" Relationship="InventorySalesDebtorsSystemModel.FK_SalesOrderHed_User" FromRole="SalesOrderHed" ToRole="User" />
+          <Property Type="DateTime" Name="DelieveryDate" Nullable="false" Precision="0" />
         </EntityType>
         <Association Name="FK_InvoiceHed_Branch">
           <End Type="InventorySalesDebtorsSystemModel.Branch" Role="Branch" Multiplicity="1" />
@@ -7905,6 +7907,7 @@
           <EntitySetMapping Name="SalesOrderHeds">
             <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.SalesOrderHed">
               <MappingFragment StoreEntitySet="SalesOrderHed">
+                <ScalarProperty Name="DelieveryDate" ColumnName="DelieveryDate" />
                 <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
                 <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />

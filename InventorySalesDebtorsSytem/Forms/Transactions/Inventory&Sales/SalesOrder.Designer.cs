@@ -45,6 +45,7 @@
             System.Windows.Forms.Label vATValLabel;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label7;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -110,6 +111,7 @@
             this.txtRepName = new System.Windows.Forms.TextBox();
             this.txtRepCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtQuotNo = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             label4 = new System.Windows.Forms.Label();
             branchCodeLabel = new System.Windows.Forms.Label();
             locationCodeLabel = new System.Windows.Forms.Label();
@@ -126,6 +128,7 @@
             vATValLabel = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHedDiscPer)).BeginInit();
@@ -282,6 +285,15 @@
             label5.Size = new System.Drawing.Size(73, 13);
             label5.TabIndex = 59;
             label5.Text = "Quotation No:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(503, 188);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(74, 13);
+            label7.TabIndex = 61;
+            label7.Text = "Delivery Date:";
             // 
             // HeaderBindingSource
             // 
@@ -524,6 +536,7 @@
             this.txtItemCode.Location = new System.Drawing.Point(79, 20);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(150, 20);
+            this.txtItemCode.sortOrder = null;
             this.txtItemCode.TabIndex = 0;
             this.txtItemCode.valid = false;
             this.txtItemCode.varList = null;
@@ -694,6 +707,7 @@
             this.txtCustomerCode.Location = new System.Drawing.Point(104, 160);
             this.txtCustomerCode.Name = "txtCustomerCode";
             this.txtCustomerCode.Size = new System.Drawing.Size(150, 20);
+            this.txtCustomerCode.sortOrder = null;
             this.txtCustomerCode.TabIndex = 8;
             this.txtCustomerCode.valid = false;
             this.txtCustomerCode.varList = null;
@@ -707,6 +721,11 @@
             this.transactionToolBar1.detObjectBindingSource = null;
             this.transactionToolBar1.firstFocusControl = null;
             this.transactionToolBar1.hedObjectBindingSource = null;
+            this.transactionToolBar1.HideAddButton = false;
+            this.transactionToolBar1.HideDeleteButton = false;
+            this.transactionToolBar1.HideEditButton = false;
+            this.transactionToolBar1.HidePrintButton = false;
+            this.transactionToolBar1.HideViewButton = false;
             this.transactionToolBar1.Location = new System.Drawing.Point(15, 2);
             this.transactionToolBar1.mode = null;
             this.transactionToolBar1.Name = "transactionToolBar1";
@@ -724,6 +743,7 @@
             this.txtLocationCode.Location = new System.Drawing.Point(104, 111);
             this.txtLocationCode.Name = "txtLocationCode";
             this.txtLocationCode.Size = new System.Drawing.Size(150, 20);
+            this.txtLocationCode.sortOrder = null;
             this.txtLocationCode.TabIndex = 6;
             this.txtLocationCode.valid = false;
             this.txtLocationCode.varList = null;
@@ -738,6 +758,7 @@
             this.txtBranchCode.Location = new System.Drawing.Point(104, 85);
             this.txtBranchCode.Name = "txtBranchCode";
             this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
+            this.txtBranchCode.sortOrder = null;
             this.txtBranchCode.TabIndex = 5;
             this.txtBranchCode.valid = false;
             this.txtBranchCode.varList = null;
@@ -809,6 +830,7 @@
             this.txtRepCode.Location = new System.Drawing.Point(104, 136);
             this.txtRepCode.Name = "txtRepCode";
             this.txtRepCode.Size = new System.Drawing.Size(150, 20);
+            this.txtRepCode.sortOrder = null;
             this.txtRepCode.TabIndex = 7;
             this.txtRepCode.valid = false;
             this.txtRepCode.varList = null;
@@ -821,16 +843,27 @@
             this.txtQuotNo.Location = new System.Drawing.Point(607, 59);
             this.txtQuotNo.Name = "txtQuotNo";
             this.txtQuotNo.Size = new System.Drawing.Size(150, 20);
+            this.txtQuotNo.sortOrder = null;
             this.txtQuotNo.TabIndex = 4;
             this.txtQuotNo.valid = false;
             this.txtQuotNo.varList = null;
             this.txtQuotNo.Enter += new System.EventHandler(this.txtQuotNo_Enter);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.HeaderBindingSource, "DelieveryDate", true));
+            this.dateTimePicker1.Location = new System.Drawing.Point(583, 184);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(171, 20);
+            this.dateTimePicker1.TabIndex = 60;
             // 
             // SalesOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 591);
+            this.Controls.Add(label7);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtQuotNo);
             this.Controls.Add(label5);
             this.Controls.Add(this.txtRepName);
@@ -952,5 +985,6 @@
         private System.Windows.Forms.TextBox txtRepName;
         private MasterDataTextBox txtRepCode;
         private MasterDataTextBox txtQuotNo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
