@@ -170,6 +170,9 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanStandardDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanStandardDet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanDet_SalesOrderDet", "SalesOrderDet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.SalesOrderDet), "ProductionPlanSODet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanSODet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_SPSHed", "SPSHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.SPSHed), "ProductionPlanStandardDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanStandardDet), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_BoqHed", "BoqHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.BoqHed), "BoqDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.BoqDet), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "BoqDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.BoqDet), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqHed_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "BoqHed", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(DBLayer.BoqHed), true)]
 
 #endregion
 
@@ -1308,6 +1311,38 @@ namespace DBLayer
             }
         }
         private ObjectSet<SPSHed> _SPSHeds;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BoqDet> BoqDets
+        {
+            get
+            {
+                if ((_BoqDets == null))
+                {
+                    _BoqDets = base.CreateObjectSet<BoqDet>("BoqDets");
+                }
+                return _BoqDets;
+            }
+        }
+        private ObjectSet<BoqDet> _BoqDets;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BoqHed> BoqHeds
+        {
+            get
+            {
+                if ((_BoqHeds == null))
+                {
+                    _BoqHeds = base.CreateObjectSet<BoqHed>("BoqHeds");
+                }
+                return _BoqHeds;
+            }
+        }
+        private ObjectSet<BoqHed> _BoqHeds;
 
         #endregion
 
@@ -1855,6 +1890,1502 @@ namespace DBLayer
         public void AddToSPSHeds(SPSHed sPSHed)
         {
             base.AddObject("SPSHeds", sPSHed);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BoqDets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBoqDets(BoqDet boqDet)
+        {
+            base.AddObject("BoqDets", boqDet);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BoqHeds EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBoqHeds(BoqHed boqHed)
+        {
+            base.AddObject("BoqHeds", boqHed);
+        }
+
+        #endregion
+
+        #region Function Imports
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchSourceSafeINI">No Metadata Documentation available.</param>
+        /// <param name="vchProjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_addtosourcecontrol(global::System.String vchSourceSafeINI, global::System.String vchProjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter vchSourceSafeINIParameter;
+            if (vchSourceSafeINI != null)
+            {
+                vchSourceSafeINIParameter = new ObjectParameter("vchSourceSafeINI", vchSourceSafeINI);
+            }
+            else
+            {
+                vchSourceSafeINIParameter = new ObjectParameter("vchSourceSafeINI", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchProjectNameParameter;
+            if (vchProjectName != null)
+            {
+                vchProjectNameParameter = new ObjectParameter("vchProjectName", vchProjectName);
+            }
+            else
+            {
+                vchProjectNameParameter = new ObjectParameter("vchProjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_addtosourcecontrol", vchSourceSafeINIParameter, vchProjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchSourceSafeINI">No Metadata Documentation available.</param>
+        /// <param name="vchProjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_addtosourcecontrol_u(global::System.String vchSourceSafeINI, global::System.String vchProjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter vchSourceSafeINIParameter;
+            if (vchSourceSafeINI != null)
+            {
+                vchSourceSafeINIParameter = new ObjectParameter("vchSourceSafeINI", vchSourceSafeINI);
+            }
+            else
+            {
+                vchSourceSafeINIParameter = new ObjectParameter("vchSourceSafeINI", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchProjectNameParameter;
+            if (vchProjectName != null)
+            {
+                vchProjectNameParameter = new ObjectParameter("vchProjectName", vchProjectName);
+            }
+            else
+            {
+                vchProjectNameParameter = new ObjectParameter("vchProjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_addtosourcecontrol_u", vchSourceSafeINIParameter, vchProjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public int dt_adduserobject()
+        {
+            return base.ExecuteFunction("dt_adduserobject");
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchProperty">No Metadata Documentation available.</param>
+        public int dt_adduserobject_vcs(global::System.String vchProperty)
+        {
+            ObjectParameter vchPropertyParameter;
+            if (vchProperty != null)
+            {
+                vchPropertyParameter = new ObjectParameter("vchProperty", vchProperty);
+            }
+            else
+            {
+                vchPropertyParameter = new ObjectParameter("vchProperty", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_adduserobject_vcs", vchPropertyParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iVCSFlags">No Metadata Documentation available.</param>
+        /// <param name="iActionFlag">No Metadata Documentation available.</param>
+        /// <param name="txStream1">No Metadata Documentation available.</param>
+        /// <param name="txStream2">No Metadata Documentation available.</param>
+        /// <param name="txStream3">No Metadata Documentation available.</param>
+        public int dt_checkinobject(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iVCSFlags, Nullable<global::System.Int32> iActionFlag, global::System.String txStream1, global::System.String txStream2, global::System.String txStream3)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iVCSFlagsParameter;
+            if (iVCSFlags.HasValue)
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", iVCSFlags);
+            }
+            else
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iActionFlagParameter;
+            if (iActionFlag.HasValue)
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", iActionFlag);
+            }
+            else
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter txStream1Parameter;
+            if (txStream1 != null)
+            {
+                txStream1Parameter = new ObjectParameter("txStream1", txStream1);
+            }
+            else
+            {
+                txStream1Parameter = new ObjectParameter("txStream1", typeof(global::System.String));
+            }
+    
+            ObjectParameter txStream2Parameter;
+            if (txStream2 != null)
+            {
+                txStream2Parameter = new ObjectParameter("txStream2", txStream2);
+            }
+            else
+            {
+                txStream2Parameter = new ObjectParameter("txStream2", typeof(global::System.String));
+            }
+    
+            ObjectParameter txStream3Parameter;
+            if (txStream3 != null)
+            {
+                txStream3Parameter = new ObjectParameter("txStream3", txStream3);
+            }
+            else
+            {
+                txStream3Parameter = new ObjectParameter("txStream3", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_checkinobject", chObjectTypeParameter, vchObjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter, iVCSFlagsParameter, iActionFlagParameter, txStream1Parameter, txStream2Parameter, txStream3Parameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iVCSFlags">No Metadata Documentation available.</param>
+        /// <param name="iActionFlag">No Metadata Documentation available.</param>
+        /// <param name="txStream1">No Metadata Documentation available.</param>
+        /// <param name="txStream2">No Metadata Documentation available.</param>
+        /// <param name="txStream3">No Metadata Documentation available.</param>
+        public int dt_checkinobject_u(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iVCSFlags, Nullable<global::System.Int32> iActionFlag, global::System.String txStream1, global::System.String txStream2, global::System.String txStream3)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iVCSFlagsParameter;
+            if (iVCSFlags.HasValue)
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", iVCSFlags);
+            }
+            else
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iActionFlagParameter;
+            if (iActionFlag.HasValue)
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", iActionFlag);
+            }
+            else
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter txStream1Parameter;
+            if (txStream1 != null)
+            {
+                txStream1Parameter = new ObjectParameter("txStream1", txStream1);
+            }
+            else
+            {
+                txStream1Parameter = new ObjectParameter("txStream1", typeof(global::System.String));
+            }
+    
+            ObjectParameter txStream2Parameter;
+            if (txStream2 != null)
+            {
+                txStream2Parameter = new ObjectParameter("txStream2", txStream2);
+            }
+            else
+            {
+                txStream2Parameter = new ObjectParameter("txStream2", typeof(global::System.String));
+            }
+    
+            ObjectParameter txStream3Parameter;
+            if (txStream3 != null)
+            {
+                txStream3Parameter = new ObjectParameter("txStream3", txStream3);
+            }
+            else
+            {
+                txStream3Parameter = new ObjectParameter("txStream3", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_checkinobject_u", chObjectTypeParameter, vchObjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter, iVCSFlagsParameter, iActionFlagParameter, txStream1Parameter, txStream2Parameter, txStream3Parameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iVCSFlags">No Metadata Documentation available.</param>
+        /// <param name="iActionFlag">No Metadata Documentation available.</param>
+        public int dt_checkoutobject(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iVCSFlags, Nullable<global::System.Int32> iActionFlag)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iVCSFlagsParameter;
+            if (iVCSFlags.HasValue)
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", iVCSFlags);
+            }
+            else
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iActionFlagParameter;
+            if (iActionFlag.HasValue)
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", iActionFlag);
+            }
+            else
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_checkoutobject", chObjectTypeParameter, vchObjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter, iVCSFlagsParameter, iActionFlagParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchComment">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iVCSFlags">No Metadata Documentation available.</param>
+        /// <param name="iActionFlag">No Metadata Documentation available.</param>
+        public int dt_checkoutobject_u(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchComment, global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iVCSFlags, Nullable<global::System.Int32> iActionFlag)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchCommentParameter;
+            if (vchComment != null)
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", vchComment);
+            }
+            else
+            {
+                vchCommentParameter = new ObjectParameter("vchComment", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iVCSFlagsParameter;
+            if (iVCSFlags.HasValue)
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", iVCSFlags);
+            }
+            else
+            {
+                iVCSFlagsParameter = new ObjectParameter("iVCSFlags", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iActionFlagParameter;
+            if (iActionFlag.HasValue)
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", iActionFlag);
+            }
+            else
+            {
+                iActionFlagParameter = new ObjectParameter("iActionFlag", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_checkoutobject_u", chObjectTypeParameter, vchObjectNameParameter, vchCommentParameter, vchLoginNameParameter, vchPasswordParameter, iVCSFlagsParameter, iActionFlagParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iObject">No Metadata Documentation available.</param>
+        /// <param name="iresult">No Metadata Documentation available.</param>
+        public int dt_displayoaerror(Nullable<global::System.Int32> iObject, Nullable<global::System.Int32> iresult)
+        {
+            ObjectParameter iObjectParameter;
+            if (iObject.HasValue)
+            {
+                iObjectParameter = new ObjectParameter("iObject", iObject);
+            }
+            else
+            {
+                iObjectParameter = new ObjectParameter("iObject", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iresultParameter;
+            if (iresult.HasValue)
+            {
+                iresultParameter = new ObjectParameter("iresult", iresult);
+            }
+            else
+            {
+                iresultParameter = new ObjectParameter("iresult", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_displayoaerror", iObjectParameter, iresultParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iObject">No Metadata Documentation available.</param>
+        /// <param name="iresult">No Metadata Documentation available.</param>
+        public int dt_displayoaerror_u(Nullable<global::System.Int32> iObject, Nullable<global::System.Int32> iresult)
+        {
+            ObjectParameter iObjectParameter;
+            if (iObject.HasValue)
+            {
+                iObjectParameter = new ObjectParameter("iObject", iObject);
+            }
+            else
+            {
+                iObjectParameter = new ObjectParameter("iObject", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter iresultParameter;
+            if (iresult.HasValue)
+            {
+                iresultParameter = new ObjectParameter("iresult", iresult);
+            }
+            else
+            {
+                iresultParameter = new ObjectParameter("iresult", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_displayoaerror_u", iObjectParameter, iresultParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        public int dt_droppropertiesbyid(Nullable<global::System.Int32> id, global::System.String property)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_droppropertiesbyid", idParameter, propertyParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        public int dt_dropuserobjectbyid(Nullable<global::System.Int32> id)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_dropuserobjectbyid", idParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="name">No Metadata Documentation available.</param>
+        public int dt_generateansiname(ObjectParameter name)
+        {
+            return base.ExecuteFunction("dt_generateansiname", name);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="value">No Metadata Documentation available.</param>
+        public ObjectResult<Nullable<global::System.Int32>> dt_getobjwithprop(global::System.String property, global::System.String value)
+        {
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            ObjectParameter valueParameter;
+            if (value != null)
+            {
+                valueParameter = new ObjectParameter("value", value);
+            }
+            else
+            {
+                valueParameter = new ObjectParameter("value", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Nullable<global::System.Int32>>("dt_getobjwithprop", propertyParameter, valueParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="uvalue">No Metadata Documentation available.</param>
+        public ObjectResult<Nullable<global::System.Int32>> dt_getobjwithprop_u(global::System.String property, global::System.String uvalue)
+        {
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            ObjectParameter uvalueParameter;
+            if (uvalue != null)
+            {
+                uvalueParameter = new ObjectParameter("uvalue", uvalue);
+            }
+            else
+            {
+                uvalueParameter = new ObjectParameter("uvalue", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Nullable<global::System.Int32>>("dt_getobjwithprop_u", propertyParameter, uvalueParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        public ObjectResult<dt_getpropertiesbyid_Result> dt_getpropertiesbyid(Nullable<global::System.Int32> id, global::System.String property)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<dt_getpropertiesbyid_Result>("dt_getpropertiesbyid", idParameter, propertyParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        public ObjectResult<dt_getpropertiesbyid_u_Result> dt_getpropertiesbyid_u(Nullable<global::System.Int32> id, global::System.String property)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<dt_getpropertiesbyid_u_Result>("dt_getpropertiesbyid_u", idParameter, propertyParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="value">No Metadata Documentation available.</param>
+        public int dt_getpropertiesbyid_vcs(Nullable<global::System.Int32> id, global::System.String property, ObjectParameter value)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_getpropertiesbyid_vcs", idParameter, propertyParameter, value);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="value">No Metadata Documentation available.</param>
+        public int dt_getpropertiesbyid_vcs_u(Nullable<global::System.Int32> id, global::System.String property, ObjectParameter value)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_getpropertiesbyid_vcs_u", idParameter, propertyParameter, value);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iWhoToo">No Metadata Documentation available.</param>
+        public int dt_isundersourcecontrol(global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iWhoToo)
+        {
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iWhoTooParameter;
+            if (iWhoToo.HasValue)
+            {
+                iWhoTooParameter = new ObjectParameter("iWhoToo", iWhoToo);
+            }
+            else
+            {
+                iWhoTooParameter = new ObjectParameter("iWhoToo", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_isundersourcecontrol", vchLoginNameParameter, vchPasswordParameter, iWhoTooParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        /// <param name="iWhoToo">No Metadata Documentation available.</param>
+        public int dt_isundersourcecontrol_u(global::System.String vchLoginName, global::System.String vchPassword, Nullable<global::System.Int32> iWhoToo)
+        {
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            ObjectParameter iWhoTooParameter;
+            if (iWhoToo.HasValue)
+            {
+                iWhoTooParameter = new ObjectParameter("iWhoToo", iWhoToo);
+            }
+            else
+            {
+                iWhoTooParameter = new ObjectParameter("iWhoToo", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("dt_isundersourcecontrol_u", vchLoginNameParameter, vchPasswordParameter, iWhoTooParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public int dt_removefromsourcecontrol()
+        {
+            return base.ExecuteFunction("dt_removefromsourcecontrol");
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="value">No Metadata Documentation available.</param>
+        /// <param name="lvalue">No Metadata Documentation available.</param>
+        public int dt_setpropertybyid(Nullable<global::System.Int32> id, global::System.String property, global::System.String value, global::System.Byte[] lvalue)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            ObjectParameter valueParameter;
+            if (value != null)
+            {
+                valueParameter = new ObjectParameter("value", value);
+            }
+            else
+            {
+                valueParameter = new ObjectParameter("value", typeof(global::System.String));
+            }
+    
+            ObjectParameter lvalueParameter;
+            if (lvalue != null)
+            {
+                lvalueParameter = new ObjectParameter("lvalue", lvalue);
+            }
+            else
+            {
+                lvalueParameter = new ObjectParameter("lvalue", typeof(global::System.Byte[]));
+            }
+    
+            return base.ExecuteFunction("dt_setpropertybyid", idParameter, propertyParameter, valueParameter, lvalueParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        /// <param name="property">No Metadata Documentation available.</param>
+        /// <param name="uvalue">No Metadata Documentation available.</param>
+        /// <param name="lvalue">No Metadata Documentation available.</param>
+        public int dt_setpropertybyid_u(Nullable<global::System.Int32> id, global::System.String property, global::System.String uvalue, global::System.Byte[] lvalue)
+        {
+            ObjectParameter idParameter;
+            if (id.HasValue)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter propertyParameter;
+            if (property != null)
+            {
+                propertyParameter = new ObjectParameter("property", property);
+            }
+            else
+            {
+                propertyParameter = new ObjectParameter("property", typeof(global::System.String));
+            }
+    
+            ObjectParameter uvalueParameter;
+            if (uvalue != null)
+            {
+                uvalueParameter = new ObjectParameter("uvalue", uvalue);
+            }
+            else
+            {
+                uvalueParameter = new ObjectParameter("uvalue", typeof(global::System.String));
+            }
+    
+            ObjectParameter lvalueParameter;
+            if (lvalue != null)
+            {
+                lvalueParameter = new ObjectParameter("lvalue", lvalue);
+            }
+            else
+            {
+                lvalueParameter = new ObjectParameter("lvalue", typeof(global::System.Byte[]));
+            }
+    
+            return base.ExecuteFunction("dt_setpropertybyid_u", idParameter, propertyParameter, uvalueParameter, lvalueParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_validateloginparams(global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_validateloginparams", vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_validateloginparams_u(global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_validateloginparams_u", vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public int dt_vcsenabled()
+        {
+            return base.ExecuteFunction("dt_vcsenabled");
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectResult<Nullable<global::System.Int32>> dt_verstamp006()
+        {
+            return base.ExecuteFunction<Nullable<global::System.Int32>>("dt_verstamp006");
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_whocheckedout(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_whocheckedout", chObjectTypeParameter, vchObjectNameParameter, vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="chObjectType">No Metadata Documentation available.</param>
+        /// <param name="vchObjectName">No Metadata Documentation available.</param>
+        /// <param name="vchLoginName">No Metadata Documentation available.</param>
+        /// <param name="vchPassword">No Metadata Documentation available.</param>
+        public int dt_whocheckedout_u(global::System.String chObjectType, global::System.String vchObjectName, global::System.String vchLoginName, global::System.String vchPassword)
+        {
+            ObjectParameter chObjectTypeParameter;
+            if (chObjectType != null)
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", chObjectType);
+            }
+            else
+            {
+                chObjectTypeParameter = new ObjectParameter("chObjectType", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchObjectNameParameter;
+            if (vchObjectName != null)
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", vchObjectName);
+            }
+            else
+            {
+                vchObjectNameParameter = new ObjectParameter("vchObjectName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchLoginNameParameter;
+            if (vchLoginName != null)
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", vchLoginName);
+            }
+            else
+            {
+                vchLoginNameParameter = new ObjectParameter("vchLoginName", typeof(global::System.String));
+            }
+    
+            ObjectParameter vchPasswordParameter;
+            if (vchPassword != null)
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", vchPassword);
+            }
+            else
+            {
+                vchPasswordParameter = new ObjectParameter("vchPassword", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("dt_whocheckedout_u", chObjectTypeParameter, vchObjectNameParameter, vchLoginNameParameter, vchPasswordParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        /// <param name="version">No Metadata Documentation available.</param>
+        /// <param name="definition">No Metadata Documentation available.</param>
+        public int sp_alterdiagram(global::System.String diagramname, Nullable<global::System.Int32> owner_id, Nullable<global::System.Int32> version, global::System.Byte[] definition)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter versionParameter;
+            if (version.HasValue)
+            {
+                versionParameter = new ObjectParameter("version", version);
+            }
+            else
+            {
+                versionParameter = new ObjectParameter("version", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter definitionParameter;
+            if (definition != null)
+            {
+                definitionParameter = new ObjectParameter("definition", definition);
+            }
+            else
+            {
+                definitionParameter = new ObjectParameter("definition", typeof(global::System.Byte[]));
+            }
+    
+            return base.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        /// <param name="version">No Metadata Documentation available.</param>
+        /// <param name="definition">No Metadata Documentation available.</param>
+        public int sp_creatediagram(global::System.String diagramname, Nullable<global::System.Int32> owner_id, Nullable<global::System.Int32> version, global::System.Byte[] definition)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter versionParameter;
+            if (version.HasValue)
+            {
+                versionParameter = new ObjectParameter("version", version);
+            }
+            else
+            {
+                versionParameter = new ObjectParameter("version", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter definitionParameter;
+            if (definition != null)
+            {
+                definitionParameter = new ObjectParameter("definition", definition);
+            }
+            else
+            {
+                definitionParameter = new ObjectParameter("definition", typeof(global::System.Byte[]));
+            }
+    
+            return base.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        public int sp_dropdiagram(global::System.String diagramname, Nullable<global::System.Int32> owner_id)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        public ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(global::System.String diagramname, Nullable<global::System.Int32> owner_id)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        public ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(global::System.String diagramname, Nullable<global::System.Int32> owner_id)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="diagramname">No Metadata Documentation available.</param>
+        /// <param name="owner_id">No Metadata Documentation available.</param>
+        /// <param name="new_diagramname">No Metadata Documentation available.</param>
+        public int sp_renamediagram(global::System.String diagramname, Nullable<global::System.Int32> owner_id, global::System.String new_diagramname)
+        {
+            ObjectParameter diagramnameParameter;
+            if (diagramname != null)
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", diagramname);
+            }
+            else
+            {
+                diagramnameParameter = new ObjectParameter("diagramname", typeof(global::System.String));
+            }
+    
+            ObjectParameter owner_idParameter;
+            if (owner_id.HasValue)
+            {
+                owner_idParameter = new ObjectParameter("owner_id", owner_id);
+            }
+            else
+            {
+                owner_idParameter = new ObjectParameter("owner_id", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter new_diagramnameParameter;
+            if (new_diagramname != null)
+            {
+                new_diagramnameParameter = new ObjectParameter("new_diagramname", new_diagramname);
+            }
+            else
+            {
+                new_diagramnameParameter = new ObjectParameter("new_diagramname", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public int sp_upgraddiagrams()
+        {
+            return base.ExecuteFunction("sp_upgraddiagrams");
         }
 
         #endregion
@@ -2809,6 +4340,475 @@ namespace DBLayer
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CusReceiptHed>("InventorySalesDebtorsSystemModel.FK_CusReceiptHed_Bank", "CusReceiptHed", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="BoqDet")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class BoqDet : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new BoqDet object.
+        /// </summary>
+        /// <param name="boqCode">Initial value of the BoqCode property.</param>
+        /// <param name="itemCode">Initial value of the ItemCode property.</param>
+        /// <param name="quantity">Initial value of the Quantity property.</param>
+        public static BoqDet CreateBoqDet(global::System.String boqCode, global::System.String itemCode, global::System.Decimal quantity)
+        {
+            BoqDet boqDet = new BoqDet();
+            boqDet.BoqCode = boqCode;
+            boqDet.ItemCode = itemCode;
+            boqDet.Quantity = quantity;
+            return boqDet;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String BoqCode
+        {
+            get
+            {
+                return _BoqCode;
+            }
+            set
+            {
+                if (_BoqCode != value)
+                {
+                    OnBoqCodeChanging(value);
+                    ReportPropertyChanging("BoqCode");
+                    _BoqCode = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("BoqCode");
+                    OnBoqCodeChanged();
+                }
+            }
+        }
+        private global::System.String _BoqCode;
+        partial void OnBoqCodeChanging(global::System.String value);
+        partial void OnBoqCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ItemCode
+        {
+            get
+            {
+                return _ItemCode;
+            }
+            set
+            {
+                if (_ItemCode != value)
+                {
+                    OnItemCodeChanging(value);
+                    ReportPropertyChanging("ItemCode");
+                    _ItemCode = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("ItemCode");
+                    OnItemCodeChanged();
+                }
+            }
+        }
+        private global::System.String _ItemCode;
+        partial void OnItemCodeChanging(global::System.String value);
+        partial void OnItemCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Quantity
+        {
+            get
+            {
+                return _Quantity;
+            }
+            set
+            {
+                OnQuantityChanging(value);
+                ReportPropertyChanging("Quantity");
+                _Quantity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Quantity");
+                OnQuantityChanged();
+            }
+        }
+        private global::System.Decimal _Quantity;
+        partial void OnQuantityChanging(global::System.Decimal value);
+        partial void OnQuantityChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_BoqHed", "BoqHed")]
+        public BoqHed BoqHed
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqHed").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqHed").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BoqHed> BoqHedReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqHed");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqHed", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_Item", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "Item", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="BoqHed")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class BoqHed : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new BoqHed object.
+        /// </summary>
+        /// <param name="boqCode">Initial value of the BoqCode property.</param>
+        /// <param name="usableQty">Initial value of the UsableQty property.</param>
+        /// <param name="uOM">Initial value of the UOM property.</param>
+        /// <param name="damageQty">Initial value of the DamageQty property.</param>
+        /// <param name="duration">Initial value of the Duration property.</param>
+        /// <param name="stdCost">Initial value of the StdCost property.</param>
+        /// <param name="toalQty">Initial value of the ToalQty property.</param>
+        public static BoqHed CreateBoqHed(global::System.String boqCode, global::System.Decimal usableQty, global::System.String uOM, global::System.Decimal damageQty, global::System.Decimal duration, global::System.Decimal stdCost, global::System.Decimal toalQty)
+        {
+            BoqHed boqHed = new BoqHed();
+            boqHed.BoqCode = boqCode;
+            boqHed.UsableQty = usableQty;
+            boqHed.UOM = uOM;
+            boqHed.DamageQty = damageQty;
+            boqHed.Duration = duration;
+            boqHed.StdCost = stdCost;
+            boqHed.ToalQty = toalQty;
+            return boqHed;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String BoqCode
+        {
+            get
+            {
+                return _BoqCode;
+            }
+            set
+            {
+                if (_BoqCode != value)
+                {
+                    OnBoqCodeChanging(value);
+                    ReportPropertyChanging("BoqCode");
+                    _BoqCode = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("BoqCode");
+                    OnBoqCodeChanged();
+                }
+            }
+        }
+        private global::System.String _BoqCode;
+        partial void OnBoqCodeChanging(global::System.String value);
+        partial void OnBoqCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal UsableQty
+        {
+            get
+            {
+                return _UsableQty;
+            }
+            set
+            {
+                OnUsableQtyChanging(value);
+                ReportPropertyChanging("UsableQty");
+                _UsableQty = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UsableQty");
+                OnUsableQtyChanged();
+            }
+        }
+        private global::System.Decimal _UsableQty;
+        partial void OnUsableQtyChanging(global::System.Decimal value);
+        partial void OnUsableQtyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String UOM
+        {
+            get
+            {
+                return _UOM;
+            }
+            set
+            {
+                OnUOMChanging(value);
+                ReportPropertyChanging("UOM");
+                _UOM = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("UOM");
+                OnUOMChanged();
+            }
+        }
+        private global::System.String _UOM;
+        partial void OnUOMChanging(global::System.String value);
+        partial void OnUOMChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal DamageQty
+        {
+            get
+            {
+                return _DamageQty;
+            }
+            set
+            {
+                OnDamageQtyChanging(value);
+                ReportPropertyChanging("DamageQty");
+                _DamageQty = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DamageQty");
+                OnDamageQtyChanged();
+            }
+        }
+        private global::System.Decimal _DamageQty;
+        partial void OnDamageQtyChanging(global::System.Decimal value);
+        partial void OnDamageQtyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Duration
+        {
+            get
+            {
+                return _Duration;
+            }
+            set
+            {
+                OnDurationChanging(value);
+                ReportPropertyChanging("Duration");
+                _Duration = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Duration");
+                OnDurationChanged();
+            }
+        }
+        private global::System.Decimal _Duration;
+        partial void OnDurationChanging(global::System.Decimal value);
+        partial void OnDurationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal StdCost
+        {
+            get
+            {
+                return _StdCost;
+            }
+            set
+            {
+                OnStdCostChanging(value);
+                ReportPropertyChanging("StdCost");
+                _StdCost = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("StdCost");
+                OnStdCostChanged();
+            }
+        }
+        private global::System.Decimal _StdCost;
+        partial void OnStdCostChanging(global::System.Decimal value);
+        partial void OnStdCostChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal ToalQty
+        {
+            get
+            {
+                return _ToalQty;
+            }
+            set
+            {
+                OnToalQtyChanging(value);
+                ReportPropertyChanging("ToalQty");
+                _ToalQty = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ToalQty");
+                OnToalQtyChanged();
+            }
+        }
+        private global::System.Decimal _ToalQty;
+        partial void OnToalQtyChanging(global::System.Decimal value);
+        partial void OnToalQtyChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_BoqHed", "BoqDet")]
+        public EntityCollection<BoqDet> BoqDets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BoqDet>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BoqDet>("InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed", "BoqDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqHed_Item", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "Item", value);
                 }
             }
         }
@@ -16101,6 +18101,66 @@ namespace DBLayer
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_Item", "BoqDet")]
+        public EntityCollection<BoqDet> BoqDets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BoqDet>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "BoqDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BoqDet>("InventorySalesDebtorsSystemModel.FK_BoqDet_Item", "BoqDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqHed_Item", "BoqHed")]
+        public BoqHed BoqHed
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "BoqHed").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "BoqHed").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BoqHed> BoqHedReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "BoqHed");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BoqHed>("InventorySalesDebtorsSystemModel.FK_BoqHed_Item", "BoqHed", value);
                 }
             }
         }
@@ -30897,6 +32957,479 @@ namespace DBLayer
                 }
             }
         }
+
+        #endregion
+
+    }
+
+    #endregion
+
+    #region ComplexTypes
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="dt_getpropertiesbyid_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class dt_getpropertiesbyid_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new dt_getpropertiesbyid_Result object.
+        /// </summary>
+        /// <param name="property">Initial value of the property property.</param>
+        /// <param name="version">Initial value of the version property.</param>
+        public static dt_getpropertiesbyid_Result Createdt_getpropertiesbyid_Result(global::System.String property, global::System.Int32 version)
+        {
+            dt_getpropertiesbyid_Result dt_getpropertiesbyid_Result = new dt_getpropertiesbyid_Result();
+            dt_getpropertiesbyid_Result.property = property;
+            dt_getpropertiesbyid_Result.version = version;
+            return dt_getpropertiesbyid_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String property
+        {
+            get
+            {
+                return _property;
+            }
+            set
+            {
+                OnpropertyChanging(value);
+                ReportPropertyChanging("property");
+                _property = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("property");
+                OnpropertyChanged();
+            }
+        }
+        private global::System.String _property;
+        partial void OnpropertyChanging(global::System.String value);
+        partial void OnpropertyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private global::System.Int32 _version;
+        partial void OnversionChanging(global::System.Int32 value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String value
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                OnvalueChanging(value);
+                ReportPropertyChanging("value");
+                _value = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("value");
+                OnvalueChanged();
+            }
+        }
+        private global::System.String _value;
+        partial void OnvalueChanging(global::System.String value);
+        partial void OnvalueChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] lvalue
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_lvalue);
+            }
+            set
+            {
+                OnlvalueChanging(value);
+                ReportPropertyChanging("lvalue");
+                _lvalue = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("lvalue");
+                OnlvalueChanged();
+            }
+        }
+        private global::System.Byte[] _lvalue;
+        partial void OnlvalueChanging(global::System.Byte[] value);
+        partial void OnlvalueChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="dt_getpropertiesbyid_u_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class dt_getpropertiesbyid_u_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new dt_getpropertiesbyid_u_Result object.
+        /// </summary>
+        /// <param name="property">Initial value of the property property.</param>
+        /// <param name="version">Initial value of the version property.</param>
+        public static dt_getpropertiesbyid_u_Result Createdt_getpropertiesbyid_u_Result(global::System.String property, global::System.Int32 version)
+        {
+            dt_getpropertiesbyid_u_Result dt_getpropertiesbyid_u_Result = new dt_getpropertiesbyid_u_Result();
+            dt_getpropertiesbyid_u_Result.property = property;
+            dt_getpropertiesbyid_u_Result.version = version;
+            return dt_getpropertiesbyid_u_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String property
+        {
+            get
+            {
+                return _property;
+            }
+            set
+            {
+                OnpropertyChanging(value);
+                ReportPropertyChanging("property");
+                _property = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("property");
+                OnpropertyChanged();
+            }
+        }
+        private global::System.String _property;
+        partial void OnpropertyChanging(global::System.String value);
+        partial void OnpropertyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private global::System.Int32 _version;
+        partial void OnversionChanging(global::System.Int32 value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String uvalue
+        {
+            get
+            {
+                return _uvalue;
+            }
+            set
+            {
+                OnuvalueChanging(value);
+                ReportPropertyChanging("uvalue");
+                _uvalue = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("uvalue");
+                OnuvalueChanged();
+            }
+        }
+        private global::System.String _uvalue;
+        partial void OnuvalueChanging(global::System.String value);
+        partial void OnuvalueChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] lvalue
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_lvalue);
+            }
+            set
+            {
+                OnlvalueChanging(value);
+                ReportPropertyChanging("lvalue");
+                _lvalue = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("lvalue");
+                OnlvalueChanged();
+            }
+        }
+        private global::System.Byte[] _lvalue;
+        partial void OnlvalueChanging(global::System.Byte[] value);
+        partial void OnlvalueChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="sp_helpdiagramdefinition_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class sp_helpdiagramdefinition_Result : ComplexObject
+    {
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="InventorySalesDebtorsSystemModel", Name="sp_helpdiagrams_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class sp_helpdiagrams_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new sp_helpdiagrams_Result object.
+        /// </summary>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="ownerID">Initial value of the OwnerID property.</param>
+        public static sp_helpdiagrams_Result Createsp_helpdiagrams_Result(global::System.String name, global::System.Int32 id, global::System.Int32 ownerID)
+        {
+            sp_helpdiagrams_Result sp_helpdiagrams_Result = new sp_helpdiagrams_Result();
+            sp_helpdiagrams_Result.Name = name;
+            sp_helpdiagrams_Result.ID = id;
+            sp_helpdiagrams_Result.OwnerID = ownerID;
+            return sp_helpdiagrams_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Database
+        {
+            get
+            {
+                return _Database;
+            }
+            set
+            {
+                OnDatabaseChanging(value);
+                ReportPropertyChanging("Database");
+                _Database = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Database");
+                OnDatabaseChanged();
+            }
+        }
+        private global::System.String _Database;
+        partial void OnDatabaseChanging(global::System.String value);
+        partial void OnDatabaseChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                OnIDChanging(value);
+                ReportPropertyChanging("ID");
+                _ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ID");
+                OnIDChanged();
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Owner
+        {
+            get
+            {
+                return _Owner;
+            }
+            set
+            {
+                OnOwnerChanging(value);
+                ReportPropertyChanging("Owner");
+                _Owner = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Owner");
+                OnOwnerChanged();
+            }
+        }
+        private global::System.String _Owner;
+        partial void OnOwnerChanging(global::System.String value);
+        partial void OnOwnerChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 OwnerID
+        {
+            get
+            {
+                return _OwnerID;
+            }
+            set
+            {
+                OnOwnerIDChanging(value);
+                ReportPropertyChanging("OwnerID");
+                _OwnerID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OwnerID");
+                OnOwnerIDChanged();
+            }
+        }
+        private global::System.Int32 _OwnerID;
+        partial void OnOwnerIDChanging(global::System.Int32 value);
+        partial void OnOwnerIDChanged();
 
         #endregion
 
