@@ -4560,7 +4560,10 @@ namespace DBLayer
         /// <param name="duration">Initial value of the Duration property.</param>
         /// <param name="stdCost">Initial value of the StdCost property.</param>
         /// <param name="toalQty">Initial value of the ToalQty property.</param>
-        public static BoqHed CreateBoqHed(global::System.String boqCode, global::System.Decimal usableQty, global::System.String uOM, global::System.Decimal damageQty, global::System.Decimal duration, global::System.Decimal stdCost, global::System.Decimal toalQty)
+        /// <param name="userID">Initial value of the UserID property.</param>
+        /// <param name="addedDate">Initial value of the AddedDate property.</param>
+        /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
+        public static BoqHed CreateBoqHed(global::System.String boqCode, global::System.Decimal usableQty, global::System.String uOM, global::System.Decimal damageQty, global::System.Decimal duration, global::System.Decimal stdCost, global::System.Decimal toalQty, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
         {
             BoqHed boqHed = new BoqHed();
             boqHed.BoqCode = boqCode;
@@ -4570,6 +4573,9 @@ namespace DBLayer
             boqHed.Duration = duration;
             boqHed.StdCost = stdCost;
             boqHed.ToalQty = toalQty;
+            boqHed.UserID = userID;
+            boqHed.AddedDate = addedDate;
+            boqHed.AddedMachineInfo = addedMachineInfo;
             return boqHed;
         }
 
@@ -4747,6 +4753,78 @@ namespace DBLayer
         private global::System.Decimal _ToalQty;
         partial void OnToalQtyChanging(global::System.Decimal value);
         partial void OnToalQtyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String UserID
+        {
+            get
+            {
+                return _UserID;
+            }
+            set
+            {
+                OnUserIDChanging(value);
+                ReportPropertyChanging("UserID");
+                _UserID = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("UserID");
+                OnUserIDChanged();
+            }
+        }
+        private global::System.String _UserID;
+        partial void OnUserIDChanging(global::System.String value);
+        partial void OnUserIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AddedDate
+        {
+            get
+            {
+                return _AddedDate;
+            }
+            set
+            {
+                OnAddedDateChanging(value);
+                ReportPropertyChanging("AddedDate");
+                _AddedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AddedDate");
+                OnAddedDateChanged();
+            }
+        }
+        private global::System.DateTime _AddedDate;
+        partial void OnAddedDateChanging(global::System.DateTime value);
+        partial void OnAddedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AddedMachineInfo
+        {
+            get
+            {
+                return _AddedMachineInfo;
+            }
+            set
+            {
+                OnAddedMachineInfoChanging(value);
+                ReportPropertyChanging("AddedMachineInfo");
+                _AddedMachineInfo = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("AddedMachineInfo");
+                OnAddedMachineInfoChanged();
+            }
+        }
+        private global::System.String _AddedMachineInfo;
+        partial void OnAddedMachineInfoChanging(global::System.String value);
+        partial void OnAddedMachineInfoChanged();
 
         #endregion
 
