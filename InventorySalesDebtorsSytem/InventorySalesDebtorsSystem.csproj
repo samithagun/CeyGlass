@@ -158,6 +158,12 @@
     <Compile Include="Forms\Transactions\Inventory&amp;Sales\GoodsReceivedNote.Designer.cs">
       <DependentUpon>GoodsReceivedNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\ProductionPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\ProductionPlan.Designer.cs">
+      <DependentUpon>ProductionPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\CommonMasterFile.cs">
       <DependentUpon>CommonMasterFile.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -600,6 +606,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transactions\Inventory&amp;Sales\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\Manufacturing\ProductionPlan.resx">
+      <DependentUpon>ProductionPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
