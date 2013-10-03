@@ -15,5 +15,10 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         {
             InitializeComponent();
         }
+
+        private void ProductionPlan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionPlan));
             System.Windows.Forms.Label manualNoLabel;
             System.Windows.Forms.Label referenceNoLabel;
             System.Windows.Forms.Label remarksLabel;
             System.Windows.Forms.Label txnDateLabel;
             System.Windows.Forms.Label finishGoodTypeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionPlan));
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.HeaderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -51,8 +51,33 @@
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.txtCustomerCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ColSoNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColQOH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RawMaterialDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -60,7 +85,63 @@
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).BeginInit();
             this.HeaderBindingNavigator.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // manualNoLabel
+            // 
+            manualNoLabel.AutoSize = true;
+            manualNoLabel.Location = new System.Drawing.Point(518, 85);
+            manualNoLabel.Name = "manualNoLabel";
+            manualNoLabel.Size = new System.Drawing.Size(62, 13);
+            manualNoLabel.TabIndex = 27;
+            manualNoLabel.Text = "Manual No:";
+            // 
+            // referenceNoLabel
+            // 
+            referenceNoLabel.AutoSize = true;
+            referenceNoLabel.Location = new System.Drawing.Point(17, 84);
+            referenceNoLabel.Name = "referenceNoLabel";
+            referenceNoLabel.Size = new System.Drawing.Size(77, 13);
+            referenceNoLabel.TabIndex = 29;
+            referenceNoLabel.Text = "Reference No:";
+            // 
+            // remarksLabel
+            // 
+            remarksLabel.AutoSize = true;
+            remarksLabel.Location = new System.Drawing.Point(15, 112);
+            remarksLabel.Name = "remarksLabel";
+            remarksLabel.Size = new System.Drawing.Size(52, 13);
+            remarksLabel.TabIndex = 30;
+            remarksLabel.Text = "Remarks:";
+            // 
+            // txnDateLabel
+            // 
+            txnDateLabel.AutoSize = true;
+            txnDateLabel.Location = new System.Drawing.Point(268, 84);
+            txnDateLabel.Name = "txnDateLabel";
+            txnDateLabel.Size = new System.Drawing.Size(33, 13);
+            txnDateLabel.TabIndex = 31;
+            txnDateLabel.Text = "Date:";
+            // 
+            // finishGoodTypeLabel
+            // 
+            finishGoodTypeLabel.AutoSize = true;
+            finishGoodTypeLabel.Location = new System.Drawing.Point(17, 139);
+            finishGoodTypeLabel.Name = "finishGoodTypeLabel";
+            finishGoodTypeLabel.Size = new System.Drawing.Size(102, 13);
+            finishGoodTypeLabel.TabIndex = 33;
+            finishGoodTypeLabel.Text = "Finished Good Type";
             // 
             // transactionToolBar1
             // 
@@ -179,30 +260,12 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // manualNoLabel
-            // 
-            manualNoLabel.AutoSize = true;
-            manualNoLabel.Location = new System.Drawing.Point(518, 85);
-            manualNoLabel.Name = "manualNoLabel";
-            manualNoLabel.Size = new System.Drawing.Size(62, 13);
-            manualNoLabel.TabIndex = 27;
-            manualNoLabel.Text = "Manual No:";
-            // 
             // manualNoTextBox
             // 
             this.manualNoTextBox.Location = new System.Drawing.Point(605, 81);
             this.manualNoTextBox.Name = "manualNoTextBox";
             this.manualNoTextBox.Size = new System.Drawing.Size(150, 20);
             this.manualNoTextBox.TabIndex = 26;
-            // 
-            // referenceNoLabel
-            // 
-            referenceNoLabel.AutoSize = true;
-            referenceNoLabel.Location = new System.Drawing.Point(17, 84);
-            referenceNoLabel.Name = "referenceNoLabel";
-            referenceNoLabel.Size = new System.Drawing.Size(77, 13);
-            referenceNoLabel.TabIndex = 29;
-            referenceNoLabel.Text = "Reference No:";
             // 
             // referenceNoTextBox
             // 
@@ -212,30 +275,12 @@
             this.referenceNoTextBox.Size = new System.Drawing.Size(131, 20);
             this.referenceNoTextBox.TabIndex = 24;
             // 
-            // remarksLabel
-            // 
-            remarksLabel.AutoSize = true;
-            remarksLabel.Location = new System.Drawing.Point(15, 112);
-            remarksLabel.Name = "remarksLabel";
-            remarksLabel.Size = new System.Drawing.Size(52, 13);
-            remarksLabel.TabIndex = 30;
-            remarksLabel.Text = "Remarks:";
-            // 
             // remarksTextBox
             // 
             this.remarksTextBox.Location = new System.Drawing.Point(123, 107);
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(632, 20);
             this.remarksTextBox.TabIndex = 28;
-            // 
-            // txnDateLabel
-            // 
-            txnDateLabel.AutoSize = true;
-            txnDateLabel.Location = new System.Drawing.Point(268, 84);
-            txnDateLabel.Name = "txnDateLabel";
-            txnDateLabel.Size = new System.Drawing.Size(33, 13);
-            txnDateLabel.TabIndex = 31;
-            txnDateLabel.Text = "Date:";
             // 
             // txnDateDateTimePicker
             // 
@@ -256,40 +301,246 @@
             this.txtCustomerCode.valid = false;
             this.txtCustomerCode.varList = null;
             // 
-            // finishGoodTypeLabel
+            // tabControl
             // 
-            finishGoodTypeLabel.AutoSize = true;
-            finishGoodTypeLabel.Location = new System.Drawing.Point(17, 139);
-            finishGoodTypeLabel.Name = "finishGoodTypeLabel";
-            finishGoodTypeLabel.Size = new System.Drawing.Size(102, 13);
-            finishGoodTypeLabel.TabIndex = 33;
-            finishGoodTypeLabel.Text = "Finished Good Type";
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Location = new System.Drawing.Point(20, 161);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(735, 426);
+            this.tabControl.TabIndex = 37;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(727, 400);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Order Details";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(727, 400);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Summary";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(20, 170);
+            this.groupBox1.Controls.Add(this.SoDataGridView);
+            this.groupBox1.Location = new System.Drawing.Point(25, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 136);
-            this.groupBox1.TabIndex = 35;
+            this.groupBox1.Size = new System.Drawing.Size(678, 181);
+            this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sales Orders";
             // 
+            // SoDataGridView
+            // 
+            this.SoDataGridView.AllowUserToAddRows = false;
+            this.SoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSoNo,
+            this.ColItem,
+            this.ColItemName,
+            this.ColQty});
+            this.SoDataGridView.Location = new System.Drawing.Point(13, 19);
+            this.SoDataGridView.Name = "SoDataGridView";
+            this.SoDataGridView.ReadOnly = true;
+            this.SoDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.SoDataGridView.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.Location = new System.Drawing.Point(13, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(648, 150);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(424, 170);
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(25, 219);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 136);
-            this.groupBox2.TabIndex = 36;
+            this.groupBox2.Size = new System.Drawing.Size(678, 181);
+            this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Standard Orders";
+            // 
+            // ColSoNo
+            // 
+            this.ColSoNo.HeaderText = "SO No";
+            this.ColSoNo.Name = "ColSoNo";
+            this.ColSoNo.ReadOnly = true;
+            // 
+            // ColItem
+            // 
+            this.ColItem.HeaderText = "ItemCode";
+            this.ColItem.Name = "ColItem";
+            this.ColItem.ReadOnly = true;
+            // 
+            // ColItemName
+            // 
+            this.ColItemName.HeaderText = "Item Name";
+            this.ColItemName.Name = "ColItemName";
+            this.ColItemName.ReadOnly = true;
+            this.ColItemName.Width = 300;
+            // 
+            // ColQty
+            // 
+            this.ColQty.HeaderText = "Quantity";
+            this.ColQty.Name = "ColQty";
+            this.ColQty.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Order No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "ItemCode";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.FinishedGoodDataGridView);
+            this.groupBox3.Location = new System.Drawing.Point(23, 21);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(678, 181);
+            this.groupBox3.TabIndex = 39;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Finished Good Summary";
+            // 
+            // FinishedGoodDataGridView
+            // 
+            this.FinishedGoodDataGridView.AllowUserToAddRows = false;
+            this.FinishedGoodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FinishedGoodDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.ColQOH,
+            this.dataGridViewTextBoxColumn8});
+            this.FinishedGoodDataGridView.Location = new System.Drawing.Point(30, 19);
+            this.FinishedGoodDataGridView.Name = "FinishedGoodDataGridView";
+            this.FinishedGoodDataGridView.ReadOnly = true;
+            this.FinishedGoodDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.FinishedGoodDataGridView.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
+            this.groupBox4.Location = new System.Drawing.Point(23, 216);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(678, 181);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Raw Material Summary";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "ItemCode";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 300;
+            // 
+            // ColQOH
+            // 
+            this.ColQOH.HeaderText = "QOH";
+            this.ColQOH.Name = "ColQOH";
+            this.ColQOH.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // RawMaterialDataGridView
+            // 
+            this.RawMaterialDataGridView.AllowUserToAddRows = false;
+            this.RawMaterialDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RawMaterialDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.RawMaterialDataGridView.Location = new System.Drawing.Point(24, 25);
+            this.RawMaterialDataGridView.Name = "RawMaterialDataGridView";
+            this.RawMaterialDataGridView.ReadOnly = true;
+            this.RawMaterialDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.RawMaterialDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "ItemCode";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "QOH";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 553);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(774, 599);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.txtCustomerCode);
             this.Controls.Add(finishGoodTypeLabel);
             this.Controls.Add(manualNoLabel);
@@ -306,11 +557,24 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProductionPlan";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductionPlan";
+            this.Load += new System.EventHandler(this.ProductionPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).EndInit();
             this.HeaderBindingNavigator.ResumeLayout(false);
             this.HeaderBindingNavigator.PerformLayout();
+            this.tabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +598,32 @@
         private System.Windows.Forms.TextBox remarksTextBox;
         private System.Windows.Forms.DateTimePicker txnDateDateTimePicker;
         private MasterDataTextBox txtCustomerCode;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView SoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSoNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColQty;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView FinishedGoodDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColQOH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView RawMaterialDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }

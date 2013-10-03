@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,6 +84,9 @@ namespace InventorySalesDebtorsSytem
                 #region Manufacturing
                 case "MFBOQ":
                     return new BOQ();
+
+                //case "TRSPRODPLAN":
+                //    return new ProductionPlan();
                 #endregion
 
             }
