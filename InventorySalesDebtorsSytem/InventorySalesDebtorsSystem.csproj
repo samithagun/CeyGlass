@@ -158,11 +158,23 @@
     <Compile Include="Forms\Transactions\Inventory&amp;Sales\GoodsReceivedNote.Designer.cs">
       <DependentUpon>GoodsReceivedNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\ProductionNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\ProductionNote.Designer.cs">
+      <DependentUpon>ProductionNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Transactions\Manufacturing\ProductionPlan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Transactions\Manufacturing\ProductionPlan.Designer.cs">
       <DependentUpon>ProductionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\SPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\Manufacturing\SPS.Designer.cs">
+      <DependentUpon>SPS.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\CommonMasterFile.cs">
       <DependentUpon>CommonMasterFile.rpt</DependentUpon>
@@ -607,8 +619,14 @@
     <EmbeddedResource Include="Forms\Transactions\Inventory&amp;Sales\PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\Manufacturing\ProductionNote.resx">
+      <DependentUpon>ProductionNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transactions\Manufacturing\ProductionPlan.resx">
       <DependentUpon>ProductionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\Manufacturing\SPS.resx">
+      <DependentUpon>SPS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\MasterFiles\BOQ.cs" />
     <Compile Include="BusinessLogic\Transactions\AdjustmentHed.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Branch.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Brand.cs" />

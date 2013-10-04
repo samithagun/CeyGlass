@@ -92,7 +92,6 @@
             label4.Size = new System.Drawing.Size(56, 13);
             label4.TabIndex = 62;
             label4.Text = "Total Qty :";
-            label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -102,7 +101,6 @@
             label5.Size = new System.Drawing.Size(121, 13);
             label5.TabIndex = 60;
             label5.Text = "Standard Cost per Item :";
-            label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -112,7 +110,6 @@
             label6.Size = new System.Drawing.Size(78, 13);
             label6.TabIndex = 58;
             label6.Text = "Duration (min) :";
-            label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -122,7 +119,6 @@
             label3.Size = new System.Drawing.Size(72, 13);
             label3.TabIndex = 56;
             label3.Text = "Damage Qty :";
-            label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -132,7 +128,6 @@
             label2.Size = new System.Drawing.Size(38, 13);
             label2.TabIndex = 54;
             label2.Text = "UOM :";
-            label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -142,7 +137,6 @@
             label1.Size = new System.Drawing.Size(65, 13);
             label1.TabIndex = 52;
             label1.Text = "Usable Qty :";
-            label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // itemCodeLabel
             // 
@@ -152,7 +146,6 @@
             itemCodeLabel.Size = new System.Drawing.Size(61, 13);
             itemCodeLabel.TabIndex = 51;
             itemCodeLabel.Text = "Item Code :";
-            itemCodeLabel.Click += new System.EventHandler(this.itemCodeLabel_Click);
             // 
             // label7
             // 
@@ -162,7 +155,6 @@
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 65;
             this.label7.Text = "Raw Materials";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // BOQDataGridView
             // 
@@ -179,7 +171,6 @@
             this.BOQDataGridView.ReadOnly = true;
             this.BOQDataGridView.Size = new System.Drawing.Size(576, 153);
             this.BOQDataGridView.TabIndex = 64;
-            this.BOQDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BOQDataGridView_CellContentClick);
             // 
             // ItemCode
             // 
@@ -205,17 +196,12 @@
             this.Quantity.ReadOnly = true;
             this.Quantity.Width = 115;
             // 
-            // BOQDetBindingSource
-            // 
-            this.BOQDetBindingSource.CurrentChanged += new System.EventHandler(this.BOQDetBindingSource_CurrentChanged);
-            // 
             // txtTotalQty
             // 
             this.txtTotalQty.Location = new System.Drawing.Point(446, 161);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Size = new System.Drawing.Size(100, 20);
             this.txtTotalQty.TabIndex = 63;
-            this.txtTotalQty.TextChanged += new System.EventHandler(this.txtTotalQty_TextChanged);
             // 
             // txtStdCost
             // 
@@ -223,7 +209,6 @@
             this.txtStdCost.Name = "txtStdCost";
             this.txtStdCost.Size = new System.Drawing.Size(100, 20);
             this.txtStdCost.TabIndex = 61;
-            this.txtStdCost.TextChanged += new System.EventHandler(this.txtStdCost_TextChanged);
             // 
             // txtDuration
             // 
@@ -231,7 +216,6 @@
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(100, 20);
             this.txtDuration.TabIndex = 59;
-            this.txtDuration.TextChanged += new System.EventHandler(this.txtDuration_TextChanged);
             // 
             // txtDamageQty
             // 
@@ -239,7 +223,6 @@
             this.txtDamageQty.Name = "txtDamageQty";
             this.txtDamageQty.Size = new System.Drawing.Size(100, 20);
             this.txtDamageQty.TabIndex = 57;
-            this.txtDamageQty.TextChanged += new System.EventHandler(this.txtDamageQty_TextChanged);
             // 
             // txtUOM
             // 
@@ -247,7 +230,6 @@
             this.txtUOM.Name = "txtUOM";
             this.txtUOM.Size = new System.Drawing.Size(100, 20);
             this.txtUOM.TabIndex = 55;
-            this.txtUOM.TextChanged += new System.EventHandler(this.txtUOM_TextChanged);
             // 
             // txtUsableQty
             // 
@@ -255,7 +237,6 @@
             this.txtUsableQty.Name = "txtUsableQty";
             this.txtUsableQty.Size = new System.Drawing.Size(100, 20);
             this.txtUsableQty.TabIndex = 53;
-            this.txtUsableQty.TextChanged += new System.EventHandler(this.txtUsableQty_TextChanged);
             // 
             // BOQBindingNavigator
             // 
@@ -282,7 +263,6 @@
             this.BOQBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.BOQBindingNavigator.Size = new System.Drawing.Size(202, 28);
             this.BOQBindingNavigator.TabIndex = 66;
-            this.BOQBindingNavigator.RefreshItems += new System.EventHandler(this.BOQBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorCountItem
             // 
@@ -290,7 +270,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 25);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            this.bindingNavigatorCountItem.Click += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -301,7 +280,6 @@
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(25, 25);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -312,13 +290,11 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(25, 25);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 28);
-            this.bindingNavigatorSeparator.Click += new System.EventHandler(this.bindingNavigatorSeparator_Click);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -327,13 +303,11 @@
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 28);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            this.bindingNavigatorPositionItem.Click += new System.EventHandler(this.bindingNavigatorPositionItem_Click);
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 28);
-            this.bindingNavigatorSeparator1.Click += new System.EventHandler(this.bindingNavigatorSeparator1_Click);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -344,7 +318,6 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(25, 25);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
-            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -355,11 +328,6 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(25, 25);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
-            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
-            // 
-            // BOQBindingSource
-            // 
-            this.BOQBindingSource.CurrentChanged += new System.EventHandler(this.BOQBindingSource_CurrentChanged);
             // 
             // transactionToolBar1
             // 
@@ -383,7 +351,6 @@
             this.transactionToolBar1.ReferenceID = null;
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 67;
-            this.transactionToolBar1.Load += new System.EventHandler(this.transactionToolBar1_Load);
             // 
             // txtItemCode
             // 
@@ -396,7 +363,6 @@
             this.txtItemCode.TabIndex = 69;
             this.txtItemCode.valid = false;
             this.txtItemCode.varList = null;
-            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
             // 
             // txtItemName
             // 
@@ -405,7 +371,6 @@
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(319, 20);
             this.txtItemName.TabIndex = 70;
-            this.txtItemName.TextChanged += new System.EventHandler(this.txtItemName_TextChanged);
             // 
             // txtRawItemCode
             // 
@@ -419,7 +384,6 @@
             this.txtRawItemCode.TabIndex = 72;
             this.txtRawItemCode.valid = false;
             this.txtRawItemCode.varList = null;
-            this.txtRawItemCode.TextChanged += new System.EventHandler(this.txtRawItemCode_TextChanged);
             // 
             // label8
             // 
@@ -429,7 +393,6 @@
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 71;
             this.label8.Text = "Item Code :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // numQty
             // 
@@ -445,7 +408,6 @@
             this.numQty.TabIndex = 73;
             this.numQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numQty.ThousandsSeparator = true;
-            this.numQty.ValueChanged += new System.EventHandler(this.numQty_ValueChanged);
             // 
             // label9
             // 
@@ -455,7 +417,6 @@
             this.label9.Size = new System.Drawing.Size(52, 13);
             this.label9.TabIndex = 74;
             this.label9.Text = "Quantity :";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnAddItem
             // 

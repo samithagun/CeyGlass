@@ -85,8 +85,14 @@ namespace InventorySalesDebtorsSytem
                 case "MFBOQ":
                     return new BOQ();
 
-                //case "TRSPRODPLAN":
-                //    return new ProductionPlan();
+                case "TRMProductionPlan":
+                    return new ProductionPlan();
+
+                case "TRMSPS":
+                    return new SPS();
+
+                case "TRMProductionNote":
+                    return new ProductionNote();
                 #endregion
 
             }
