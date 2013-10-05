@@ -53,26 +53,26 @@
             this.txtCustomerCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.SoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ColSoNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SoDataGridView = new System.Windows.Forms.DataGridView();
+            this.ColSoNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColQOH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.RawMaterialDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,11 +87,11 @@
             this.HeaderBindingNavigator.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -323,42 +323,15 @@
             this.tabPage1.Text = "Order Details";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // groupBox2
             // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(727, 400);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Summary";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.SoDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(25, 16);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(678, 181);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sales Orders";
-            // 
-            // SoDataGridView
-            // 
-            this.SoDataGridView.AllowUserToAddRows = false;
-            this.SoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSoNo,
-            this.ColItem,
-            this.ColItemName,
-            this.ColQty});
-            this.SoDataGridView.Location = new System.Drawing.Point(13, 19);
-            this.SoDataGridView.Name = "SoDataGridView";
-            this.SoDataGridView.ReadOnly = true;
-            this.SoDataGridView.Size = new System.Drawing.Size(648, 150);
-            this.SoDataGridView.TabIndex = 0;
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(25, 219);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(678, 181);
+            this.groupBox2.TabIndex = 38;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Standard Orders";
             // 
             // dataGridView1
             // 
@@ -374,41 +347,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(648, 150);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(25, 219);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(678, 181);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Standard Orders";
-            // 
-            // ColSoNo
-            // 
-            this.ColSoNo.HeaderText = "SO No";
-            this.ColSoNo.Name = "ColSoNo";
-            this.ColSoNo.ReadOnly = true;
-            // 
-            // ColItem
-            // 
-            this.ColItem.HeaderText = "ItemCode";
-            this.ColItem.Name = "ColItem";
-            this.ColItem.ReadOnly = true;
-            // 
-            // ColItemName
-            // 
-            this.ColItemName.HeaderText = "Item Name";
-            this.ColItemName.Name = "ColItemName";
-            this.ColItemName.ReadOnly = true;
-            this.ColItemName.Width = 300;
-            // 
-            // ColQty
-            // 
-            this.ColQty.HeaderText = "Quantity";
-            this.ColQty.Name = "ColQty";
-            this.ColQty.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -435,6 +373,68 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.SoDataGridView);
+            this.groupBox1.Location = new System.Drawing.Point(25, 16);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(678, 181);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sales Orders";
+            // 
+            // SoDataGridView
+            // 
+            this.SoDataGridView.AllowUserToAddRows = false;
+            this.SoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColSoNo,
+            this.ColItem,
+            this.ColItemName,
+            this.ColQty});
+            this.SoDataGridView.Location = new System.Drawing.Point(13, 19);
+            this.SoDataGridView.Name = "SoDataGridView";
+            this.SoDataGridView.ReadOnly = true;
+            this.SoDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.SoDataGridView.TabIndex = 0;
+            // 
+            // ColSoNo
+            // 
+            this.ColSoNo.HeaderText = "SO No";
+            this.ColSoNo.Name = "ColSoNo";
+            this.ColSoNo.ReadOnly = true;
+            // 
+            // ColItem
+            // 
+            this.ColItem.HeaderText = "ItemCode";
+            this.ColItem.Name = "ColItem";
+            this.ColItem.ReadOnly = true;
+            // 
+            // ColItemName
+            // 
+            this.ColItemName.HeaderText = "Item Name";
+            this.ColItemName.Name = "ColItemName";
+            this.ColItemName.ReadOnly = true;
+            this.ColItemName.Width = 300;
+            // 
+            // ColQty
+            // 
+            this.ColQty.HeaderText = "Quantity";
+            this.ColQty.Name = "ColQty";
+            this.ColQty.ReadOnly = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(727, 400);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Summary";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.FinishedGoodDataGridView);
@@ -460,16 +460,6 @@
             this.FinishedGoodDataGridView.Size = new System.Drawing.Size(648, 150);
             this.FinishedGoodDataGridView.TabIndex = 0;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
-            this.groupBox4.Location = new System.Drawing.Point(23, 216);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(678, 181);
-            this.groupBox4.TabIndex = 40;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Raw Material Summary";
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "ItemCode";
@@ -494,6 +484,16 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
+            this.groupBox4.Location = new System.Drawing.Point(23, 216);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(678, 181);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Raw Material Summary";
             // 
             // RawMaterialDataGridView
             // 
@@ -566,11 +566,11 @@
             this.HeaderBindingNavigator.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);

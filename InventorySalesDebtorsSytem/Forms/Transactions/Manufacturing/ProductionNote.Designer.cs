@@ -32,13 +32,13 @@
             System.Windows.Forms.Label manualNoLabel;
             System.Windows.Forms.Label finishGoodTypeLabel;
             System.Windows.Forms.Label referenceNoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
             System.Windows.Forms.Label remarksLabel;
             System.Windows.Forms.Label txnDateLabel;
-            System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
+            System.Windows.Forms.Label label1;
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,11 +53,8 @@
             this.manualNoTextBox = new System.Windows.Forms.TextBox();
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtProPlan = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.masterDataTextBox1 = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.masterDataTextBox2 = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.masterDataTextBox3 = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -67,15 +64,17 @@
             this.TotalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WasteQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTotalQty = new System.Windows.Forms.TextBox();
             manualNoLabel = new System.Windows.Forms.Label();
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
             txnDateLabel = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).BeginInit();
             this.HeaderBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -108,15 +107,6 @@
             referenceNoLabel.TabIndex = 45;
             referenceNoLabel.Text = "Reference No:";
             // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
             // remarksLabel
             // 
             remarksLabel.AutoSize = true;
@@ -125,6 +115,51 @@
             remarksLabel.Size = new System.Drawing.Size(102, 13);
             remarksLabel.TabIndex = 46;
             remarksLabel.Text = "Production Plan No:";
+            // 
+            // txnDateLabel
+            // 
+            txnDateLabel.AutoSize = true;
+            txnDateLabel.Location = new System.Drawing.Point(297, 81);
+            txnDateLabel.Name = "txnDateLabel";
+            txnDateLabel.Size = new System.Drawing.Size(33, 13);
+            txnDateLabel.TabIndex = 47;
+            txnDateLabel.Text = "Date:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(18, 197);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(52, 13);
+            label2.TabIndex = 77;
+            label2.Text = "BOQ Qty:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(293, 197);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 13);
+            label3.TabIndex = 79;
+            label3.Text = "Usable Qty:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(549, 197);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(69, 13);
+            label4.TabIndex = 81;
+            label4.Text = "Damage Qty:";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
@@ -139,15 +174,6 @@
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // txnDateLabel
-            // 
-            txnDateLabel.AutoSize = true;
-            txnDateLabel.Location = new System.Drawing.Point(297, 81);
-            txnDateLabel.Name = "txnDateLabel";
-            txnDateLabel.Size = new System.Drawing.Size(33, 13);
-            txnDateLabel.TabIndex = 47;
-            txnDateLabel.Text = "Date:";
             // 
             // transactionToolBar1
             // 
@@ -247,7 +273,7 @@
             // 
             this.manualNoTextBox.Location = new System.Drawing.Point(606, 78);
             this.manualNoTextBox.Name = "manualNoTextBox";
-            this.manualNoTextBox.Size = new System.Drawing.Size(150, 20);
+            this.manualNoTextBox.Size = new System.Drawing.Size(148, 20);
             this.manualNoTextBox.TabIndex = 42;
             // 
             // referenceNoTextBox
@@ -265,114 +291,47 @@
             this.txnDateDateTimePicker.Size = new System.Drawing.Size(160, 20);
             this.txnDateDateTimePicker.TabIndex = 41;
             // 
+            // txtProPlan
+            // 
+            this.txtProPlan.codeFieldName = null;
+            this.txtProPlan.filterCondition = null;
+            this.txtProPlan.Location = new System.Drawing.Point(123, 107);
+            this.txtProPlan.Name = "txtProPlan";
+            this.txtProPlan.Size = new System.Drawing.Size(131, 20);
+            this.txtProPlan.sortOrder = null;
+            this.txtProPlan.TabIndex = 70;
+            this.txtProPlan.valid = false;
+            this.txtProPlan.varList = null;
+            // 
             // txtItemCode
             // 
             this.txtItemCode.codeFieldName = null;
             this.txtItemCode.filterCondition = null;
-            this.txtItemCode.Location = new System.Drawing.Point(123, 107);
+            this.txtItemCode.Location = new System.Drawing.Point(123, 136);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(131, 20);
             this.txtItemCode.sortOrder = null;
-            this.txtItemCode.TabIndex = 70;
+            this.txtItemCode.TabIndex = 71;
             this.txtItemCode.valid = false;
             this.txtItemCode.varList = null;
             // 
-            // masterDataTextBox1
-            // 
-            this.masterDataTextBox1.codeFieldName = null;
-            this.masterDataTextBox1.filterCondition = null;
-            this.masterDataTextBox1.Location = new System.Drawing.Point(123, 136);
-            this.masterDataTextBox1.Name = "masterDataTextBox1";
-            this.masterDataTextBox1.Size = new System.Drawing.Size(131, 20);
-            this.masterDataTextBox1.sortOrder = null;
-            this.masterDataTextBox1.TabIndex = 71;
-            this.masterDataTextBox1.valid = false;
-            this.masterDataTextBox1.varList = null;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(123, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 72;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 172);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(61, 13);
-            label1.TabIndex = 73;
-            label1.Text = "BOQ Code:";
-            // 
-            // masterDataTextBox2
-            // 
-            this.masterDataTextBox2.codeFieldName = null;
-            this.masterDataTextBox2.filterCondition = null;
-            this.masterDataTextBox2.Location = new System.Drawing.Point(261, 136);
-            this.masterDataTextBox2.Name = "masterDataTextBox2";
-            this.masterDataTextBox2.Size = new System.Drawing.Size(495, 20);
-            this.masterDataTextBox2.sortOrder = null;
-            this.masterDataTextBox2.TabIndex = 74;
-            this.masterDataTextBox2.valid = false;
-            this.masterDataTextBox2.varList = null;
-            // 
-            // masterDataTextBox3
-            // 
-            this.masterDataTextBox3.codeFieldName = null;
-            this.masterDataTextBox3.filterCondition = null;
-            this.masterDataTextBox3.Location = new System.Drawing.Point(260, 168);
-            this.masterDataTextBox3.Name = "masterDataTextBox3";
-            this.masterDataTextBox3.Size = new System.Drawing.Size(495, 20);
-            this.masterDataTextBox3.sortOrder = null;
-            this.masterDataTextBox3.TabIndex = 75;
-            this.masterDataTextBox3.valid = false;
-            this.masterDataTextBox3.varList = null;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(18, 205);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(52, 13);
-            label2.TabIndex = 77;
-            label2.Text = "BOQ Qty:";
-            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 201);
+            this.textBox2.Location = new System.Drawing.Point(123, 193);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(131, 20);
             this.textBox2.TabIndex = 76;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(293, 205);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(62, 13);
-            label3.TabIndex = 79;
-            label3.Text = "Usable Qty:";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(359, 201);
+            this.textBox3.Location = new System.Drawing.Point(359, 193);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(131, 20);
             this.textBox3.TabIndex = 78;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(549, 205);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(69, 13);
-            label4.TabIndex = 81;
-            label4.Text = "Damage Qty:";
-            // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(623, 201);
+            this.textBox4.Location = new System.Drawing.Point(623, 193);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(131, 20);
             this.textBox4.TabIndex = 80;
@@ -387,10 +346,10 @@
             this.TotalQty,
             this.UsedQty,
             this.WasteQty});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 244);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(733, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(733, 212);
             this.dataGridView1.TabIndex = 82;
             // 
             // ItemCode
@@ -424,11 +383,37 @@
             this.WasteQty.Name = "WasteQty";
             this.WasteQty.ReadOnly = true;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(260, 137);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(494, 20);
+            this.textBox6.TabIndex = 84;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(18, 168);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 13);
+            label1.TabIndex = 86;
+            label1.Text = "Total Qty:";
+            // 
+            // txtTotalQty
+            // 
+            this.txtTotalQty.Location = new System.Drawing.Point(123, 164);
+            this.txtTotalQty.Name = "txtTotalQty";
+            this.txtTotalQty.Size = new System.Drawing.Size(131, 20);
+            this.txtTotalQty.TabIndex = 85;
+            // 
             // ProductionNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 457);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.txtTotalQty);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(label4);
             this.Controls.Add(this.textBox4);
@@ -436,12 +421,8 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.masterDataTextBox3);
-            this.Controls.Add(this.masterDataTextBox2);
-            this.Controls.Add(label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.masterDataTextBox1);
             this.Controls.Add(this.txtItemCode);
+            this.Controls.Add(this.txtProPlan);
             this.Controls.Add(manualNoLabel);
             this.Controls.Add(finishGoodTypeLabel);
             this.Controls.Add(referenceNoLabel);
@@ -479,11 +460,8 @@
         private System.Windows.Forms.TextBox manualNoTextBox;
         private System.Windows.Forms.TextBox referenceNoTextBox;
         private System.Windows.Forms.DateTimePicker txnDateDateTimePicker;
+        private MasterDataTextBox txtProPlan;
         private MasterDataTextBox txtItemCode;
-        private MasterDataTextBox masterDataTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private MasterDataTextBox masterDataTextBox2;
-        private MasterDataTextBox masterDataTextBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -493,5 +471,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsedQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn WasteQty;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTotalQty;
     }
 }
