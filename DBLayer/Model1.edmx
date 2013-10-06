@@ -635,6 +635,10 @@
             <End Role="sEntry" EntitySet="sEntry" />
             <End Role="sOption" EntitySet="sOption" />
           </AssociationSet>
+          <AssociationSet Name="FK_SPSDet_SPSHed" Association="InventorySalesDebtorsSystemModel.Store.FK_SPSDet_SPSHed">
+            <End Role="SPSHed" EntitySet="SPSHed" />
+            <End Role="SPSDet" EntitySet="SPSDet" />
+          </AssociationSet>
           <AssociationSet Name="FK_Supplier_User" Association="InventorySalesDebtorsSystemModel.Store.FK_Supplier_User">
             <End Role="User" EntitySet="User" />
             <End Role="Supplier" EntitySet="Supplier" />
@@ -1605,6 +1609,9 @@
           <Property Name="FromDate" Type="datetime" Nullable="false" />
           <Property Name="ToDate" Type="datetime" Nullable="false" />
           <Property Name="Qty" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AddedDate" Type="datetime" Nullable="false" />
+          <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="sReferencePrefixes">
           <Key>
@@ -1643,6 +1650,8 @@
           <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="AddedDate" Type="datetime" Nullable="false" />
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Password" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="SupplierTxn">
           <Key>
@@ -3385,6 +3394,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SPSDet_SPSHed">
+          <End Role="SPSHed" Type="InventorySalesDebtorsSystemModel.Store.SPSHed" Multiplicity="1" />
+          <End Role="SPSDet" Type="InventorySalesDebtorsSystemModel.Store.SPSDet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SPSHed">
+              <PropertyRef Name="ReferenceNo" />
+            </Principal>
+            <Dependent Role="SPSDet">
+              <PropertyRef Name="ReferenceNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Supplier_User">
           <End Role="User" Type="InventorySalesDebtorsSystemModel.Store.User" Multiplicity="1" />
           <End Role="Supplier" Type="InventorySalesDebtorsSystemModel.Store.Supplier" Multiplicity="*" />
@@ -4546,6 +4567,10 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <AssociationSet Name="FK_SPSDet_SPSHed" Association="InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed">
+            <End Role="SPSHed" EntitySet="SPSHeds" />
+            <End Role="SPSDet" EntitySet="SPSDets" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="AdjustmentDet">
           <Key>
@@ -5143,6 +5168,8 @@
           <Property Type="DateTime" Name="AddedDate" Nullable="false" Precision="3" />
           <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="InventorySalesDebtorsSystemModel.FK_Supplier_User" FromRole="Supplier" ToRole="User" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TransferDet">
           <Key>
@@ -7582,6 +7609,7 @@
           <Property Type="String" Name="ReferenceNo" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
           <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
           <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="SPSHed" Relationship="InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed" FromRole="SPSDet" ToRole="SPSHed" />
         </EntityType>
         <EntityType Name="SPSHed">
           <Key>
@@ -7593,6 +7621,10 @@
           <Property Type="DateTime" Name="ToDate" Nullable="false" Precision="3" />
           <Property Type="Decimal" Name="Qty" Nullable="false" Precision="18" Scale="2" />
           <NavigationProperty Name="ProductionPlanStandardDets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_SPSHed" FromRole="SPSHed" ToRole="ProductionPlanStandardDet" />
+          <Property Type="String" Name="UserID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AddedDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SPSDets" Relationship="InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed" FromRole="SPSHed" ToRole="SPSDet" />
         </EntityType>
         <Association Name="FK_ProductionPlanFinishedGoodDet_Item">
           <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
@@ -7753,7 +7785,7 @@
           <NavigationProperty Name="BoqDets" Relationship="InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed" FromRole="BoqHed" ToRole="BoqDet" />
           <NavigationProperty Name="Item" Relationship="InventorySalesDebtorsSystemModel.FK_BoqHed_Item" FromRole="BoqHed" ToRole="Item" />
           <Property Type="String" Name="UserID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="AddedDate" Nullable="false" />
+          <Property Type="DateTime" Name="AddedDate" Nullable="false" Precision="3" />
           <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_BoqDet_BoqHed">
@@ -7815,6 +7847,18 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <Association Name="FK_SPSDet_SPSHed">
+          <End Type="InventorySalesDebtorsSystemModel.SPSHed" Role="SPSHed" Multiplicity="1" />
+          <End Type="InventorySalesDebtorsSystemModel.SPSDet" Role="SPSDet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SPSHed">
+              <PropertyRef Name="ReferenceNo" />
+            </Principal>
+            <Dependent Role="SPSDet">
+              <PropertyRef Name="ReferenceNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -8159,7 +8203,9 @@
             <ScalarProperty Name="TotalItemVal" ColumnName="TotalItemVal" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Suppliers"><EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.Supplier"><MappingFragment StoreEntitySet="Supplier">
-            <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
                 <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
@@ -8768,6 +8814,9 @@
           <EntitySetMapping Name="SPSHeds">
             <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.SPSHed">
               <MappingFragment StoreEntitySet="SPSHed">
+                <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Qty" ColumnName="Qty" />
                 <ScalarProperty Name="ToDate" ColumnName="ToDate" />
                 <ScalarProperty Name="FromDate" ColumnName="FromDate" />
@@ -11205,6 +11254,7 @@
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqDet_Item" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqHed_Item" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed" />
         </Diagram>
     </Diagrams>
   </Designer>

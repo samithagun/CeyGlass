@@ -50,6 +50,7 @@
             this.txtUOM = new System.Windows.Forms.TextBox();
             this.txtUsableQty = new System.Windows.Forms.TextBox();
             this.BOQBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +59,6 @@
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -198,6 +198,7 @@
             // 
             // txtTotalQty
             // 
+            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "ToalQty", true));
             this.txtTotalQty.Location = new System.Drawing.Point(446, 161);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Size = new System.Drawing.Size(100, 20);
@@ -205,6 +206,7 @@
             // 
             // txtStdCost
             // 
+            this.txtStdCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "StdCost", true));
             this.txtStdCost.Location = new System.Drawing.Point(446, 135);
             this.txtStdCost.Name = "txtStdCost";
             this.txtStdCost.Size = new System.Drawing.Size(100, 20);
@@ -212,6 +214,7 @@
             // 
             // txtDuration
             // 
+            this.txtDuration.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Duration", true));
             this.txtDuration.Location = new System.Drawing.Point(446, 109);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(100, 20);
@@ -219,6 +222,7 @@
             // 
             // txtDamageQty
             // 
+            this.txtDamageQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "DamageQty", true));
             this.txtDamageQty.Location = new System.Drawing.Point(121, 161);
             this.txtDamageQty.Name = "txtDamageQty";
             this.txtDamageQty.Size = new System.Drawing.Size(100, 20);
@@ -226,6 +230,7 @@
             // 
             // txtUOM
             // 
+            this.txtUOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UOM", true));
             this.txtUOM.Location = new System.Drawing.Point(121, 135);
             this.txtUOM.Name = "txtUOM";
             this.txtUOM.Size = new System.Drawing.Size(100, 20);
@@ -233,6 +238,7 @@
             // 
             // txtUsableQty
             // 
+            this.txtUsableQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UsableQty", true));
             this.txtUsableQty.Location = new System.Drawing.Point(121, 109);
             this.txtUsableQty.Name = "txtUsableQty";
             this.txtUsableQty.Size = new System.Drawing.Size(100, 20);
@@ -241,6 +247,7 @@
             // BOQBindingNavigator
             // 
             this.BOQBindingNavigator.AddNewItem = null;
+            this.BOQBindingNavigator.BindingSource = this.BOQBindingSource;
             this.BOQBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.BOQBindingNavigator.DeleteItem = null;
             this.BOQBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
@@ -263,6 +270,10 @@
             this.BOQBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.BOQBindingNavigator.Size = new System.Drawing.Size(202, 28);
             this.BOQBindingNavigator.TabIndex = 66;
+            // 
+            // BOQBindingSource
+            // 
+            this.BOQBindingSource.DataSource = typeof(DBLayer.BoqHed);
             // 
             // bindingNavigatorCountItem
             // 
@@ -355,6 +366,7 @@
             // txtItemCode
             // 
             this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "BoqCode", true));
             this.txtItemCode.filterCondition = null;
             this.txtItemCode.Location = new System.Drawing.Point(121, 83);
             this.txtItemCode.Name = "txtItemCode";

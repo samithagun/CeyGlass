@@ -92,6 +92,12 @@ namespace InventorySalesDebtorsSytem
             this.TotalItemVal = Math.Round(grossTotal - this.ItemDiscVal - this.HedDiscVal + this.NbtItemVal + this.VatItemVal, 2);
         }
 
+        public ItemGrid(DateTime Date, decimal Quantity)
+        {
+            this.Date = Date;
+            this.Quantity = Quantity;
+        }
+
         public string ItemCode { get; set; }
         public string ItemName { get; set; }
         public string UOM { get; set; }
@@ -107,5 +113,8 @@ namespace InventorySalesDebtorsSytem
         public decimal VatItemVal { get; set; }
         public decimal NbtItemVal { get; set; }
         public decimal TotalItemVal { get; set; }
+
+        public DateTime Date { get; set; }
+
     }
 }

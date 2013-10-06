@@ -173,6 +173,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_BoqHed", "BoqHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.BoqHed), "BoqDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.BoqDet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "BoqDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.BoqDet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_BoqHed_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "BoqHed", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(DBLayer.BoqHed), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_SPSDet_SPSHed", "SPSHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.SPSHed), "SPSDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.SPSDet), true)]
 
 #endregion
 
@@ -28739,6 +28740,48 @@ namespace DBLayer
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_SPSDet_SPSHed", "SPSHed")]
+        public SPSHed SPSHed
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SPSHed>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSHed").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SPSHed>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSHed").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SPSHed> SPSHedReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SPSHed>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSHed");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SPSHed>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSHed", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -28759,7 +28802,10 @@ namespace DBLayer
         /// <param name="fromDate">Initial value of the FromDate property.</param>
         /// <param name="toDate">Initial value of the ToDate property.</param>
         /// <param name="qty">Initial value of the Qty property.</param>
-        public static SPSHed CreateSPSHed(global::System.String referenceNo, global::System.String itemCode, global::System.DateTime fromDate, global::System.DateTime toDate, global::System.Decimal qty)
+        /// <param name="userID">Initial value of the UserID property.</param>
+        /// <param name="addedDate">Initial value of the AddedDate property.</param>
+        /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
+        public static SPSHed CreateSPSHed(global::System.String referenceNo, global::System.String itemCode, global::System.DateTime fromDate, global::System.DateTime toDate, global::System.Decimal qty, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
         {
             SPSHed sPSHed = new SPSHed();
             sPSHed.ReferenceNo = referenceNo;
@@ -28767,6 +28813,9 @@ namespace DBLayer
             sPSHed.FromDate = fromDate;
             sPSHed.ToDate = toDate;
             sPSHed.Qty = qty;
+            sPSHed.UserID = userID;
+            sPSHed.AddedDate = addedDate;
+            sPSHed.AddedMachineInfo = addedMachineInfo;
             return sPSHed;
         }
 
@@ -28896,6 +28945,78 @@ namespace DBLayer
         private global::System.Decimal _Qty;
         partial void OnQtyChanging(global::System.Decimal value);
         partial void OnQtyChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String UserID
+        {
+            get
+            {
+                return _UserID;
+            }
+            set
+            {
+                OnUserIDChanging(value);
+                ReportPropertyChanging("UserID");
+                _UserID = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("UserID");
+                OnUserIDChanged();
+            }
+        }
+        private global::System.String _UserID;
+        partial void OnUserIDChanging(global::System.String value);
+        partial void OnUserIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime AddedDate
+        {
+            get
+            {
+                return _AddedDate;
+            }
+            set
+            {
+                OnAddedDateChanging(value);
+                ReportPropertyChanging("AddedDate");
+                _AddedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AddedDate");
+                OnAddedDateChanged();
+            }
+        }
+        private global::System.DateTime _AddedDate;
+        partial void OnAddedDateChanging(global::System.DateTime value);
+        partial void OnAddedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String AddedMachineInfo
+        {
+            get
+            {
+                return _AddedMachineInfo;
+            }
+            set
+            {
+                OnAddedMachineInfoChanging(value);
+                ReportPropertyChanging("AddedMachineInfo");
+                _AddedMachineInfo = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("AddedMachineInfo");
+                OnAddedMachineInfoChanged();
+            }
+        }
+        private global::System.String _AddedMachineInfo;
+        partial void OnAddedMachineInfoChanging(global::System.String value);
+        partial void OnAddedMachineInfoChanged();
 
         #endregion
 
@@ -28920,6 +29041,28 @@ namespace DBLayer
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanStandardDet>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_SPSHed", "ProductionPlanStandardDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_SPSDet_SPSHed", "SPSDet")]
+        public EntityCollection<SPSDet> SPSDets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SPSDet>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SPSDet>("InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed", "SPSDet", value);
                 }
             }
         }
@@ -29342,7 +29485,9 @@ namespace DBLayer
         /// <param name="userID">Initial value of the UserID property.</param>
         /// <param name="addedDate">Initial value of the AddedDate property.</param>
         /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
-        public static Supplier CreateSupplier(global::System.String supplierCode, global::System.String supplierName, global::System.String supAddress1, global::System.String supAddress2, global::System.String supAddress3, global::System.String supEmail, global::System.String supTelephone, global::System.String supFax, global::System.String status, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
+        /// <param name="userName">Initial value of the UserName property.</param>
+        /// <param name="password">Initial value of the Password property.</param>
+        public static Supplier CreateSupplier(global::System.String supplierCode, global::System.String supplierName, global::System.String supAddress1, global::System.String supAddress2, global::System.String supAddress3, global::System.String supEmail, global::System.String supTelephone, global::System.String supFax, global::System.String status, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo, global::System.String userName, global::System.String password)
         {
             Supplier supplier = new Supplier();
             supplier.SupplierCode = supplierCode;
@@ -29357,6 +29502,8 @@ namespace DBLayer
             supplier.UserID = userID;
             supplier.AddedDate = addedDate;
             supplier.AddedMachineInfo = addedMachineInfo;
+            supplier.UserName = userName;
+            supplier.Password = password;
             return supplier;
         }
 
@@ -29654,6 +29801,54 @@ namespace DBLayer
         private global::System.String _AddedMachineInfo;
         partial void OnAddedMachineInfoChanging(global::System.String value);
         partial void OnAddedMachineInfoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String UserName
+        {
+            get
+            {
+                return _UserName;
+            }
+            set
+            {
+                OnUserNameChanging(value);
+                ReportPropertyChanging("UserName");
+                _UserName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("UserName");
+                OnUserNameChanged();
+            }
+        }
+        private global::System.String _UserName;
+        partial void OnUserNameChanging(global::System.String value);
+        partial void OnUserNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Password
+        {
+            get
+            {
+                return _Password;
+            }
+            set
+            {
+                OnPasswordChanging(value);
+                ReportPropertyChanging("Password");
+                _Password = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Password");
+                OnPasswordChanged();
+            }
+        }
+        private global::System.String _Password;
+        partial void OnPasswordChanging(global::System.String value);
+        partial void OnPasswordChanged();
 
         #endregion
 

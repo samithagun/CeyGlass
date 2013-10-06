@@ -33,20 +33,18 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label itemCodeLabel;
             System.Windows.Forms.Label referenceNoLabel;
-            System.Windows.Forms.Label txnDateLabel;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SPS));
             this.txtItemName = new System.Windows.Forms.TextBox();
-            this.BOQDataGridView = new System.Windows.Forms.DataGridView();
+            this.SPSDataGridView = new System.Windows.Forms.DataGridView();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtTotalQty = new System.Windows.Forms.TextBox();
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
-            this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimeFromPicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimeToPicker = new System.Windows.Forms.DateTimePicker();
             this.SPSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -60,16 +58,20 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
+            this.SPSDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SPSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             itemCodeLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
-            txnDateLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SPSBindingNavigator)).BeginInit();
             this.SPSBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSDetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -108,15 +110,6 @@
             referenceNoLabel.TabIndex = 97;
             referenceNoLabel.Text = "Reference No:";
             // 
-            // txnDateLabel
-            // 
-            txnDateLabel.AutoSize = true;
-            txnDateLabel.Location = new System.Drawing.Point(340, 80);
-            txnDateLabel.Name = "txnDateLabel";
-            txnDateLabel.Size = new System.Drawing.Size(33, 13);
-            txnDateLabel.TabIndex = 98;
-            txnDateLabel.Text = "Date:";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -134,9 +127,9 @@
             this.txtItemName.Size = new System.Drawing.Size(354, 20);
             this.txtItemName.TabIndex = 94;
             // 
-            // BOQDataGridView
+            // SPSDataGridView
             // 
-            this.BOQDataGridView.AllowUserToAddRows = false;
+            this.SPSDataGridView.AllowUserToAddRows = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,9 +137,9 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BOQDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.BOQDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BOQDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SPSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.SPSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SPSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.Quantity});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -156,10 +149,10 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BOQDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.BOQDataGridView.Location = new System.Drawing.Point(75, 190);
-            this.BOQDataGridView.Name = "BOQDataGridView";
-            this.BOQDataGridView.ReadOnly = true;
+            this.SPSDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.SPSDataGridView.Location = new System.Drawing.Point(75, 190);
+            this.SPSDataGridView.Name = "SPSDataGridView";
+            this.SPSDataGridView.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,9 +160,9 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BOQDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.BOQDataGridView.Size = new System.Drawing.Size(454, 208);
-            this.BOQDataGridView.TabIndex = 89;
+            this.SPSDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.SPSDataGridView.Size = new System.Drawing.Size(454, 208);
+            this.SPSDataGridView.TabIndex = 89;
             // 
             // Date
             // 
@@ -193,6 +186,7 @@
             // 
             // txtTotalQty
             // 
+            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SPSBindingSource, "Qty", true));
             this.txtTotalQty.Location = new System.Drawing.Point(95, 133);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Size = new System.Drawing.Size(124, 20);
@@ -206,15 +200,9 @@
             this.referenceNoTextBox.Size = new System.Drawing.Size(124, 20);
             this.referenceNoTextBox.TabIndex = 95;
             // 
-            // txnDateDateTimePicker
-            // 
-            this.txnDateDateTimePicker.Location = new System.Drawing.Point(379, 76);
-            this.txnDateDateTimePicker.Name = "txnDateDateTimePicker";
-            this.txnDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.txnDateDateTimePicker.TabIndex = 96;
-            // 
             // dateTimeFromPicker
             // 
+            this.dateTimeFromPicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SPSBindingSource, "FromDate", true));
             this.dateTimeFromPicker.Location = new System.Drawing.Point(95, 159);
             this.dateTimeFromPicker.Name = "dateTimeFromPicker";
             this.dateTimeFromPicker.Size = new System.Drawing.Size(200, 20);
@@ -222,14 +210,17 @@
             // 
             // dateTimeToPicker
             // 
+            this.dateTimeToPicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SPSBindingSource, "ToDate", true));
             this.dateTimeToPicker.Location = new System.Drawing.Point(379, 159);
             this.dateTimeToPicker.Name = "dateTimeToPicker";
             this.dateTimeToPicker.Size = new System.Drawing.Size(200, 20);
             this.dateTimeToPicker.TabIndex = 101;
+            this.dateTimeToPicker.ValueChanged += new System.EventHandler(this.dateTimeToPicker_ValueChanged);
             // 
             // SPSBindingNavigator
             // 
             this.SPSBindingNavigator.AddNewItem = null;
+            this.SPSBindingNavigator.BindingSource = this.SPSBindingSource;
             this.SPSBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.SPSBindingNavigator.DeleteItem = null;
             this.SPSBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
@@ -250,7 +241,7 @@
             this.SPSBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.SPSBindingNavigator.Name = "SPSBindingNavigator";
             this.SPSBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.SPSBindingNavigator.Size = new System.Drawing.Size(202, 28);
+            this.SPSBindingNavigator.Size = new System.Drawing.Size(233, 28);
             this.SPSBindingNavigator.TabIndex = 102;
             // 
             // bindingNavigatorCountItem
@@ -321,6 +312,7 @@
             // txtItemCode
             // 
             this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SPSBindingSource, "ItemCode", true));
             this.txtItemCode.filterCondition = null;
             this.txtItemCode.Location = new System.Drawing.Point(95, 107);
             this.txtItemCode.Name = "txtItemCode";
@@ -353,23 +345,40 @@
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 92;
             // 
+            // SPSBindingSource
+            // 
+            this.SPSBindingSource.DataSource = typeof(DBLayer.SPSHed);
+            // 
+            // txtBranchCode
+            // 
+            this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.filterCondition = null;
+            this.txtBranchCode.Location = new System.Drawing.Point(429, 76);
+            this.txtBranchCode.Name = "txtBranchCode";
+            this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
+            this.txtBranchCode.sortOrder = null;
+            this.txtBranchCode.TabIndex = 103;
+            this.txtBranchCode.Text = "100";
+            this.txtBranchCode.valid = true;
+            this.txtBranchCode.varList = null;
+            this.txtBranchCode.Visible = false;
+            // 
             // SPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 412);
+            this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(this.SPSBindingNavigator);
             this.Controls.Add(this.dateTimeToPicker);
             this.Controls.Add(label3);
             this.Controls.Add(this.dateTimeFromPicker);
             this.Controls.Add(referenceNoLabel);
             this.Controls.Add(this.referenceNoTextBox);
-            this.Controls.Add(txnDateLabel);
-            this.Controls.Add(this.txnDateDateTimePicker);
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.transactionToolBar1);
-            this.Controls.Add(this.BOQDataGridView);
+            this.Controls.Add(this.SPSDataGridView);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
             this.Controls.Add(itemCodeLabel);
@@ -377,11 +386,13 @@
             this.Name = "SPS";
             this.Text = "Standard Production Schedule";
             this.Load += new System.EventHandler(this.SPS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SPSBindingNavigator)).EndInit();
             this.SPSBindingNavigator.ResumeLayout(false);
             this.SPSBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSDetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,11 +403,10 @@
         private System.Windows.Forms.TextBox txtItemName;
         private MasterDataTextBox txtItemCode;
         private TransactionToolBar transactionToolBar1;
-        private System.Windows.Forms.DataGridView BOQDataGridView;
+        private System.Windows.Forms.DataGridView SPSDataGridView;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox txtTotalQty;
         private System.Windows.Forms.TextBox referenceNoTextBox;
-        private System.Windows.Forms.DateTimePicker txnDateDateTimePicker;
         private System.Windows.Forms.DateTimePicker dateTimeToPicker;
         private System.Windows.Forms.DateTimePicker dateTimeFromPicker;
         private System.Windows.Forms.BindingNavigator SPSBindingNavigator;
@@ -410,5 +420,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.BindingSource SPSDetBindingSource;
+        private System.Windows.Forms.BindingSource SPSBindingSource;
+        private MasterDataTextBox txtBranchCode;
     }
 }

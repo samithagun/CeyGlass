@@ -896,6 +896,8 @@
     <None Include="Properties\DataSources\DBLayer.AdjustmentDet.datasource" />
     <None Include="Properties\DataSources\DBLayer.AdjustmentHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.Bank.datasource" />
+    <None Include="Properties\DataSources\DBLayer.BoqDet.datasource" />
+    <None Include="Properties\DataSources\DBLayer.BoqHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.Branch.datasource" />
     <None Include="Properties\DataSources\DBLayer.Brand.datasource" />
     <None Include="Properties\DataSources\DBLayer.Cart.datasource" />
@@ -945,6 +947,8 @@
     <None Include="Properties\DataSources\DBLayer.sEntry.datasource" />
     <None Include="Properties\DataSources\DBLayer.sModule.datasource" />
     <None Include="Properties\DataSources\DBLayer.sOption.datasource" />
+    <None Include="Properties\DataSources\DBLayer.SPSDet.datasource" />
+    <None Include="Properties\DataSources\DBLayer.SPSHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.sReferencePrefix.datasource" />
     <None Include="Properties\DataSources\DBLayer.sSection.datasource" />
     <None Include="Properties\DataSources\DBLayer.Supplier.datasource" />
