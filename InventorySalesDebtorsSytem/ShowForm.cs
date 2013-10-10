@@ -30,6 +30,8 @@ namespace InventorySalesDebtorsSytem
                     return new PurchaseOrder();
                 case "TRSGRN":
                     return new GoodsReceivedNote();
+                case "TRSQuot":
+                    return new CustomerQuotation();
                 case "TRSSOrd":
                     return new SalesOrder();
                 case "TRSInv":
