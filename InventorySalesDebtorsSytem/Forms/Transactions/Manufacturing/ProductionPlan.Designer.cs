@@ -35,7 +35,6 @@
             System.Windows.Forms.Label txnDateLabel;
             System.Windows.Forms.Label finishGoodTypeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionPlan));
-            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.HeaderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -47,10 +46,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.manualNoTextBox = new System.Windows.Forms.TextBox();
+            this.productionPlanHedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.txtCustomerCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -78,6 +77,15 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.StdOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FinishGoodItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RawItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBranchName = new System.Windows.Forms.TextBox();
+            this.branchCodeLabel = new System.Windows.Forms.Label();
+            this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.txtCustomerCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -85,6 +93,7 @@
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).BeginInit();
             this.HeaderBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -96,12 +105,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SOItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // manualNoLabel
             // 
             manualNoLabel.AutoSize = true;
-            manualNoLabel.Location = new System.Drawing.Point(518, 85);
+            manualNoLabel.Location = new System.Drawing.Point(533, 84);
             manualNoLabel.Name = "manualNoLabel";
             manualNoLabel.Size = new System.Drawing.Size(62, 13);
             manualNoLabel.TabIndex = 27;
@@ -119,7 +132,7 @@
             // remarksLabel
             // 
             remarksLabel.AutoSize = true;
-            remarksLabel.Location = new System.Drawing.Point(15, 112);
+            remarksLabel.Location = new System.Drawing.Point(17, 135);
             remarksLabel.Name = "remarksLabel";
             remarksLabel.Size = new System.Drawing.Size(52, 13);
             remarksLabel.TabIndex = 30;
@@ -128,7 +141,7 @@
             // txnDateLabel
             // 
             txnDateLabel.AutoSize = true;
-            txnDateLabel.Location = new System.Drawing.Point(268, 84);
+            txnDateLabel.Location = new System.Drawing.Point(287, 84);
             txnDateLabel.Name = "txnDateLabel";
             txnDateLabel.Size = new System.Drawing.Size(33, 13);
             txnDateLabel.TabIndex = 31;
@@ -137,34 +150,11 @@
             // finishGoodTypeLabel
             // 
             finishGoodTypeLabel.AutoSize = true;
-            finishGoodTypeLabel.Location = new System.Drawing.Point(17, 139);
+            finishGoodTypeLabel.Location = new System.Drawing.Point(17, 161);
             finishGoodTypeLabel.Name = "finishGoodTypeLabel";
             finishGoodTypeLabel.Size = new System.Drawing.Size(102, 13);
             finishGoodTypeLabel.TabIndex = 33;
             finishGoodTypeLabel.Text = "Finished Good Type";
-            // 
-            // transactionToolBar1
-            // 
-            this.transactionToolBar1.bindingNavigator = null;
-            this.transactionToolBar1.branchCodeControl = null;
-            this.transactionToolBar1.db = null;
-            this.transactionToolBar1.detDataGrid = null;
-            this.transactionToolBar1.detObjectBindingSource = null;
-            this.transactionToolBar1.firstFocusControl = null;
-            this.transactionToolBar1.hedObjectBindingSource = null;
-            this.transactionToolBar1.HideAddButton = false;
-            this.transactionToolBar1.HideDeleteButton = false;
-            this.transactionToolBar1.HideEditButton = false;
-            this.transactionToolBar1.HidePrintButton = false;
-            this.transactionToolBar1.HideViewButton = false;
-            this.transactionToolBar1.Location = new System.Drawing.Point(12, 12);
-            this.transactionToolBar1.mode = null;
-            this.transactionToolBar1.Name = "transactionToolBar1";
-            this.transactionToolBar1.primaryKeyControl = null;
-            this.transactionToolBar1.primaryKeyField = null;
-            this.transactionToolBar1.ReferenceID = null;
-            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
-            this.transactionToolBar1.TabIndex = 2;
             // 
             // HeaderBindingNavigator
             // 
@@ -262,50 +252,46 @@
             // 
             // manualNoTextBox
             // 
-            this.manualNoTextBox.Location = new System.Drawing.Point(605, 81);
+            this.manualNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "ManualNo", true));
+            this.manualNoTextBox.Location = new System.Drawing.Point(605, 80);
             this.manualNoTextBox.Name = "manualNoTextBox";
             this.manualNoTextBox.Size = new System.Drawing.Size(150, 20);
             this.manualNoTextBox.TabIndex = 26;
             // 
+            // productionPlanHedBindingSource
+            // 
+            this.productionPlanHedBindingSource.DataSource = typeof(DBLayer.ProductionPlanHed);
+            // 
             // referenceNoTextBox
             // 
+            this.referenceNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "ReferenceNo", true));
             this.referenceNoTextBox.Location = new System.Drawing.Point(123, 80);
             this.referenceNoTextBox.Name = "referenceNoTextBox";
             this.referenceNoTextBox.ReadOnly = true;
-            this.referenceNoTextBox.Size = new System.Drawing.Size(131, 20);
+            this.referenceNoTextBox.Size = new System.Drawing.Size(150, 20);
             this.referenceNoTextBox.TabIndex = 24;
             // 
             // remarksTextBox
             // 
-            this.remarksTextBox.Location = new System.Drawing.Point(123, 107);
+            this.remarksTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "Remarks", true));
+            this.remarksTextBox.Location = new System.Drawing.Point(123, 131);
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(632, 20);
             this.remarksTextBox.TabIndex = 28;
             // 
             // txnDateDateTimePicker
             // 
-            this.txnDateDateTimePicker.Location = new System.Drawing.Point(308, 80);
+            this.txnDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productionPlanHedBindingSource, "TxnDate", true));
+            this.txnDateDateTimePicker.Location = new System.Drawing.Point(326, 80);
             this.txnDateDateTimePicker.Name = "txnDateDateTimePicker";
             this.txnDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.txnDateDateTimePicker.TabIndex = 25;
-            // 
-            // txtCustomerCode
-            // 
-            this.txtCustomerCode.codeFieldName = null;
-            this.txtCustomerCode.filterCondition = null;
-            this.txtCustomerCode.Location = new System.Drawing.Point(123, 135);
-            this.txtCustomerCode.Name = "txtCustomerCode";
-            this.txtCustomerCode.Size = new System.Drawing.Size(150, 20);
-            this.txtCustomerCode.sortOrder = null;
-            this.txtCustomerCode.TabIndex = 32;
-            this.txtCustomerCode.valid = false;
-            this.txtCustomerCode.varList = null;
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Location = new System.Drawing.Point(20, 161);
+            this.tabControl.Location = new System.Drawing.Point(17, 189);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(735, 426);
@@ -535,11 +521,78 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
+            // txtBranchName
+            // 
+            this.txtBranchName.Enabled = false;
+            this.txtBranchName.Location = new System.Drawing.Point(278, 105);
+            this.txtBranchName.Name = "txtBranchName";
+            this.txtBranchName.Size = new System.Drawing.Size(498, 20);
+            this.txtBranchName.TabIndex = 40;
+            // 
+            // branchCodeLabel
+            // 
+            this.branchCodeLabel.AutoSize = true;
+            this.branchCodeLabel.Location = new System.Drawing.Point(17, 109);
+            this.branchCodeLabel.Name = "branchCodeLabel";
+            this.branchCodeLabel.Size = new System.Drawing.Size(72, 13);
+            this.branchCodeLabel.TabIndex = 39;
+            this.branchCodeLabel.Text = "Branch Code:";
+            // 
+            // txtBranchCode
+            // 
+            this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.filterCondition = null;
+            this.txtBranchCode.Location = new System.Drawing.Point(123, 105);
+            this.txtBranchCode.Name = "txtBranchCode";
+            this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
+            this.txtBranchCode.sortOrder = null;
+            this.txtBranchCode.TabIndex = 38;
+            this.txtBranchCode.valid = false;
+            this.txtBranchCode.varList = null;
+            // 
+            // txtCustomerCode
+            // 
+            this.txtCustomerCode.codeFieldName = null;
+            this.txtCustomerCode.filterCondition = null;
+            this.txtCustomerCode.Location = new System.Drawing.Point(123, 157);
+            this.txtCustomerCode.Name = "txtCustomerCode";
+            this.txtCustomerCode.Size = new System.Drawing.Size(150, 20);
+            this.txtCustomerCode.sortOrder = null;
+            this.txtCustomerCode.TabIndex = 32;
+            this.txtCustomerCode.valid = false;
+            this.txtCustomerCode.varList = null;
+            // 
+            // transactionToolBar1
+            // 
+            this.transactionToolBar1.bindingNavigator = null;
+            this.transactionToolBar1.branchCodeControl = null;
+            this.transactionToolBar1.db = null;
+            this.transactionToolBar1.detDataGrid = null;
+            this.transactionToolBar1.detObjectBindingSource = null;
+            this.transactionToolBar1.firstFocusControl = null;
+            this.transactionToolBar1.hedObjectBindingSource = null;
+            this.transactionToolBar1.HideAddButton = false;
+            this.transactionToolBar1.HideDeleteButton = false;
+            this.transactionToolBar1.HideEditButton = false;
+            this.transactionToolBar1.HidePrintButton = false;
+            this.transactionToolBar1.HideViewButton = false;
+            this.transactionToolBar1.Location = new System.Drawing.Point(12, 12);
+            this.transactionToolBar1.mode = null;
+            this.transactionToolBar1.Name = "transactionToolBar1";
+            this.transactionToolBar1.primaryKeyControl = null;
+            this.transactionToolBar1.primaryKeyField = null;
+            this.transactionToolBar1.ReferenceID = null;
+            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
+            this.transactionToolBar1.TabIndex = 2;
+            // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 599);
+            this.ClientSize = new System.Drawing.Size(774, 616);
+            this.Controls.Add(this.txtBranchName);
+            this.Controls.Add(this.txtBranchCode);
+            this.Controls.Add(this.branchCodeLabel);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.txtCustomerCode);
             this.Controls.Add(finishGoodTypeLabel);
@@ -564,6 +617,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).EndInit();
             this.HeaderBindingNavigator.ResumeLayout(false);
             this.HeaderBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -575,6 +629,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SOItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,5 +683,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource productionPlanHedBindingSource;
+        private System.Windows.Forms.BindingSource SOItemBindingSource;
+        private System.Windows.Forms.BindingSource StdOrderItemBindingSource;
+        private System.Windows.Forms.BindingSource FinishGoodItemBindingSource;
+        private System.Windows.Forms.BindingSource RawItemBindingSource;
+        private System.Windows.Forms.TextBox txtBranchName;
+        private MasterDataTextBox txtBranchCode;
+        private System.Windows.Forms.Label branchCodeLabel;
     }
 }
