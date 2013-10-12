@@ -382,6 +382,7 @@
     <Compile Include="ReusableComponents\MultipleSelectorBar.Designer.cs">
       <DependentUpon>MultipleSelectorBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReusableComponents\ReferenceItemGrid.cs" />
     <Compile Include="ReusableComponents\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>

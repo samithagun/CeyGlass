@@ -46,24 +46,19 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.manualNoTextBox = new System.Windows.Forms.TextBox();
-            this.productionPlanHedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.SoDataGridView = new System.Windows.Forms.DataGridView();
-            this.ColSoNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
@@ -86,7 +81,13 @@
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtTypeCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
+            this.productionPlanHedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -94,13 +95,12 @@
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).BeginInit();
             this.HeaderBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
@@ -110,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // manualNoLabel
@@ -259,10 +260,6 @@
             this.manualNoTextBox.Size = new System.Drawing.Size(150, 20);
             this.manualNoTextBox.TabIndex = 26;
             // 
-            // productionPlanHedBindingSource
-            // 
-            this.productionPlanHedBindingSource.DataSource = typeof(DBLayer.ProductionPlanHed);
-            // 
             // referenceNoTextBox
             // 
             this.referenceNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "ReferenceNo", true));
@@ -320,6 +317,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Standard Orders";
             // 
+            // SoDataGridView
+            // 
+            this.SoDataGridView.AllowUserToAddRows = false;
+            this.SoDataGridView.AutoGenerateColumns = false;
+            this.SoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
+            this.SoDataGridView.DataSource = this.SOItemBindingSource;
+            this.SoDataGridView.Location = new System.Drawing.Point(24, 19);
+            this.SoDataGridView.Name = "SoDataGridView";
+            this.SoDataGridView.ReadOnly = true;
+            this.SoDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.SoDataGridView.TabIndex = 1;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -369,46 +384,6 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sales Orders";
-            // 
-            // SoDataGridView
-            // 
-            this.SoDataGridView.AllowUserToAddRows = false;
-            this.SoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSoNo,
-            this.ColItem,
-            this.ColItemName,
-            this.ColQty});
-            this.SoDataGridView.Location = new System.Drawing.Point(13, 19);
-            this.SoDataGridView.Name = "SoDataGridView";
-            this.SoDataGridView.ReadOnly = true;
-            this.SoDataGridView.Size = new System.Drawing.Size(648, 150);
-            this.SoDataGridView.TabIndex = 0;
-            // 
-            // ColSoNo
-            // 
-            this.ColSoNo.HeaderText = "SO No";
-            this.ColSoNo.Name = "ColSoNo";
-            this.ColSoNo.ReadOnly = true;
-            // 
-            // ColItem
-            // 
-            this.ColItem.HeaderText = "ItemCode";
-            this.ColItem.Name = "ColItem";
-            this.ColItem.ReadOnly = true;
-            // 
-            // ColItemName
-            // 
-            this.ColItemName.HeaderText = "Item Name";
-            this.ColItemName.Name = "ColItemName";
-            this.ColItemName.ReadOnly = true;
-            this.ColItemName.Width = 300;
-            // 
-            // ColQty
-            // 
-            this.ColQty.HeaderText = "Quantity";
-            this.ColQty.Name = "ColQty";
-            this.ColQty.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -564,6 +539,7 @@
             this.txtTypeCode.TabIndex = 32;
             this.txtTypeCode.valid = false;
             this.txtTypeCode.varList = null;
+            this.txtTypeCode.Leave += new System.EventHandler(this.txtTypeCode_Leave);
             // 
             // transactionToolBar1
             // 
@@ -588,20 +564,56 @@
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 2;
             // 
-            // textBox1
+            // txtTypeName
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(279, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(477, 20);
-            this.textBox1.TabIndex = 41;
+            this.txtTypeName.Enabled = false;
+            this.txtTypeName.Location = new System.Drawing.Point(279, 156);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(477, 20);
+            this.txtTypeName.TabIndex = 41;
+            // 
+            // productionPlanHedBindingSource
+            // 
+            this.productionPlanHedBindingSource.DataSource = typeof(DBLayer.ProductionPlanHed);
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Rec No";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 45;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "SO No";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "ItemCode";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 625);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.txtBranchName);
             this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(this.branchCodeLabel);
@@ -629,13 +641,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).EndInit();
             this.HeaderBindingNavigator.ResumeLayout(false);
             this.HeaderBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
@@ -645,6 +656,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productionPlanHedBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,11 +689,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView SoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSoNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColQty;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView FinishedGoodDataGridView;
@@ -703,6 +710,12 @@
         private System.Windows.Forms.TextBox txtBranchName;
         private MasterDataTextBox txtBranchCode;
         private System.Windows.Forms.Label branchCodeLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTypeName;
+        private System.Windows.Forms.DataGridView SoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }

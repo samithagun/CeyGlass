@@ -57,6 +57,7 @@
     <Compile Include="BusinessLogic\Transactions\CusCreditNoteHed.cs" />
     <Compile Include="BusinessLogic\Transactions\CusDebitNote.cs" />
     <Compile Include="BusinessLogic\Transactions\CusReceiptHed.cs" />
+    <Compile Include="BusinessLogic\Transactions\ProductionPlanHed.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="BusinessLogic\IMasterFile.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Item.cs" />
