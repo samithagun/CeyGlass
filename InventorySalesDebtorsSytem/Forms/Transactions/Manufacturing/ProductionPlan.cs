@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 {
-    public partial class ProductionPlan : Form
+    public partial class ProductionPlan : TransactionForm
     {
         string branchCode, locationCode;
         InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
@@ -37,6 +37,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             txtBranchCode.codeFieldName = "BranchCode";
             txtBranchCode.controlList.Add(txtBranchName);
             txtBranchCode.fieldList.Add("BranchName");
+
+            
 
 
         }

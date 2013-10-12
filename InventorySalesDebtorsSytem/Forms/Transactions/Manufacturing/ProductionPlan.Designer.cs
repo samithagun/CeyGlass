@@ -84,8 +84,9 @@
             this.txtBranchName = new System.Windows.Forms.TextBox();
             this.branchCodeLabel = new System.Windows.Forms.Label();
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.txtCustomerCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.txtTypeCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -123,7 +124,7 @@
             // referenceNoLabel
             // 
             referenceNoLabel.AutoSize = true;
-            referenceNoLabel.Location = new System.Drawing.Point(17, 84);
+            referenceNoLabel.Location = new System.Drawing.Point(20, 84);
             referenceNoLabel.Name = "referenceNoLabel";
             referenceNoLabel.Size = new System.Drawing.Size(77, 13);
             referenceNoLabel.TabIndex = 29;
@@ -132,7 +133,7 @@
             // remarksLabel
             // 
             remarksLabel.AutoSize = true;
-            remarksLabel.Location = new System.Drawing.Point(17, 135);
+            remarksLabel.Location = new System.Drawing.Point(20, 135);
             remarksLabel.Name = "remarksLabel";
             remarksLabel.Size = new System.Drawing.Size(52, 13);
             remarksLabel.TabIndex = 30;
@@ -150,7 +151,7 @@
             // finishGoodTypeLabel
             // 
             finishGoodTypeLabel.AutoSize = true;
-            finishGoodTypeLabel.Location = new System.Drawing.Point(17, 161);
+            finishGoodTypeLabel.Location = new System.Drawing.Point(20, 161);
             finishGoodTypeLabel.Name = "finishGoodTypeLabel";
             finishGoodTypeLabel.Size = new System.Drawing.Size(102, 13);
             finishGoodTypeLabel.TabIndex = 33;
@@ -253,7 +254,7 @@
             // manualNoTextBox
             // 
             this.manualNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "ManualNo", true));
-            this.manualNoTextBox.Location = new System.Drawing.Point(605, 80);
+            this.manualNoTextBox.Location = new System.Drawing.Point(606, 80);
             this.manualNoTextBox.Name = "manualNoTextBox";
             this.manualNoTextBox.Size = new System.Drawing.Size(150, 20);
             this.manualNoTextBox.TabIndex = 26;
@@ -276,7 +277,7 @@
             this.remarksTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "Remarks", true));
             this.remarksTextBox.Location = new System.Drawing.Point(123, 131);
             this.remarksTextBox.Name = "remarksTextBox";
-            this.remarksTextBox.Size = new System.Drawing.Size(632, 20);
+            this.remarksTextBox.Size = new System.Drawing.Size(633, 20);
             this.remarksTextBox.TabIndex = 28;
             // 
             // txnDateDateTimePicker
@@ -291,7 +292,7 @@
             // 
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Location = new System.Drawing.Point(17, 189);
+            this.tabControl.Location = new System.Drawing.Point(20, 189);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(735, 426);
@@ -312,7 +313,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(25, 219);
+            this.groupBox2.Location = new System.Drawing.Point(25, 207);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(678, 181);
             this.groupBox2.TabIndex = 38;
@@ -524,15 +525,15 @@
             // txtBranchName
             // 
             this.txtBranchName.Enabled = false;
-            this.txtBranchName.Location = new System.Drawing.Point(278, 105);
+            this.txtBranchName.Location = new System.Drawing.Point(279, 105);
             this.txtBranchName.Name = "txtBranchName";
-            this.txtBranchName.Size = new System.Drawing.Size(498, 20);
+            this.txtBranchName.Size = new System.Drawing.Size(477, 20);
             this.txtBranchName.TabIndex = 40;
             // 
             // branchCodeLabel
             // 
             this.branchCodeLabel.AutoSize = true;
-            this.branchCodeLabel.Location = new System.Drawing.Point(17, 109);
+            this.branchCodeLabel.Location = new System.Drawing.Point(20, 109);
             this.branchCodeLabel.Name = "branchCodeLabel";
             this.branchCodeLabel.Size = new System.Drawing.Size(72, 13);
             this.branchCodeLabel.TabIndex = 39;
@@ -541,6 +542,7 @@
             // txtBranchCode
             // 
             this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "BranchCode", true));
             this.txtBranchCode.filterCondition = null;
             this.txtBranchCode.Location = new System.Drawing.Point(123, 105);
             this.txtBranchCode.Name = "txtBranchCode";
@@ -550,17 +552,18 @@
             this.txtBranchCode.valid = false;
             this.txtBranchCode.varList = null;
             // 
-            // txtCustomerCode
+            // txtTypeCode
             // 
-            this.txtCustomerCode.codeFieldName = null;
-            this.txtCustomerCode.filterCondition = null;
-            this.txtCustomerCode.Location = new System.Drawing.Point(123, 157);
-            this.txtCustomerCode.Name = "txtCustomerCode";
-            this.txtCustomerCode.Size = new System.Drawing.Size(150, 20);
-            this.txtCustomerCode.sortOrder = null;
-            this.txtCustomerCode.TabIndex = 32;
-            this.txtCustomerCode.valid = false;
-            this.txtCustomerCode.varList = null;
+            this.txtTypeCode.codeFieldName = null;
+            this.txtTypeCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "TypeCode", true));
+            this.txtTypeCode.filterCondition = null;
+            this.txtTypeCode.Location = new System.Drawing.Point(123, 156);
+            this.txtTypeCode.Name = "txtTypeCode";
+            this.txtTypeCode.Size = new System.Drawing.Size(150, 20);
+            this.txtTypeCode.sortOrder = null;
+            this.txtTypeCode.TabIndex = 32;
+            this.txtTypeCode.valid = false;
+            this.txtTypeCode.varList = null;
             // 
             // transactionToolBar1
             // 
@@ -576,7 +579,7 @@
             this.transactionToolBar1.HideEditButton = false;
             this.transactionToolBar1.HidePrintButton = false;
             this.transactionToolBar1.HideViewButton = false;
-            this.transactionToolBar1.Location = new System.Drawing.Point(12, 12);
+            this.transactionToolBar1.Location = new System.Drawing.Point(20, 8);
             this.transactionToolBar1.mode = null;
             this.transactionToolBar1.Name = "transactionToolBar1";
             this.transactionToolBar1.primaryKeyControl = null;
@@ -585,16 +588,25 @@
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 2;
             // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(279, 156);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(477, 20);
+            this.textBox1.TabIndex = 41;
+            // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 616);
+            this.ClientSize = new System.Drawing.Size(770, 625);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtBranchName);
             this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(this.branchCodeLabel);
             this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.txtCustomerCode);
+            this.Controls.Add(this.txtTypeCode);
             this.Controls.Add(finishGoodTypeLabel);
             this.Controls.Add(manualNoLabel);
             this.Controls.Add(this.manualNoTextBox);
@@ -612,7 +624,7 @@
             this.Name = "ProductionPlan";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProductionPlan";
+            this.Text = "Production Plan";
             this.Load += new System.EventHandler(this.ProductionPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).EndInit();
             this.HeaderBindingNavigator.ResumeLayout(false);
@@ -655,7 +667,7 @@
         private System.Windows.Forms.TextBox referenceNoTextBox;
         private System.Windows.Forms.TextBox remarksTextBox;
         private System.Windows.Forms.DateTimePicker txnDateDateTimePicker;
-        private MasterDataTextBox txtCustomerCode;
+        private MasterDataTextBox txtTypeCode;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -691,5 +703,6 @@
         private System.Windows.Forms.TextBox txtBranchName;
         private MasterDataTextBox txtBranchCode;
         private System.Windows.Forms.Label branchCodeLabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
