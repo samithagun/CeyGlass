@@ -26,8 +26,6 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void SPS_Load(object sender, EventArgs e)
         {
-            
-
             transactionToolBar1.bindingNavigator = SPSBindingNavigator;
             transactionToolBar1.hedObjectBindingSource = SPSBindingSource;
             transactionToolBar1.detObjectBindingSource = SPSDetBindingSource;
@@ -142,7 +140,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             alreadyFilling = false;
         }
 
-         public override void ClearData()
+        public override void ClearData()
         {
             txtItemCode.Text = "";
             txtItemName.Text = "";

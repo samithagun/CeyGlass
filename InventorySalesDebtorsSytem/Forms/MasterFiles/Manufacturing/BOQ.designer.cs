@@ -44,13 +44,13 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BOQDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTotalQty = new System.Windows.Forms.TextBox();
+            this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtStdCost = new System.Windows.Forms.TextBox();
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.txtDamageQty = new System.Windows.Forms.TextBox();
             this.txtUOM = new System.Windows.Forms.TextBox();
             this.txtUsableQty = new System.Windows.Forms.TextBox();
             this.BOQBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -77,9 +77,9 @@
             itemCodeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQDetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingNavigator)).BeginInit();
             this.BOQBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -132,7 +132,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(12, 114);
+            label1.Location = new System.Drawing.Point(12, 112);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(65, 13);
             label1.TabIndex = 52;
@@ -204,6 +204,10 @@
             this.txtTotalQty.Size = new System.Drawing.Size(100, 20);
             this.txtTotalQty.TabIndex = 63;
             // 
+            // BOQBindingSource
+            // 
+            this.BOQBindingSource.DataSource = typeof(DBLayer.BoqHed);
+            // 
             // txtStdCost
             // 
             this.txtStdCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "StdCost", true));
@@ -270,10 +274,6 @@
             this.BOQBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.BOQBindingNavigator.Size = new System.Drawing.Size(202, 28);
             this.BOQBindingNavigator.TabIndex = 66;
-            // 
-            // BOQBindingSource
-            // 
-            this.BOQBindingSource.DataSource = typeof(DBLayer.BoqHed);
             // 
             // bindingNavigatorCountItem
             // 
@@ -486,10 +486,10 @@
             this.Load += new System.EventHandler(this.BOQ_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQDetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingNavigator)).EndInit();
             this.BOQBindingNavigator.ResumeLayout(false);
             this.BOQBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

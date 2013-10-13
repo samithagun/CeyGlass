@@ -9374,14 +9374,14 @@
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.Cart" Width="1.5" PointX="7.5" PointY="48.875" Height="2.172587890624996" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CreditCardType" Width="1.5" PointX="9" PointY="45.375" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.Customer" Width="1.5" PointX="6" PointY="12.125" Height="5.0571093750000031" IsExpanded="true" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CustomerGroup" Width="1.5" PointX="3.75" PointY="12.625" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CustomerGroup" Width="1.5" PointX="4" PointY="10.875" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CustomerType" Width="1.5" PointX="3.75" PointY="15" Height="1.5956835937500014" IsExpanded="true" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.DispatchDet" Width="1.5" PointX="7.5" PointY="61.5" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.DispatchDet" Width="1.5" PointX="13.875" PointY="53.5" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.GRNDet" Width="1.5" PointX="10.5" PointY="34.125" Height="4.0956022135416674" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.GRRNDet" Width="1.5" PointX="7.5" PointY="34.125" Height="3.9033007812500102" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.InvoiceDet" Width="1.5" PointX="10.5" PointY="21" Height="4.2879036458333388" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.Item" Width="1.5" PointX="5.25" PointY="27.5" Height="7.1724251302083353" IsExpanded="true" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ItemCategory" Width="1.5" PointX="0.75" PointY="30.375" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ItemCategory" Width="1.5" PointX="0.875" PointY="31.625" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ItemGroup" Width="1.5" PointX="3" PointY="33.375" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ItemQOH" Width="1.5" PointX="7.5" PointY="26" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ItemSubCategory" Width="1.5" PointX="3" PointY="30.125" Height="1.9802864583333353" IsExpanded="true" />
@@ -9398,7 +9398,7 @@
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SalesOrderDet" Width="1.5" PointX="10.5" PointY="29.125" Height="4.095602213541671" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SalesReturnDet" Width="1.5" PointX="7.5" PointY="29.125" Height="3.9033007812500138" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.Supplier" Width="1.5" PointX="9" PointY="40.5" Height="3.3263964843749818" IsExpanded="true" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.TransferDet" Width="1.5" PointX="7.5" PointY="23" Height="2.1725878906249818" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.TransferDet" Width="1.5" PointX="4.5" PointY="23.375" Height="2.1725878906249818" IsExpanded="true" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.TransferHed" Width="1.5" PointX="3.75" PointY="37.875" Height="4.2879036458333317" IsExpanded="true" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ItemQOH_Branch" ManuallyRouted="false">
           <ConnectorPoint PointX="7.5" PointY="8.1126511473624223" />
@@ -9847,7 +9847,7 @@
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sOption" Width="1.5" PointX="17.5" PointY="3.5" Height="2.172587890624996" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sReferencePrefix" Width="1.5" PointX="2.75" PointY="3.125" Height="2.1725878906249818" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sSection" Width="1.5" PointX="13" PointY="3.5" Height="2.172587890624996" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.User" Width="1.5" PointX="2.75" PointY="6.125" Height="1.5956835937499818" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.User" Width="1.5" PointX="1.5" PointY="5.75" Height="1.5956835937499818" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.UserAccess" Width="1.5" PointX="19.75" PointY="3.625" Height="1.7879850260416674" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_Section_Module" >
           <ConnectorPoint PointX="12.25" PointY="4.5189925130208337" />
@@ -10793,7 +10793,7 @@
           <ConnectorPoint PointX="24.75" PointY="10.749410807291666" />
           <ConnectorPoint PointX="24.75" PointY="11.75" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.DispatchHed" Width="1.5" PointX="26.875" PointY="12.625" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.DispatchHed" Width="1.5" PointX="18.75" PointY="19.375" Height="4.0956022135416674" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_DispatchHed_Branch" >
           <ConnectorPoint PointX="7.5" PointY="11.662671544289717" />
           <ConnectorPoint PointX="7.635416666666667" PointY="11.662671544289715" />
@@ -10945,39 +10945,7 @@
           <ConnectorPoint PointX="28.034387676950139" PointY="11.5" />
           <ConnectorPoint PointX="28.034387676950139" PointY="12.625" />
         </AssociationConnector>
-        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_DispatchHed_User" >
-          <ConnectorPoint PointX="3.8356986342773438" PointY="6.125" />
-          <ConnectorPoint PointX="3.8356986342773438" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="3.9633828395182289" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="4.1300495061848954" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="4.3690787760416852" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="4.5357454427083512" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="4.541666666666667" PointY="5.92258789062498" />
-          <ConnectorPoint PointX="4.9733333333333336" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="5.1191666666666675" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="5.2858333333333336" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="8.6119772916666673" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="8.7786439583333351" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="9.1197929166666665" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="9.2864595833333343" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="14.744794166666667" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="14.911460833333335" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="16.658855666666668" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="16.825522333333332" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="19.135416666666668" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="19.302083333333332" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="21.791666666666668" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="21.958333333333332" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="22.166666666666668" PointY="5.9225878906249809" />
-          <ConnectorPoint PointX="22.333333333333332" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="22.375" PointY="5.9225878906249818" />
-          <ConnectorPoint PointX="22.375" PointY="10.5" />
-          <ConnectorPoint PointX="23.375" PointY="10.5" />
-          <ConnectorPoint PointX="23.375" PointY="10.765035807291666" />
-          <ConnectorPoint PointX="25.885416666666668" PointY="10.765035807291666" />
-          <ConnectorPoint PointX="26.052083333333332" PointY="10.765035807291666" />
-          <ConnectorPoint PointX="27.631271353900274" PointY="10.765035807291666" />
-          <ConnectorPoint PointX="27.631271353900274" PointY="12.625" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_DispatchHed_User" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_DispatchDet_DispatchHed" >
           <ConnectorPoint PointX="27.332882080078122" PointY="18.451315104166667" />
@@ -11023,7 +10991,7 @@
           <ConnectorPoint PointX="26.583333333333332" PointY="17.663157552083334" />
           <ConnectorPoint PointX="26.875" PointY="17.663157552083334" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.AdjustmentHed" Width="1.5" PointX="8.25" PointY="12.875" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.AdjustmentHed" Width="1.5" PointX="10.625" PointY="13.25" Height="3.5186979166666674" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_AdjustmentDet_AdjustmentHed" >
           <ConnectorPoint PointX="9.75" PointY="14.344590742726343" />
           <ConnectorPoint PointX="10.916666666666666" PointY="14.344590742726343" />
@@ -11639,7 +11607,7 @@
           <ConnectorPoint PointX="22.25" PointY="1.9325716145833334" />
           <ConnectorPoint PointX="22.625" PointY="1.9325716145833334" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CustomerTxn" Width="1.5" PointX="9.875" PointY="7.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.CustomerTxn" Width="1.5" PointX="11.5" PointY="6.625" Height="1.7879850260416674" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sEntry" Width="1.5" PointX="15.25" PointY="3.375" Height="2.3648893229166674" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_Entry_Section" >
           <ConnectorPoint PointX="14.5" PointY="4.5862939453125" />
@@ -11653,15 +11621,15 @@
           <ConnectorPoint PointX="17.052083333333332" PointY="4.5862939453125" />
           <ConnectorPoint PointX="17.5" PointY="4.5862939453125" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.dtproperty" Width="1.5" PointX="5.0271137752696466" PointY="10.693484624239376" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SupplierTxn" Width="1.5" PointX="2.0600367887225173" PointY="23.419126983461496" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sysdiagram" Width="1.5" PointX="3.4243853424789314" PointY="17.159201913121716" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanFinishedGoodDet" Width="1.5" PointX="11.02864524676867" PointY="19.354211548042581" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanHed" Width="1.75" PointX="8.625" PointY="18.375" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Width="2" PointX="8.875" PointY="7.875" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanSODet" Width="1.5" PointX="4.4997475726994445" PointY="17.944821962129708" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanStandardDet" Width="1.5" PointX="6.6299854324338892" PointY="12.967194980460775" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SPSDet" Width="1.5" PointX="4.1952397470340319" PointY="5.854201274856087" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.dtproperty" Width="1.5" PointX="8.75" PointY="10.625" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SupplierTxn" Width="1.5" PointX="0.875" PointY="20" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sysdiagram" Width="1.5" PointX="1.75" PointY="16.875" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanFinishedGoodDet" Width="1.5" PointX="10" PointY="18.875" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanHed" Width="1.75" PointX="14.625" PointY="18.25" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Width="2" PointX="9" PointY="7.125" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanSODet" Width="1.5" PointX="4.25" PointY="18" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanStandardDet" Width="1.5" PointX="8.625" PointY="13.625" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SPSDet" Width="1.5" PointX="3.875" PointY="7.5" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SPSHed" Width="1.5" PointX="10.118519100415762" PointY="23.213410030684159" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_Item" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" />
@@ -11674,15 +11642,15 @@
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_ProductionPlanHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanDet_SalesOrderDet" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_SPSHed" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.BoqDet" Width="1.5" PointX="12.375" PointY="18" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.BoqHed" Width="1.5" PointX="10.720972459167694" PointY="23.040158640146331" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.BoqDet" Width="1.5" PointX="13.125" PointY="16.75" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.BoqHed" Width="1.5" PointX="12.5" PointY="22.125" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqDet_BoqHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqDet_Item" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_BoqHed_Item" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_SPSDet_SPSHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_Branch" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_ItemType" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionNoteDet" Width="1.5" PointX="2.6971594759715529" PointY="19.872264066651585" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionNoteDet" Width="1.5" PointX="3" PointY="20.625" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionNoteHed" Width="1.5" PointX="11.25" PointY="9.75" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_ProductionNoteHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionNoteHed_ProductionPlanHed" />

@@ -49,19 +49,19 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.manualNoTextBox = new System.Windows.Forms.TextBox();
+            this.txtManualNo = new System.Windows.Forms.TextBox();
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
-            this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txnDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtBOQQty = new System.Windows.Forms.TextBox();
+            this.txtUsableQty = new System.Windows.Forms.TextBox();
+            this.txtDamageQty = new System.Windows.Forms.TextBox();
+            this.PNDataGridView = new System.Windows.Forms.DataGridView();
             this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WasteQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtTotalQty = new System.Windows.Forms.TextBox();
             this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtProPlan = new InventorySalesDebtorsSytem.MasterDataTextBox();
@@ -81,7 +81,7 @@
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).BeginInit();
             this.PNBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -262,12 +262,12 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // manualNoTextBox
+            // txtManualNo
             // 
-            this.manualNoTextBox.Location = new System.Drawing.Point(606, 78);
-            this.manualNoTextBox.Name = "manualNoTextBox";
-            this.manualNoTextBox.Size = new System.Drawing.Size(148, 20);
-            this.manualNoTextBox.TabIndex = 42;
+            this.txtManualNo.Location = new System.Drawing.Point(606, 78);
+            this.txtManualNo.Name = "txtManualNo";
+            this.txtManualNo.Size = new System.Drawing.Size(148, 20);
+            this.txtManualNo.TabIndex = 42;
             // 
             // referenceNoTextBox
             // 
@@ -277,49 +277,52 @@
             this.referenceNoTextBox.Size = new System.Drawing.Size(131, 20);
             this.referenceNoTextBox.TabIndex = 40;
             // 
-            // txnDateDateTimePicker
+            // txnDateTimePicker
             // 
-            this.txnDateDateTimePicker.Location = new System.Drawing.Point(334, 77);
-            this.txnDateDateTimePicker.Name = "txnDateDateTimePicker";
-            this.txnDateDateTimePicker.Size = new System.Drawing.Size(160, 20);
-            this.txnDateDateTimePicker.TabIndex = 41;
+            this.txnDateTimePicker.Location = new System.Drawing.Point(334, 77);
+            this.txnDateTimePicker.Name = "txnDateTimePicker";
+            this.txnDateTimePicker.Size = new System.Drawing.Size(160, 20);
+            this.txnDateTimePicker.TabIndex = 41;
             // 
-            // textBox2
+            // txtBOQQty
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 76;
+            this.txtBOQQty.Enabled = false;
+            this.txtBOQQty.Location = new System.Drawing.Point(123, 193);
+            this.txtBOQQty.Name = "txtBOQQty";
+            this.txtBOQQty.Size = new System.Drawing.Size(131, 20);
+            this.txtBOQQty.TabIndex = 76;
             // 
-            // textBox3
+            // txtUsableQty
             // 
-            this.textBox3.Location = new System.Drawing.Point(359, 193);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
-            this.textBox3.TabIndex = 78;
+            this.txtUsableQty.Enabled = false;
+            this.txtUsableQty.Location = new System.Drawing.Point(359, 193);
+            this.txtUsableQty.Name = "txtUsableQty";
+            this.txtUsableQty.Size = new System.Drawing.Size(131, 20);
+            this.txtUsableQty.TabIndex = 78;
             // 
-            // textBox4
+            // txtDamageQty
             // 
-            this.textBox4.Location = new System.Drawing.Point(623, 193);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 20);
-            this.textBox4.TabIndex = 80;
+            this.txtDamageQty.Enabled = false;
+            this.txtDamageQty.Location = new System.Drawing.Point(623, 193);
+            this.txtDamageQty.Name = "txtDamageQty";
+            this.txtDamageQty.Size = new System.Drawing.Size(131, 20);
+            this.txtDamageQty.TabIndex = 80;
             // 
-            // dataGridView1
+            // PNDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PNDataGridView.AllowUserToAddRows = false;
+            this.PNDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PNDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemCode,
             this.ItemName,
             this.TotalQty,
             this.UsedQty,
             this.WasteQty});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 233);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(733, 212);
-            this.dataGridView1.TabIndex = 82;
+            this.PNDataGridView.Location = new System.Drawing.Point(21, 233);
+            this.PNDataGridView.Name = "PNDataGridView";
+            this.PNDataGridView.ReadOnly = true;
+            this.PNDataGridView.Size = new System.Drawing.Size(733, 212);
+            this.PNDataGridView.TabIndex = 82;
             // 
             // ItemCode
             // 
@@ -352,12 +355,13 @@
             this.WasteQty.Name = "WasteQty";
             this.WasteQty.ReadOnly = true;
             // 
-            // textBox6
+            // txtItemName
             // 
-            this.textBox6.Location = new System.Drawing.Point(260, 137);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(494, 20);
-            this.textBox6.TabIndex = 84;
+            this.txtItemName.Enabled = false;
+            this.txtItemName.Location = new System.Drawing.Point(260, 137);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(494, 20);
+            this.txtItemName.TabIndex = 84;
             // 
             // txtTotalQty
             // 
@@ -443,14 +447,14 @@
             this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(label1);
             this.Controls.Add(this.txtTotalQty);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtItemName);
+            this.Controls.Add(this.PNDataGridView);
             this.Controls.Add(label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDamageQty);
             this.Controls.Add(label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtUsableQty);
             this.Controls.Add(label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBOQQty);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.txtProPlan);
             this.Controls.Add(manualNoLabel);
@@ -460,16 +464,16 @@
             this.Controls.Add(txnDateLabel);
             this.Controls.Add(this.transactionToolBar1);
             this.Controls.Add(this.PNBindingNavigator);
-            this.Controls.Add(this.manualNoTextBox);
+            this.Controls.Add(this.txtManualNo);
             this.Controls.Add(this.referenceNoTextBox);
-            this.Controls.Add(this.txnDateDateTimePicker);
+            this.Controls.Add(this.txnDateTimePicker);
             this.Name = "ProductionNote";
-            this.Text = "ProductionNote";
+            this.Text = "Production Note";
             this.Load += new System.EventHandler(this.ProductionNote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).EndInit();
             this.PNBindingNavigator.ResumeLayout(false);
             this.PNBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -491,21 +495,21 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.TextBox manualNoTextBox;
+        private System.Windows.Forms.TextBox txtManualNo;
         private System.Windows.Forms.TextBox referenceNoTextBox;
-        private System.Windows.Forms.DateTimePicker txnDateDateTimePicker;
+        private System.Windows.Forms.DateTimePicker txnDateTimePicker;
         private MasterDataTextBox txtProPlan;
         private MasterDataTextBox txtItemCode;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBOQQty;
+        private System.Windows.Forms.TextBox txtUsableQty;
+        private System.Windows.Forms.TextBox txtDamageQty;
+        private System.Windows.Forms.DataGridView PNDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsedQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn WasteQty;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.TextBox txtTotalQty;
         private MasterDataTextBox txtBranchCode;
         private System.Windows.Forms.BindingSource PNDetBindingSource;
