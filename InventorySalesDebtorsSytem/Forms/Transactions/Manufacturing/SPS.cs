@@ -26,7 +26,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void SPS_Load(object sender, EventArgs e)
         {
-            SPSBindingSource.DataSource = db.SPSHeds;
+            
 
             transactionToolBar1.bindingNavigator = SPSBindingNavigator;
             transactionToolBar1.hedObjectBindingSource = SPSBindingSource;
@@ -39,11 +39,12 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             transactionToolBar1.branchCodeControl = txtBranchCode;
             transactionToolBar1.ReferenceID = "M-SPS";
 
-            txtItemCode.varList = from i in db.Items select new { i.ItemCode, i.ItemName };
+            txtItemCode.varList = from i in db.Items where i.IsRawMaterial == false select new { i.ItemCode, i.ItemName };
             txtItemCode.codeFieldName = "ItemCode";
             txtItemCode.controlList.Add(txtItemName);
             txtItemCode.fieldList.Add("ItemName");
 
+            SPSBindingSource.DataSource = db.SPSHeds;
             SPSDetBindingSource.DataSource = tmpDetData;
             SPSDataGridView.DataSource = SPSDetBindingSource;
 

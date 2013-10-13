@@ -947,6 +947,8 @@
     <None Include="Properties\DataSources\DBLayer.POHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.PORequisitionDet.datasource" />
     <None Include="Properties\DataSources\DBLayer.PORequisitionHed.datasource" />
+    <None Include="Properties\DataSources\DBLayer.ProductionNoteDet.datasource" />
+    <None Include="Properties\DataSources\DBLayer.ProductionNoteHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.ProductionPlanFinishedGoodDet.datasource" />
     <None Include="Properties\DataSources\DBLayer.ProductionPlanHed.datasource" />
     <None Include="Properties\DataSources\DBLayer.ProductionPlanRawItem.datasource" />

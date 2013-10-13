@@ -39,12 +39,12 @@ namespace InventorySalesDebtorsSytem
             //transactionToolBar1.branchCodeControl = txtBranchCode;
             //transactionToolBar1.ReferenceID = "S-INV";
 
-            txtItemCode.varList = from i in db.Items select new { i.ItemCode, i.ItemName };
+            txtItemCode.varList = from i in db.Items where i.IsRawMaterial == false select new { i.ItemCode, i.ItemName };
             txtItemCode.codeFieldName = "ItemCode";
             txtItemCode.controlList.Add(txtItemName);
             txtItemCode.fieldList.Add("ItemName");
 
-            txtRawItemCode.varList = from i in db.Items select new { i.ItemCode, i.ItemName };
+            txtRawItemCode.varList = from i in db.Items where i.IsRawMaterial == true select new { i.ItemCode, i.ItemName };
             txtRawItemCode.codeFieldName = "ItemCode";
 
             BOQDetBindingSource.DataSource = tmpDetData;

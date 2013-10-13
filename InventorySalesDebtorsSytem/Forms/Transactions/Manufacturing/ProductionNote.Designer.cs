@@ -37,15 +37,14 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.HeaderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.PNBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -53,8 +52,6 @@
             this.manualNoTextBox = new System.Windows.Forms.TextBox();
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.txnDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.txtProPlan = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -66,6 +63,13 @@
             this.WasteQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtTotalQty = new System.Windows.Forms.TextBox();
+            this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.txtProPlan = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
+            this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.PNDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PNBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             manualNoLabel = new System.Windows.Forms.Label();
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
@@ -75,9 +79,12 @@
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).BeginInit();
-            this.HeaderBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).BeginInit();
+            this.PNBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // manualNoLabel
@@ -152,6 +159,15 @@
             label4.TabIndex = 81;
             label4.Text = "Damage Qty:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(18, 168);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 13);
+            label1.TabIndex = 86;
+            label1.Text = "Total Qty:";
+            // 
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -175,29 +191,6 @@
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // transactionToolBar1
-            // 
-            this.transactionToolBar1.bindingNavigator = null;
-            this.transactionToolBar1.branchCodeControl = null;
-            this.transactionToolBar1.db = null;
-            this.transactionToolBar1.detDataGrid = null;
-            this.transactionToolBar1.detObjectBindingSource = null;
-            this.transactionToolBar1.firstFocusControl = null;
-            this.transactionToolBar1.hedObjectBindingSource = null;
-            this.transactionToolBar1.HideAddButton = false;
-            this.transactionToolBar1.HideDeleteButton = false;
-            this.transactionToolBar1.HideEditButton = false;
-            this.transactionToolBar1.HidePrintButton = false;
-            this.transactionToolBar1.HideViewButton = false;
-            this.transactionToolBar1.Location = new System.Drawing.Point(13, 9);
-            this.transactionToolBar1.mode = null;
-            this.transactionToolBar1.Name = "transactionToolBar1";
-            this.transactionToolBar1.primaryKeyControl = null;
-            this.transactionToolBar1.primaryKeyField = null;
-            this.transactionToolBar1.ReferenceID = null;
-            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
-            this.transactionToolBar1.TabIndex = 38;
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -214,13 +207,13 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // HeaderBindingNavigator
+            // PNBindingNavigator
             // 
-            this.HeaderBindingNavigator.AddNewItem = null;
-            this.HeaderBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.HeaderBindingNavigator.DeleteItem = null;
-            this.HeaderBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
-            this.HeaderBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PNBindingNavigator.AddNewItem = null;
+            this.PNBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.PNBindingNavigator.DeleteItem = null;
+            this.PNBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.PNBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -230,16 +223,16 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.HeaderBindingNavigator.Location = new System.Drawing.Point(415, 19);
-            this.HeaderBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.HeaderBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.HeaderBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.HeaderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.HeaderBindingNavigator.Name = "HeaderBindingNavigator";
-            this.HeaderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.HeaderBindingNavigator.Size = new System.Drawing.Size(209, 25);
-            this.HeaderBindingNavigator.TabIndex = 39;
-            this.HeaderBindingNavigator.Text = "bindingNavigator1";
+            this.PNBindingNavigator.Location = new System.Drawing.Point(415, 19);
+            this.PNBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.PNBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.PNBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.PNBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.PNBindingNavigator.Name = "PNBindingNavigator";
+            this.PNBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.PNBindingNavigator.Size = new System.Drawing.Size(209, 25);
+            this.PNBindingNavigator.TabIndex = 39;
+            this.PNBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorSeparator1
             // 
@@ -290,30 +283,6 @@
             this.txnDateDateTimePicker.Name = "txnDateDateTimePicker";
             this.txnDateDateTimePicker.Size = new System.Drawing.Size(160, 20);
             this.txnDateDateTimePicker.TabIndex = 41;
-            // 
-            // txtProPlan
-            // 
-            this.txtProPlan.codeFieldName = null;
-            this.txtProPlan.filterCondition = null;
-            this.txtProPlan.Location = new System.Drawing.Point(123, 107);
-            this.txtProPlan.Name = "txtProPlan";
-            this.txtProPlan.Size = new System.Drawing.Size(131, 20);
-            this.txtProPlan.sortOrder = null;
-            this.txtProPlan.TabIndex = 70;
-            this.txtProPlan.valid = false;
-            this.txtProPlan.varList = null;
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.codeFieldName = null;
-            this.txtItemCode.filterCondition = null;
-            this.txtItemCode.Location = new System.Drawing.Point(123, 136);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(131, 20);
-            this.txtItemCode.sortOrder = null;
-            this.txtItemCode.TabIndex = 71;
-            this.txtItemCode.valid = false;
-            this.txtItemCode.varList = null;
             // 
             // textBox2
             // 
@@ -390,15 +359,6 @@
             this.textBox6.Size = new System.Drawing.Size(494, 20);
             this.textBox6.TabIndex = 84;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 168);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(53, 13);
-            label1.TabIndex = 86;
-            label1.Text = "Total Qty:";
-            // 
             // txtTotalQty
             // 
             this.txtTotalQty.Location = new System.Drawing.Point(123, 164);
@@ -406,11 +366,81 @@
             this.txtTotalQty.Size = new System.Drawing.Size(131, 20);
             this.txtTotalQty.TabIndex = 85;
             // 
+            // txtItemCode
+            // 
+            this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.filterCondition = null;
+            this.txtItemCode.Location = new System.Drawing.Point(123, 136);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(131, 20);
+            this.txtItemCode.sortOrder = null;
+            this.txtItemCode.TabIndex = 71;
+            this.txtItemCode.valid = false;
+            this.txtItemCode.varList = null;
+            // 
+            // txtProPlan
+            // 
+            this.txtProPlan.codeFieldName = null;
+            this.txtProPlan.filterCondition = null;
+            this.txtProPlan.Location = new System.Drawing.Point(123, 107);
+            this.txtProPlan.Name = "txtProPlan";
+            this.txtProPlan.Size = new System.Drawing.Size(131, 20);
+            this.txtProPlan.sortOrder = null;
+            this.txtProPlan.TabIndex = 70;
+            this.txtProPlan.valid = false;
+            this.txtProPlan.varList = null;
+            // 
+            // transactionToolBar1
+            // 
+            this.transactionToolBar1.bindingNavigator = null;
+            this.transactionToolBar1.branchCodeControl = null;
+            this.transactionToolBar1.db = null;
+            this.transactionToolBar1.detDataGrid = null;
+            this.transactionToolBar1.detObjectBindingSource = null;
+            this.transactionToolBar1.firstFocusControl = null;
+            this.transactionToolBar1.hedObjectBindingSource = null;
+            this.transactionToolBar1.HideAddButton = false;
+            this.transactionToolBar1.HideDeleteButton = false;
+            this.transactionToolBar1.HideEditButton = false;
+            this.transactionToolBar1.HidePrintButton = false;
+            this.transactionToolBar1.HideViewButton = false;
+            this.transactionToolBar1.Location = new System.Drawing.Point(13, 9);
+            this.transactionToolBar1.mode = null;
+            this.transactionToolBar1.Name = "transactionToolBar1";
+            this.transactionToolBar1.primaryKeyControl = null;
+            this.transactionToolBar1.primaryKeyField = null;
+            this.transactionToolBar1.ReferenceID = null;
+            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
+            this.transactionToolBar1.TabIndex = 38;
+            // 
+            // txtBranchCode
+            // 
+            this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.filterCondition = null;
+            this.txtBranchCode.Location = new System.Drawing.Point(606, 107);
+            this.txtBranchCode.Name = "txtBranchCode";
+            this.txtBranchCode.Size = new System.Drawing.Size(148, 20);
+            this.txtBranchCode.sortOrder = null;
+            this.txtBranchCode.TabIndex = 104;
+            this.txtBranchCode.Text = "100";
+            this.txtBranchCode.valid = true;
+            this.txtBranchCode.varList = null;
+            this.txtBranchCode.Visible = false;
+            // 
+            // PNBindingSource
+            // 
+            this.PNBindingSource.DataSource = typeof(DBLayer.ProductionNoteHed);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ProductionNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 457);
+            this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(label1);
             this.Controls.Add(this.txtTotalQty);
             this.Controls.Add(this.textBox6);
@@ -429,16 +459,20 @@
             this.Controls.Add(remarksLabel);
             this.Controls.Add(txnDateLabel);
             this.Controls.Add(this.transactionToolBar1);
-            this.Controls.Add(this.HeaderBindingNavigator);
+            this.Controls.Add(this.PNBindingNavigator);
             this.Controls.Add(this.manualNoTextBox);
             this.Controls.Add(this.referenceNoTextBox);
             this.Controls.Add(this.txnDateDateTimePicker);
             this.Name = "ProductionNote";
             this.Text = "ProductionNote";
-            ((System.ComponentModel.ISupportInitialize)(this.HeaderBindingNavigator)).EndInit();
-            this.HeaderBindingNavigator.ResumeLayout(false);
-            this.HeaderBindingNavigator.PerformLayout();
+            this.Load += new System.EventHandler(this.ProductionNote_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).EndInit();
+            this.PNBindingNavigator.ResumeLayout(false);
+            this.PNBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,7 +486,7 @@
         private TransactionToolBar transactionToolBar1;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.BindingNavigator HeaderBindingNavigator;
+        private System.Windows.Forms.BindingNavigator PNBindingNavigator;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
@@ -473,5 +507,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WasteQty;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtTotalQty;
+        private MasterDataTextBox txtBranchCode;
+        private System.Windows.Forms.BindingSource PNDetBindingSource;
+        private System.Windows.Forms.BindingSource PNBindingSource;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
