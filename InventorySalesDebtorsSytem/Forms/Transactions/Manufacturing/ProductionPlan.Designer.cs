@@ -60,6 +60,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.StdOrderDataGridView = new System.Windows.Forms.DataGridView();
+            this.RECNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StdRefferenceNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StdItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StdItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StdQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SOItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SoDataGridView = new System.Windows.Forms.DataGridView();
@@ -70,12 +75,13 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
+            this.FinishGRecNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.RawMaterialDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StdOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FinishGoodItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RawItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -85,16 +91,10 @@
             this.txtTypeCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.txtTypeName = new System.Windows.Forms.TextBox();
-            this.RECNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StdRefferenceNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StdItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StdItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StdQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
-            this.FinishGRecNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RQOH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -112,12 +112,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // manualNoLabel
@@ -348,6 +348,44 @@
             this.StdOrderDataGridView.TabIndex = 2;
             this.StdOrderDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.StdOrderDataGridView_RowsAdded);
             // 
+            // RECNO
+            // 
+            this.RECNO.Frozen = true;
+            this.RECNO.HeaderText = "Rec No";
+            this.RECNO.Name = "RECNO";
+            this.RECNO.ReadOnly = true;
+            this.RECNO.Width = 45;
+            // 
+            // StdRefferenceNo
+            // 
+            this.StdRefferenceNo.Frozen = true;
+            this.StdRefferenceNo.HeaderText = "Std Order No";
+            this.StdRefferenceNo.Name = "StdRefferenceNo";
+            this.StdRefferenceNo.ReadOnly = true;
+            this.StdRefferenceNo.Width = 120;
+            // 
+            // StdItemCode
+            // 
+            this.StdItemCode.Frozen = true;
+            this.StdItemCode.HeaderText = "ItemCode";
+            this.StdItemCode.Name = "StdItemCode";
+            this.StdItemCode.ReadOnly = true;
+            // 
+            // StdItemName
+            // 
+            this.StdItemName.Frozen = true;
+            this.StdItemName.HeaderText = "Item Name";
+            this.StdItemName.Name = "StdItemName";
+            this.StdItemName.ReadOnly = true;
+            this.StdItemName.Width = 250;
+            // 
+            // StdQuantity
+            // 
+            this.StdQuantity.Frozen = true;
+            this.StdQuantity.HeaderText = "Quantity";
+            this.StdQuantity.Name = "StdQuantity";
+            this.StdQuantity.ReadOnly = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.SoDataGridView);
@@ -438,167 +476,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Finished Good Summary";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
-            this.groupBox4.Location = new System.Drawing.Point(23, 216);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(678, 181);
-            this.groupBox4.TabIndex = 40;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Raw Material Summary";
-            // 
-            // RawMaterialDataGridView
-            // 
-            this.RawMaterialDataGridView.AllowUserToAddRows = false;
-            this.RawMaterialDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RawMaterialDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.RawMaterialDataGridView.Location = new System.Drawing.Point(24, 25);
-            this.RawMaterialDataGridView.Name = "RawMaterialDataGridView";
-            this.RawMaterialDataGridView.ReadOnly = true;
-            this.RawMaterialDataGridView.Size = new System.Drawing.Size(648, 150);
-            this.RawMaterialDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ItemCode";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Item Name";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "QOH";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // txtBranchName
-            // 
-            this.txtBranchName.Enabled = false;
-            this.txtBranchName.Location = new System.Drawing.Point(279, 105);
-            this.txtBranchName.Name = "txtBranchName";
-            this.txtBranchName.Size = new System.Drawing.Size(477, 20);
-            this.txtBranchName.TabIndex = 40;
-            // 
-            // branchCodeLabel
-            // 
-            this.branchCodeLabel.AutoSize = true;
-            this.branchCodeLabel.Location = new System.Drawing.Point(20, 109);
-            this.branchCodeLabel.Name = "branchCodeLabel";
-            this.branchCodeLabel.Size = new System.Drawing.Size(72, 13);
-            this.branchCodeLabel.TabIndex = 39;
-            this.branchCodeLabel.Text = "Branch Code:";
-            // 
-            // txtBranchCode
-            // 
-            this.txtBranchCode.codeFieldName = null;
-            this.txtBranchCode.filterCondition = null;
-            this.txtBranchCode.Location = new System.Drawing.Point(123, 105);
-            this.txtBranchCode.Name = "txtBranchCode";
-            this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
-            this.txtBranchCode.sortOrder = null;
-            this.txtBranchCode.TabIndex = 38;
-            this.txtBranchCode.valid = false;
-            this.txtBranchCode.varList = null;
-            // 
-            // txtTypeCode
-            // 
-            this.txtTypeCode.codeFieldName = null;
-            this.txtTypeCode.filterCondition = null;
-            this.txtTypeCode.Location = new System.Drawing.Point(123, 156);
-            this.txtTypeCode.Name = "txtTypeCode";
-            this.txtTypeCode.Size = new System.Drawing.Size(150, 20);
-            this.txtTypeCode.sortOrder = null;
-            this.txtTypeCode.TabIndex = 32;
-            this.txtTypeCode.valid = false;
-            this.txtTypeCode.varList = null;
-            this.txtTypeCode.Leave += new System.EventHandler(this.txtTypeCode_Leave);
-            // 
-            // transactionToolBar1
-            // 
-            this.transactionToolBar1.bindingNavigator = null;
-            this.transactionToolBar1.branchCodeControl = null;
-            this.transactionToolBar1.db = null;
-            this.transactionToolBar1.detDataGrid = null;
-            this.transactionToolBar1.detObjectBindingSource = null;
-            this.transactionToolBar1.firstFocusControl = null;
-            this.transactionToolBar1.hedObjectBindingSource = null;
-            this.transactionToolBar1.HideAddButton = false;
-            this.transactionToolBar1.HideDeleteButton = false;
-            this.transactionToolBar1.HideEditButton = false;
-            this.transactionToolBar1.HidePrintButton = false;
-            this.transactionToolBar1.HideViewButton = false;
-            this.transactionToolBar1.Location = new System.Drawing.Point(20, 8);
-            this.transactionToolBar1.mode = null;
-            this.transactionToolBar1.Name = "transactionToolBar1";
-            this.transactionToolBar1.primaryKeyControl = null;
-            this.transactionToolBar1.primaryKeyField = null;
-            this.transactionToolBar1.ReferenceID = null;
-            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
-            this.transactionToolBar1.TabIndex = 2;
-            // 
-            // txtTypeName
-            // 
-            this.txtTypeName.Enabled = false;
-            this.txtTypeName.Location = new System.Drawing.Point(279, 156);
-            this.txtTypeName.Name = "txtTypeName";
-            this.txtTypeName.Size = new System.Drawing.Size(477, 20);
-            this.txtTypeName.TabIndex = 41;
-            // 
-            // RECNO
-            // 
-            this.RECNO.Frozen = true;
-            this.RECNO.HeaderText = "Rec No";
-            this.RECNO.Name = "RECNO";
-            this.RECNO.ReadOnly = true;
-            this.RECNO.Width = 45;
-            // 
-            // StdRefferenceNo
-            // 
-            this.StdRefferenceNo.Frozen = true;
-            this.StdRefferenceNo.HeaderText = "Std Order No";
-            this.StdRefferenceNo.Name = "StdRefferenceNo";
-            this.StdRefferenceNo.ReadOnly = true;
-            this.StdRefferenceNo.Width = 120;
-            // 
-            // StdItemCode
-            // 
-            this.StdItemCode.Frozen = true;
-            this.StdItemCode.HeaderText = "ItemCode";
-            this.StdItemCode.Name = "StdItemCode";
-            this.StdItemCode.ReadOnly = true;
-            // 
-            // StdItemName
-            // 
-            this.StdItemName.Frozen = true;
-            this.StdItemName.HeaderText = "Item Name";
-            this.StdItemName.Name = "StdItemName";
-            this.StdItemName.ReadOnly = true;
-            this.StdItemName.Width = 250;
-            // 
-            // StdQuantity
-            // 
-            this.StdQuantity.Frozen = true;
-            this.StdQuantity.HeaderText = "Quantity";
-            this.StdQuantity.Name = "StdQuantity";
-            this.StdQuantity.ReadOnly = true;
-            // 
             // FinishedGoodDataGridView
             // 
             this.FinishedGoodDataGridView.AllowUserToAddRows = false;
@@ -674,6 +551,133 @@
             this.FgQuantity.ReadOnly = true;
             this.FgQuantity.Width = 75;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
+            this.groupBox4.Location = new System.Drawing.Point(23, 216);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(678, 181);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Raw Material Summary";
+            // 
+            // RawMaterialDataGridView
+            // 
+            this.RawMaterialDataGridView.AllowUserToAddRows = false;
+            this.RawMaterialDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RawMaterialDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RItemCode,
+            this.RItemName,
+            this.RQuantity,
+            this.RQOH});
+            this.RawMaterialDataGridView.Location = new System.Drawing.Point(24, 25);
+            this.RawMaterialDataGridView.Name = "RawMaterialDataGridView";
+            this.RawMaterialDataGridView.ReadOnly = true;
+            this.RawMaterialDataGridView.Size = new System.Drawing.Size(648, 150);
+            this.RawMaterialDataGridView.TabIndex = 1;
+            // 
+            // txtBranchName
+            // 
+            this.txtBranchName.Enabled = false;
+            this.txtBranchName.Location = new System.Drawing.Point(279, 105);
+            this.txtBranchName.Name = "txtBranchName";
+            this.txtBranchName.Size = new System.Drawing.Size(477, 20);
+            this.txtBranchName.TabIndex = 40;
+            // 
+            // branchCodeLabel
+            // 
+            this.branchCodeLabel.AutoSize = true;
+            this.branchCodeLabel.Location = new System.Drawing.Point(20, 109);
+            this.branchCodeLabel.Name = "branchCodeLabel";
+            this.branchCodeLabel.Size = new System.Drawing.Size(72, 13);
+            this.branchCodeLabel.TabIndex = 39;
+            this.branchCodeLabel.Text = "Branch Code:";
+            // 
+            // txtBranchCode
+            // 
+            this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.filterCondition = null;
+            this.txtBranchCode.Location = new System.Drawing.Point(123, 105);
+            this.txtBranchCode.Name = "txtBranchCode";
+            this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
+            this.txtBranchCode.sortOrder = null;
+            this.txtBranchCode.TabIndex = 38;
+            this.txtBranchCode.valid = false;
+            this.txtBranchCode.varList = null;
+            // 
+            // txtTypeCode
+            // 
+            this.txtTypeCode.codeFieldName = null;
+            this.txtTypeCode.filterCondition = null;
+            this.txtTypeCode.Location = new System.Drawing.Point(123, 156);
+            this.txtTypeCode.Name = "txtTypeCode";
+            this.txtTypeCode.Size = new System.Drawing.Size(150, 20);
+            this.txtTypeCode.sortOrder = null;
+            this.txtTypeCode.TabIndex = 32;
+            this.txtTypeCode.valid = false;
+            this.txtTypeCode.varList = null;
+            this.txtTypeCode.Leave += new System.EventHandler(this.txtTypeCode_Leave);
+            // 
+            // transactionToolBar1
+            // 
+            this.transactionToolBar1.bindingNavigator = null;
+            this.transactionToolBar1.branchCodeControl = null;
+            this.transactionToolBar1.db = null;
+            this.transactionToolBar1.detDataGrid = null;
+            this.transactionToolBar1.detObjectBindingSource = null;
+            this.transactionToolBar1.firstFocusControl = null;
+            this.transactionToolBar1.hedObjectBindingSource = null;
+            this.transactionToolBar1.HideAddButton = false;
+            this.transactionToolBar1.HideDeleteButton = false;
+            this.transactionToolBar1.HideEditButton = false;
+            this.transactionToolBar1.HidePrintButton = false;
+            this.transactionToolBar1.HideViewButton = false;
+            this.transactionToolBar1.Location = new System.Drawing.Point(20, 8);
+            this.transactionToolBar1.mode = null;
+            this.transactionToolBar1.Name = "transactionToolBar1";
+            this.transactionToolBar1.primaryKeyControl = null;
+            this.transactionToolBar1.primaryKeyField = null;
+            this.transactionToolBar1.ReferenceID = null;
+            this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
+            this.transactionToolBar1.TabIndex = 2;
+            // 
+            // txtTypeName
+            // 
+            this.txtTypeName.Enabled = false;
+            this.txtTypeName.Location = new System.Drawing.Point(279, 156);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(477, 20);
+            this.txtTypeName.TabIndex = 41;
+            // 
+            // RItemCode
+            // 
+            this.RItemCode.Frozen = true;
+            this.RItemCode.HeaderText = "ItemCode";
+            this.RItemCode.Name = "RItemCode";
+            this.RItemCode.ReadOnly = true;
+            // 
+            // RItemName
+            // 
+            this.RItemName.Frozen = true;
+            this.RItemName.HeaderText = "Item Name";
+            this.RItemName.Name = "RItemName";
+            this.RItemName.ReadOnly = true;
+            this.RItemName.Width = 300;
+            // 
+            // RQuantity
+            // 
+            this.RQuantity.Frozen = true;
+            this.RQuantity.HeaderText = "Quantity";
+            this.RQuantity.Name = "RQuantity";
+            this.RQuantity.ReadOnly = true;
+            // 
+            // RQOH
+            // 
+            this.RQOH.Frozen = true;
+            this.RQOH.HeaderText = "QOH";
+            this.RQOH.Name = "RQOH";
+            this.RQOH.ReadOnly = true;
+            // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -717,12 +721,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoDataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RawMaterialDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StdOrderItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FinishGoodItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RawItemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FinishedGoodDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,10 +758,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView RawMaterialDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.BindingSource productionPlanHedBindingSource;
         private System.Windows.Forms.BindingSource SOItemBindingSource;
         private System.Windows.Forms.BindingSource StdOrderItemBindingSource;
@@ -784,5 +784,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FgItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn FgItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FgQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RItemCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RQOH;
     }
 }

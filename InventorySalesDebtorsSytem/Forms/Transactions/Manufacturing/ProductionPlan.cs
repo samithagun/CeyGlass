@@ -20,6 +20,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         BindingList<ReferenceItemGrid> tmpStdordDetData = new BindingList<ReferenceItemGrid>();
         BindingList<ItemGrid> tmpSummaryDetData = new BindingList<ItemGrid>();
         BindingList<ItemGrid> tmpSummaryFinishGData = new BindingList<ItemGrid>();
+        BindingList<ProductionPlanRawItem> tmpRawMaterialData = new BindingList<ProductionPlanRawItem>();
+        BindingList<ItemGrid> tmpSummaryRawMatData = new BindingList<ItemGrid>();
 
         public ProductionPlan()
         {
@@ -73,10 +75,16 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
             FinishedGoodDataGridView.Columns["FGItemCode"].DataPropertyName = "ItemCode";
             FinishedGoodDataGridView.Columns["FGItemName"].DataPropertyName = "ItemName";
-           // FinishedGoodDataGridView.Columns["FgQOH"].DataPropertyName = "QOH";
+            // FinishedGoodDataGridView.Columns["FgQOH"].DataPropertyName = "QOH";
             FinishedGoodDataGridView.Columns["FgQuantity"].DataPropertyName = "Quantity";
 
+            RawItemBindingSource.DataSource = tmpSummaryRawMatData;
+            RawMaterialDataGridView.DataSource = RawItemBindingSource;
 
+            RawMaterialDataGridView.Columns["RItemCode"].DataPropertyName = "ItemCode";
+            RawMaterialDataGridView.Columns["RItemName"].DataPropertyName = "ItemName";            
+            RawMaterialDataGridView.Columns["RQuantity"].DataPropertyName = "Quantity";
+            RawMaterialDataGridView.Columns["RQOH"].DataPropertyName = "QOH";
         }
 
 
@@ -102,26 +110,65 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             foreach (var item in salesorderList)
             {
                 tmpDetData.Add(new ReferenceItemGrid(item.ReferenceNo, item.ItemCode, item.ItemName, item.Quantity));
-                tmpSummaryDetData.Add(new ItemGrid(item.ItemCode, item.ItemName, item.Quantity,0));
+                tmpSummaryDetData.Add(new ItemGrid(item.ItemCode, item.ItemName, item.Quantity, 0));
             }
 
             tmpStdordDetData.Clear();
             foreach (var stdItem in standardOrdList)
             {
                 tmpStdordDetData.Add(new ReferenceItemGrid(stdItem.ReferenceNo, stdItem.ItemCode, stdItem.ItemName, stdItem.Qty));
-                tmpSummaryDetData.Add(new ItemGrid(stdItem.ItemCode, stdItem.ItemName, stdItem.Qty,0));
+                tmpSummaryDetData.Add(new ItemGrid(stdItem.ItemCode, stdItem.ItemName, stdItem.Qty, 0));
             }
 
             tmpSummaryFinishGData.Clear();
             var finalVal = from s in tmpSummaryDetData
-                                    group s by new {s.ItemCode,s.ItemName}
-                                    into g
-                          select new { g.Key.ItemCode,g.Key.ItemName, Quantity = g.Sum(s => s.Quantity) };
+                           group s by new { s.ItemCode, s.ItemName }
+                               into g
+                               select new { g.Key.ItemCode, g.Key.ItemName, Quantity = g.Sum(s => s.Quantity) };
+
 
             foreach (var sumItem in finalVal)
             {
                 tmpSummaryFinishGData.Add(new ItemGrid(sumItem.ItemCode, sumItem.ItemName, sumItem.Quantity, 0));
-                //decimal QOH = Item.ItemQOHs.Single(q => q.BranchCode == txtBranchCode.Text && q.LocationCode == txtLocationCode.Text).QOH;
+               
+            }
+
+            tmpRawMaterialData.Clear();
+            tmpSummaryRawMatData.Clear();
+            foreach (ItemGrid i in tmpSummaryFinishGData)
+            {
+                var boqData = from d in db.BoqDets
+                              join h in db.BoqHeds on
+                              d.BoqCode equals h.BoqCode
+                              where h.BoqCode == i.ItemCode
+                              select new { h.BoqCode, h.UsableQty, h.ToalQty, d.ItemCode, d.Quantity, d.Item.CostPrice };
+                foreach (var raw in boqData)
+                {
+                    ProductionPlanRawItem rItem = new ProductionPlanRawItem();
+                    rItem.FinishedItemCode = i.ItemCode;
+                    rItem.RawItemCode = raw.ItemCode;
+                    decimal reqQty;
+                    if (raw.UsableQty > 0)
+                        reqQty = (raw.Quantity / raw.UsableQty) * i.Quantity;
+                    else
+                        reqQty = (raw.Quantity / 1) * i.Quantity;
+
+                    rItem.Quantity = reqQty;
+                    rItem.CostPrice = raw.CostPrice;
+                    tmpRawMaterialData.Add(rItem);
+                }
+            }
+
+            var rawmatSum = from rdet in tmpRawMaterialData
+                            group rdet by new {rdet.RawItemCode} into g
+                            select new {g.Key.RawItemCode, Quantity = g.Sum(s => s.Quantity)};
+
+
+            foreach (var rawS in rawmatSum)
+            {
+                decimal QOH = db.ItemQOHs.Single(q => q.BranchCode == "100" && q.LocationCode == "LOC01     " && q.ItemCode == rawS.RawItemCode).QOH;
+                string itemName = db.Items.Single(i => i.ItemCode == rawS.RawItemCode).ItemName;
+                tmpSummaryRawMatData.Add(new ItemGrid(rawS.RawItemCode, itemName, rawS.Quantity, QOH));
             }
         }
 
