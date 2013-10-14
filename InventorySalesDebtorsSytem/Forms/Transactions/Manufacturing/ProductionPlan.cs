@@ -12,7 +12,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 {
     public partial class ProductionPlan : TransactionForm
     {
-
+        public string ProdLocation;
+        public string StoresLocation;
         InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
 
         BindingList<ProductionPlanHed> tmpHedData = new BindingList<ProductionPlanHed>();
@@ -40,6 +41,12 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             transactionToolBar1.db = db;
             transactionToolBar1.branchCodeControl = txtBranchCode;
             transactionToolBar1.ReferenceID = "M-PPLAN";
+
+            var val = (from c in db.Companies select new { c.ProductionLoc, c.StoresLoc }).FirstOrDefault();
+            ProdLocation = val.ProductionLoc;
+            StoresLocation = val.StoresLoc;
+
+
 
             txtBranchCode.varList = from b in db.Branches select new { b.BranchCode, b.BranchName };
             txtBranchCode.codeFieldName = "BranchCode";
@@ -82,7 +89,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             RawMaterialDataGridView.DataSource = RawItemBindingSource;
 
             RawMaterialDataGridView.Columns["RItemCode"].DataPropertyName = "ItemCode";
-            RawMaterialDataGridView.Columns["RItemName"].DataPropertyName = "ItemName";            
+            RawMaterialDataGridView.Columns["RItemName"].DataPropertyName = "ItemName";
             RawMaterialDataGridView.Columns["RQuantity"].DataPropertyName = "Quantity";
             RawMaterialDataGridView.Columns["RQOH"].DataPropertyName = "QOH";
         }
@@ -130,7 +137,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             foreach (var sumItem in finalVal)
             {
                 tmpSummaryFinishGData.Add(new ItemGrid(sumItem.ItemCode, sumItem.ItemName, sumItem.Quantity, 0));
-               
+
             }
 
             tmpRawMaterialData.Clear();
@@ -160,16 +167,27 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             }
 
             var rawmatSum = from rdet in tmpRawMaterialData
-                            group rdet by new {rdet.RawItemCode} into g
-                            select new {g.Key.RawItemCode, Quantity = g.Sum(s => s.Quantity)};
+                            group rdet by new { rdet.RawItemCode } into g
+                            select new { g.Key.RawItemCode, Quantity = g.Sum(s => s.Quantity) };
 
 
+            bool IsEnoughQOH = true;
             foreach (var rawS in rawmatSum)
             {
-                decimal QOH = db.ItemQOHs.Single(q => q.BranchCode == "100" && q.LocationCode == "LOC01     " && q.ItemCode == rawS.RawItemCode).QOH;
+                decimal QOH = db.ItemQOHs.Single(q => q.BranchCode == txtBranchCode.Text && q.LocationCode == StoresLocation && q.ItemCode == rawS.RawItemCode).QOH;
                 string itemName = db.Items.Single(i => i.ItemCode == rawS.RawItemCode).ItemName;
                 tmpSummaryRawMatData.Add(new ItemGrid(rawS.RawItemCode, itemName, rawS.Quantity, QOH));
+                if (rawS.Quantity > QOH)
+                    IsEnoughQOH = false;
             }
+            if (!IsEnoughQOH)
+            {
+                MessageBox.Show("There are items with less QOH. Please check inventory", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // return false;
+
+            }
+
+
         }
 
         public override void EnableControls(bool enable)
@@ -179,11 +197,70 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             txnDateDateTimePicker.Enabled = enable;
 
         }
+
+        public override bool BeforeDataSave()
+        {
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ReferenceNo = referenceNoTextBox.Text;
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionLocation = ProdLocation;
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).StoresLocation = StoresLocation;
+
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).UserID = Program.UserID;
+
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedDate = DateTime.Now;
+
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedMachineInfo = Program.MachineName;
+
+            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Clear();
+
+            ProductionPlanFinishedGoodDet d;
+
+            foreach (var x in tmpSummaryFinishGData)
+            {
+                d = new ProductionPlanFinishedGoodDet();
+                d.ItemCode = x.ItemCode;
+                d.Quantity = x.Quantity;
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Add(d);
+            }
+
+            if (transactionToolBar1.mode == "Add")
+                db.ProductionPlanHeds.AddObject((ProductionPlanHed)productionPlanHedBindingSource.Current);
+
+            return true;
+        }
+
+        public override bool AfterDataSave()
+        {
+            try
+            {
+                //DispatchHed h = ((DispatchHed)HeaderBindingSource.Current);
+
+                //foreach (DispatchDet d in h.DispatchDets)
+                //{
+                //    db.InvoiceDets.Single(x => x.ReferenceNo == h.InvoiceNo && x.ItemCode == d.ItemCode).BalQty1 -= d.Quantity;
+                //    if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.LocationCode, d.ItemCode, -1 * d.Quantity, (d.TotalItemVal - d.VATItemVal - d.NBTItemVal) / d.Quantity, false))
+                //        throw new Exception("Error @ UpdateQOH");
+                //}
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Helpers.WriteException(ex);
+                return false;
+            }
+        }
         #endregion
 
         private void txtTypeCode_Leave(object sender, EventArgs e)
         {
-            GetReleventSalesOrders();
+            try
+            {
+                GetReleventSalesOrders();
+            }
+            catch (Exception ex)
+            {
+                Helpers.WriteException(ex);               
+            }          
         }
 
         private void SoDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

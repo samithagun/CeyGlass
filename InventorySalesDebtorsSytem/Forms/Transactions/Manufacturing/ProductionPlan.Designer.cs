@@ -82,6 +82,10 @@
             this.FgQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.RawMaterialDataGridView = new System.Windows.Forms.DataGridView();
+            this.RItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RQOH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StdOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FinishGoodItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RawItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -91,10 +95,6 @@
             this.txtTypeCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.txtTypeName = new System.Windows.Forms.TextBox();
-            this.RItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RQOH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
@@ -576,6 +576,35 @@
             this.RawMaterialDataGridView.Size = new System.Drawing.Size(648, 150);
             this.RawMaterialDataGridView.TabIndex = 1;
             // 
+            // RItemCode
+            // 
+            this.RItemCode.Frozen = true;
+            this.RItemCode.HeaderText = "ItemCode";
+            this.RItemCode.Name = "RItemCode";
+            this.RItemCode.ReadOnly = true;
+            // 
+            // RItemName
+            // 
+            this.RItemName.Frozen = true;
+            this.RItemName.HeaderText = "Item Name";
+            this.RItemName.Name = "RItemName";
+            this.RItemName.ReadOnly = true;
+            this.RItemName.Width = 300;
+            // 
+            // RQuantity
+            // 
+            this.RQuantity.Frozen = true;
+            this.RQuantity.HeaderText = "Quantity";
+            this.RQuantity.Name = "RQuantity";
+            this.RQuantity.ReadOnly = true;
+            // 
+            // RQOH
+            // 
+            this.RQOH.Frozen = true;
+            this.RQOH.HeaderText = "QOH";
+            this.RQOH.Name = "RQOH";
+            this.RQOH.ReadOnly = true;
+            // 
             // txtBranchName
             // 
             this.txtBranchName.Enabled = false;
@@ -596,6 +625,7 @@
             // txtBranchCode
             // 
             this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "BranchCode", true));
             this.txtBranchCode.filterCondition = null;
             this.txtBranchCode.Location = new System.Drawing.Point(123, 105);
             this.txtBranchCode.Name = "txtBranchCode";
@@ -608,6 +638,7 @@
             // txtTypeCode
             // 
             this.txtTypeCode.codeFieldName = null;
+            this.txtTypeCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productionPlanHedBindingSource, "TypeCode", true));
             this.txtTypeCode.filterCondition = null;
             this.txtTypeCode.Location = new System.Drawing.Point(123, 156);
             this.txtTypeCode.Name = "txtTypeCode";
@@ -648,35 +679,6 @@
             this.txtTypeName.Name = "txtTypeName";
             this.txtTypeName.Size = new System.Drawing.Size(477, 20);
             this.txtTypeName.TabIndex = 41;
-            // 
-            // RItemCode
-            // 
-            this.RItemCode.Frozen = true;
-            this.RItemCode.HeaderText = "ItemCode";
-            this.RItemCode.Name = "RItemCode";
-            this.RItemCode.ReadOnly = true;
-            // 
-            // RItemName
-            // 
-            this.RItemName.Frozen = true;
-            this.RItemName.HeaderText = "Item Name";
-            this.RItemName.Name = "RItemName";
-            this.RItemName.ReadOnly = true;
-            this.RItemName.Width = 300;
-            // 
-            // RQuantity
-            // 
-            this.RQuantity.Frozen = true;
-            this.RQuantity.HeaderText = "Quantity";
-            this.RQuantity.Name = "RQuantity";
-            this.RQuantity.ReadOnly = true;
-            // 
-            // RQOH
-            // 
-            this.RQOH.Frozen = true;
-            this.RQOH.HeaderText = "QOH";
-            this.RQOH.Name = "RQOH";
-            this.RQOH.ReadOnly = true;
             // 
             // ProductionPlan
             // 
