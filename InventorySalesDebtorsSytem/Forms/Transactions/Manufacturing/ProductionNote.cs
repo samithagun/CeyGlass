@@ -58,8 +58,11 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             PNDetBindingSource.DataSource = tmpDetData;
             PNDataGridView.DataSource = PNDetBindingSource;
 
-            PNDataGridView.Columns["Date"].DataPropertyName = "Date";
-            PNDataGridView.Columns["Quantity"].DataPropertyName = "Quantity";
+            PNDataGridView.Columns["ItemCode"].DataPropertyName = "ItemCode";
+            PNDataGridView.Columns["ItemName"].DataPropertyName = "ItemName";
+            PNDataGridView.Columns["TotalQty"].DataPropertyName = "TotalQty";
+            PNDataGridView.Columns["WasteQty"].DataPropertyName = "WasteQty";
+            PNDataGridView.Columns["UsedQty"].DataPropertyName = "UsedQty";
         }
 
         public override void EnableControls(bool enable)
@@ -81,6 +84,37 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             txtProPlan.Text = "";
             txtManualNo.Text = "";
             referenceNoTextBox.Text = "";
+        }
+
+        private void txtItemCode_TextChanged(object sender, EventArgs e)
+        {
+            var itemData = db.ProductionPlanRawItems.Single(h => h.ReferenceNo == txtProPlan.Text);
+
+            //foreach (var Item in itemData)
+            tmpDetData.Add(new ItemGrid(itemData.Item1, itemData.Quantity, itemData.Quantity, itemData.Quantity));
+        }
+
+        public override void ViewClick()
+        {
+            PNBindingSource.DataSource = db.ProductionNoteHeds.ToList();
+            FillDetails((ProductionNoteHed)PNBindingSource.Current);
+        }
+
+        private void FillDetails(ProductionNoteHed hedData)
+        {
+            alreadyFilling = true;
+
+            if (hedData != null)
+            {
+                tmpDetData.Clear();
+
+                var detData = hedData.ProductionNoteDets.ToList();
+
+                foreach (ProductionNoteDet d in detData)
+                tmpDetData.Add(new ItemGrid(d.Item,d.TotalQty,d.UsedQty,d.WasteQty));
+            }
+
+            alreadyFilling = false;
         }
     }
 }

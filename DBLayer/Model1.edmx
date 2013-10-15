@@ -523,6 +523,10 @@
             <End Role="User" EntitySet="User" />
             <End Role="PORequisitionHed" EntitySet="PORequisitionHed" />
           </AssociationSet>
+          <AssociationSet Name="FK_ProductionNoteDet_Item" Association="InventorySalesDebtorsSystemModel.Store.FK_ProductionNoteDet_Item">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="ProductionNoteDet" EntitySet="ProductionNoteDet" />
+          </AssociationSet>
           <AssociationSet Name="FK_ProductionNoteDet_ProductionNoteHed" Association="InventorySalesDebtorsSystemModel.Store.FK_ProductionNoteDet_ProductionNoteHed">
             <End Role="ProductionNoteHed" EntitySet="ProductionNoteHed" />
             <End Role="ProductionNoteDet" EntitySet="ProductionNoteDet" />
@@ -571,7 +575,7 @@
             <End Role="Item" EntitySet="Item" />
             <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItem" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductionPlanRawItem_ProductionPlanRawItem" Association="InventorySalesDebtorsSystemModel.Store.FK_ProductionPlanRawItem_ProductionPlanRawItem">
+          <AssociationSet Name="FK_ProductionPlanRawItem_ProductionPlanHed" Association="InventorySalesDebtorsSystemModel.Store.FK_ProductionPlanRawItem_ProductionPlanHed">
             <End Role="ProductionPlanHed" EntitySet="ProductionPlanHed" />
             <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItem" />
           </AssociationSet>
@@ -1476,6 +1480,7 @@
           <Key>
             <PropertyRef Name="ReferenceNo" />
             <PropertyRef Name="FinishedItemCode" />
+            <PropertyRef Name="RawItemCode" />
           </Key>
           <Property Name="ReferenceNo" Type="char" Nullable="false" MaxLength="15" />
           <Property Name="FinishedItemCode" Type="char" Nullable="false" MaxLength="20" />
@@ -3130,6 +3135,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ProductionNoteDet_Item">
+          <End Role="Item" Type="InventorySalesDebtorsSystemModel.Store.Item" Multiplicity="1" />
+          <End Role="ProductionNoteDet" Type="InventorySalesDebtorsSystemModel.Store.ProductionNoteDet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="ProductionNoteDet">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ProductionNoteDet_ProductionNoteHed">
           <End Role="ProductionNoteHed" Type="InventorySalesDebtorsSystemModel.Store.ProductionNoteHed" Multiplicity="1" />
           <End Role="ProductionNoteDet" Type="InventorySalesDebtorsSystemModel.Store.ProductionNoteDet" Multiplicity="*" />
@@ -3276,7 +3293,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ProductionPlanRawItem_ProductionPlanRawItem">
+        <Association Name="FK_ProductionPlanRawItem_ProductionPlanHed">
           <End Role="ProductionPlanHed" Type="InventorySalesDebtorsSystemModel.Store.ProductionPlanHed" Multiplicity="1" />
           <End Role="ProductionPlanRawItem" Type="InventorySalesDebtorsSystemModel.Store.ProductionPlanRawItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -4555,7 +4572,6 @@
           <EntitySet Name="sysdiagrams" EntityType="InventorySalesDebtorsSystemModel.sysdiagram" />
           <EntitySet Name="ProductionPlanFinishedGoodDets" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanFinishedGoodDet" />
           <EntitySet Name="ProductionPlanHeds" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanHed" />
-          <EntitySet Name="ProductionPlanRawItems" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" />
           <EntitySet Name="ProductionPlanSODets" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanSODet" />
           <EntitySet Name="ProductionPlanStandardDets" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanStandardDet" />
           <EntitySet Name="SPSDets" EntityType="InventorySalesDebtorsSystemModel.SPSDet" />
@@ -4563,14 +4579,6 @@
           <AssociationSet Name="FK_ProductionPlanFinishedGoodDet_Item" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_Item">
             <End Role="Item" EntitySet="Items" />
             <End Role="ProductionPlanFinishedGoodDet" EntitySet="ProductionPlanFinishedGoodDets" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductionPlanRawItem_Item" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item">
-            <End Role="Item" EntitySet="Items" />
-            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductionPlanRawItem_Item1" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1">
-            <End Role="Item" EntitySet="Items" />
-            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductionPlanHed_Location" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_Location">
             <End Role="Location" EntitySet="Locations" />
@@ -4587,10 +4595,6 @@
           <AssociationSet Name="FK_ProductionPlanDet_ProductionPlanHed" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanDet_ProductionPlanHed">
             <End Role="ProductionPlanHed" EntitySet="ProductionPlanHeds" />
             <End Role="ProductionPlanSODet" EntitySet="ProductionPlanSODets" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductionPlanRawItem_ProductionPlanRawItem" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem">
-            <End Role="ProductionPlanHed" EntitySet="ProductionPlanHeds" />
-            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductionPlanStandardDet_ProductionPlanHed" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_ProductionPlanHed">
             <End Role="ProductionPlanHed" EntitySet="ProductionPlanHeds" />
@@ -4830,6 +4834,23 @@
           <AssociationSet Name="FK_SPSHed_Item" Association="InventorySalesDebtorsSystemModel.FK_SPSHed_Item">
             <End Role="Item" EntitySet="Items" />
             <End Role="SPSHed" EntitySet="SPSHeds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductionNoteDet_Item" Association="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="ProductionNoteDet" EntitySet="ProductionNoteDets" />
+          </AssociationSet>
+          <EntitySet Name="ProductionPlanRawItems" EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" />
+          <AssociationSet Name="FK_ProductionPlanRawItem_Item" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductionPlanRawItem_Item1" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductionPlanRawItem_ProductionPlanHed" Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed">
+            <End Role="ProductionPlanHed" EntitySet="ProductionPlanHeds" />
+            <End Role="ProductionPlanRawItem" EntitySet="ProductionPlanRawItems" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="AdjustmentDet">
@@ -5103,11 +5124,12 @@
           <Property Type="Decimal" Name="AvgMonCon" Precision="7" Scale="4" Nullable="false" />
           <Property Type="Boolean" Name="IsRawMaterial" Nullable="false" />
           <NavigationProperty Name="ProductionPlanFinishedGoodDets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_Item" FromRole="Item" ToRole="ProductionPlanFinishedGoodDet" />
-          <NavigationProperty Name="ProductionPlanRawItems" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" FromRole="Item" ToRole="ProductionPlanRawItem" />
-          <NavigationProperty Name="ProductionPlanRawItems1" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" FromRole="Item" ToRole="ProductionPlanRawItem" />
           <NavigationProperty Name="BoqDets" Relationship="InventorySalesDebtorsSystemModel.FK_BoqDet_Item" FromRole="Item" ToRole="BoqDet" />
           <NavigationProperty Name="BoqHed" Relationship="InventorySalesDebtorsSystemModel.FK_BoqHed_Item" FromRole="Item" ToRole="BoqHed" />
           <NavigationProperty Name="SPSHeds" Relationship="InventorySalesDebtorsSystemModel.FK_SPSHed_Item" FromRole="Item" ToRole="SPSHed" />
+          <NavigationProperty Name="ProductionNoteDets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item" FromRole="Item" ToRole="ProductionNoteDet" />
+          <NavigationProperty Name="ProductionPlanRawItems" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" FromRole="Item" ToRole="ProductionPlanRawItem" />
+          <NavigationProperty Name="ProductionPlanRawItems1" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" FromRole="Item" ToRole="ProductionPlanRawItem" />
         </EntityType>
         <EntityType Name="ItemCategory">
           <Key>
@@ -7829,7 +7851,6 @@
           <NavigationProperty Name="Location1" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_Location1" FromRole="ProductionPlanHed" ToRole="Location" />
           <NavigationProperty Name="ProductionPlanFinishedGoodDets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_ProductionPlanHed" FromRole="ProductionPlanHed" ToRole="ProductionPlanFinishedGoodDet" />
           <NavigationProperty Name="ProductionPlanSODets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanDet_ProductionPlanHed" FromRole="ProductionPlanHed" ToRole="ProductionPlanSODet" />
-          <NavigationProperty Name="ProductionPlanRawItems" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem" FromRole="ProductionPlanHed" ToRole="ProductionPlanRawItem" />
           <NavigationProperty Name="ProductionPlanStandardDets" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_ProductionPlanHed" FromRole="ProductionPlanHed" ToRole="ProductionPlanStandardDet" />
           <Property Type="String" Name="BranchCode" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Type="String" Name="TypeCode" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
@@ -7839,20 +7860,7 @@
           <NavigationProperty Name="ItemType" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_ItemType" FromRole="ProductionPlanHed" ToRole="ItemType" />
           <NavigationProperty Name="ProductionNoteHeds" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionNoteHed_ProductionPlanHed" FromRole="ProductionPlanHed" ToRole="ProductionNoteHed" />
           <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="ProductionPlanRawItem">
-          <Key>
-            <PropertyRef Name="ReferenceNo" />
-            <PropertyRef Name="FinishedItemCode" />
-          </Key>
-          <Property Type="String" Name="ReferenceNo" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
-          <Property Type="String" Name="FinishedItemCode" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="2" />
-          <Property Type="String" Name="RawItemCode" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Type="Decimal" Name="CostPrice" Nullable="false" Precision="18" Scale="2" />
-          <NavigationProperty Name="Item" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" FromRole="ProductionPlanRawItem" ToRole="Item" />
-          <NavigationProperty Name="Item1" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" FromRole="ProductionPlanRawItem" ToRole="Item" />
-          <NavigationProperty Name="ProductionPlanHed" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem" FromRole="ProductionPlanRawItem" ToRole="ProductionPlanHed" />
+          <NavigationProperty Name="ProductionPlanRawItems" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed" FromRole="ProductionPlanHed" ToRole="ProductionPlanRawItem" />
         </EntityType>
         <EntityType Name="ProductionPlanSODet">
           <Key>
@@ -7918,30 +7926,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ProductionPlanRawItem_Item">
-          <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
-          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Item">
-              <PropertyRef Name="ItemCode" />
-            </Principal>
-            <Dependent Role="ProductionPlanRawItem">
-              <PropertyRef Name="FinishedItemCode" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductionPlanRawItem_Item1">
-          <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
-          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Item">
-              <PropertyRef Name="ItemCode" />
-            </Principal>
-            <Dependent Role="ProductionPlanRawItem">
-              <PropertyRef Name="RawItemCode" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ProductionPlanHed_Location">
           <End Type="InventorySalesDebtorsSystemModel.Location" Role="Location" Multiplicity="1" />
           <End Type="InventorySalesDebtorsSystemModel.ProductionPlanHed" Role="ProductionPlanHed" Multiplicity="*" />
@@ -7986,18 +7970,6 @@
               <PropertyRef Name="ReferenceNo" />
             </Principal>
             <Dependent Role="ProductionPlanSODet">
-              <PropertyRef Name="ReferenceNo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductionPlanRawItem_ProductionPlanRawItem">
-          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanHed" Role="ProductionPlanHed" Multiplicity="1" />
-          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ProductionPlanHed">
-              <PropertyRef Name="ReferenceNo" />
-            </Principal>
-            <Dependent Role="ProductionPlanRawItem">
               <PropertyRef Name="ReferenceNo" />
             </Dependent>
           </ReferentialConstraint>
@@ -8174,6 +8146,7 @@
           <Property Type="Decimal" Name="WasteQty" Nullable="false" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="TotalQty" Nullable="false" Precision="18" Scale="2" />
           <NavigationProperty Name="ProductionNoteHed" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_ProductionNoteHed" FromRole="ProductionNoteDet" ToRole="ProductionNoteHed" />
+          <NavigationProperty Name="Item" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item" FromRole="ProductionNoteDet" ToRole="Item" />
         </EntityType>
         <EntityType Name="ProductionNoteHed">
           <Key>
@@ -8248,6 +8221,69 @@
             </Principal>
             <Dependent Role="SPSHed">
               <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductionNoteDet_Item">
+          <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="InventorySalesDebtorsSystemModel.ProductionNoteDet" Role="ProductionNoteDet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="ProductionNoteDet">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProductionPlanRawItem">
+          <Key>
+            <PropertyRef Name="ReferenceNo" />
+            <PropertyRef Name="FinishedItemCode" />
+            <PropertyRef Name="RawItemCode" />
+          </Key>
+          <Property Type="String" Name="ReferenceNo" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FinishedItemCode" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="RawItemCode" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="Quantity" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CostPrice" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="Item" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" FromRole="ProductionPlanRawItem" ToRole="Item" />
+          <NavigationProperty Name="Item1" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" FromRole="ProductionPlanRawItem" ToRole="Item" />
+          <NavigationProperty Name="ProductionPlanHed" Relationship="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed" FromRole="ProductionPlanRawItem" ToRole="ProductionPlanHed" />
+        </EntityType>
+        <Association Name="FK_ProductionPlanRawItem_Item">
+          <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="ProductionPlanRawItem">
+              <PropertyRef Name="FinishedItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductionPlanRawItem_Item1">
+          <End Type="InventorySalesDebtorsSystemModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="ProductionPlanRawItem">
+              <PropertyRef Name="RawItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductionPlanRawItem_ProductionPlanHed">
+          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanHed" Role="ProductionPlanHed" Multiplicity="1" />
+          <End Type="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Role="ProductionPlanRawItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductionPlanHed">
+              <PropertyRef Name="ReferenceNo" />
+            </Principal>
+            <Dependent Role="ProductionPlanRawItem">
+              <PropertyRef Name="ReferenceNo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -9170,17 +9206,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProductionPlanRawItems">
-            <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.ProductionPlanRawItem">
-              <MappingFragment StoreEntitySet="ProductionPlanRawItem">
-                <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
-                <ScalarProperty Name="RawItemCode" ColumnName="RawItemCode" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="FinishedItemCode" ColumnName="FinishedItemCode" />
-                <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ProductionPlanSODets">
             <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.ProductionPlanSODet">
               <MappingFragment StoreEntitySet="ProductionPlanSODet">
@@ -9343,6 +9368,17 @@
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
                 <ScalarProperty Name="ProPlanNo" ColumnName="ProPlanNo" />
+                <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductionPlanRawItems">
+            <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.ProductionPlanRawItem">
+              <MappingFragment StoreEntitySet="ProductionPlanRawItem">
+                <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="RawItemCode" ColumnName="RawItemCode" />
+                <ScalarProperty Name="FinishedItemCode" ColumnName="FinishedItemCode" />
                 <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -11626,19 +11662,15 @@
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.sysdiagram" Width="1.5" PointX="1.75" PointY="16.875" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanFinishedGoodDet" Width="1.5" PointX="10" PointY="18.875" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanHed" Width="1.75" PointX="14.625" PointY="18.25" />
-        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Width="2" PointX="9" PointY="7.125" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanSODet" Width="1.5" PointX="4.25" PointY="18" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanStandardDet" Width="1.5" PointX="8.625" PointY="13.625" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SPSDet" Width="1.5" PointX="3.875" PointY="7.5" />
         <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.SPSHed" Width="1.5" PointX="10.118519100415762" PointY="23.213410030684159" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_Item" />
-        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" />
-        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_Location" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanHed_Location1" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanFinishedGoodDet_ProductionPlanHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanDet_ProductionPlanHed" />
-        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_ProductionPlanHed" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanDet_SalesOrderDet" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_SPSHed" />
@@ -11657,6 +11689,11 @@
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_Company_Location" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_Company_Location1" />
         <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_SPSHed_Item" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item" />
+        <EntityTypeShape EntityType="InventorySalesDebtorsSystemModel.ProductionPlanRawItem" Width="1.5" PointX="4.9058777601019843" PointY="9.3979236378324789" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1" />
+        <AssociationConnector Association="InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed" />
         </Diagram>
     </Diagrams>
   </Designer>

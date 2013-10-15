@@ -160,13 +160,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_Entry_Section", "sSection", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.sSection), "sEntry", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.sEntry), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_sOption_sEntry", "sEntry", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.sEntry), "sOption", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.sOption), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanFinishedGoodDet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanFinishedGoodDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanFinishedGoodDet), true)]
-[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
-[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item1", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanHed_Location", "Location", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Location), "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanHed), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanHed_Location1", "Location", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Location), "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanHed), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanFinishedGoodDet_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanFinishedGoodDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanFinishedGoodDet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanDet_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanSODet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanSODet), true)]
-[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanStandardDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanStandardDet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanDet_SalesOrderDet", "SalesOrderDet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.SalesOrderDet), "ProductionPlanSODet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanSODet), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_SPSHed", "SPSHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.SPSHed), "ProductionPlanStandardDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanStandardDet), true)]
@@ -181,6 +178,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_Company_Location", "Location", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Location), "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.Company), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_Company_Location1", "Location", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Location), "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.Company), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_SPSHed_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "SPSHed", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.SPSHed), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionNoteDet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionNoteDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionNoteDet), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item1", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
 
 #endregion
 
@@ -1243,22 +1244,6 @@ namespace DBLayer
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<ProductionPlanRawItem> ProductionPlanRawItems
-        {
-            get
-            {
-                if ((_ProductionPlanRawItems == null))
-                {
-                    _ProductionPlanRawItems = base.CreateObjectSet<ProductionPlanRawItem>("ProductionPlanRawItems");
-                }
-                return _ProductionPlanRawItems;
-            }
-        }
-        private ObjectSet<ProductionPlanRawItem> _ProductionPlanRawItems;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<ProductionPlanSODet> ProductionPlanSODets
         {
             get
@@ -1383,6 +1368,22 @@ namespace DBLayer
             }
         }
         private ObjectSet<ProductionNoteHed> _ProductionNoteHeds;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ProductionPlanRawItem> ProductionPlanRawItems
+        {
+            get
+            {
+                if ((_ProductionPlanRawItems == null))
+                {
+                    _ProductionPlanRawItems = base.CreateObjectSet<ProductionPlanRawItem>("ProductionPlanRawItems");
+                }
+                return _ProductionPlanRawItems;
+            }
+        }
+        private ObjectSet<ProductionPlanRawItem> _ProductionPlanRawItems;
 
         #endregion
 
@@ -1893,14 +1894,6 @@ namespace DBLayer
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the ProductionPlanRawItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToProductionPlanRawItems(ProductionPlanRawItem productionPlanRawItem)
-        {
-            base.AddObject("ProductionPlanRawItems", productionPlanRawItem);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the ProductionPlanSODets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToProductionPlanSODets(ProductionPlanSODet productionPlanSODet)
@@ -1962,6 +1955,14 @@ namespace DBLayer
         public void AddToProductionNoteHeds(ProductionNoteHed productionNoteHed)
         {
             base.AddObject("ProductionNoteHeds", productionNoteHed);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ProductionPlanRawItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToProductionPlanRawItems(ProductionPlanRawItem productionPlanRawItem)
+        {
+            base.AddObject("ProductionPlanRawItems", productionPlanRawItem);
         }
 
         #endregion
@@ -18361,50 +18362,6 @@ namespace DBLayer
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem")]
-        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem")]
-        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_BoqDet_Item", "BoqDet")]
         public EntityCollection<BoqDet> BoqDets
         {
@@ -18477,6 +18434,72 @@ namespace DBLayer
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SPSHed>("InventorySalesDebtorsSystemModel.FK_SPSHed_Item", "SPSHed", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionNoteDet_Item", "ProductionNoteDet")]
+        public EntityCollection<ProductionNoteDet> ProductionNoteDets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionNoteDet>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "ProductionNoteDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionNoteDet>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "ProductionNoteDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem")]
+        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item", "ProductionPlanRawItem", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem")]
+        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_Item1", "ProductionPlanRawItem", value);
                 }
             }
         }
@@ -23086,6 +23109,44 @@ namespace DBLayer
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionNoteDet_Item", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionNoteDet_Item", "Item", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -24055,28 +24116,6 @@ namespace DBLayer
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanRawItem")]
-        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanRawItem");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanRawItem", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_ProductionPlanHed", "ProductionPlanStandardDet")]
         public EntityCollection<ProductionPlanStandardDet> ProductionPlanStandardDets
         {
@@ -24190,6 +24229,28 @@ namespace DBLayer
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanRawItem")]
+        public EntityCollection<ProductionPlanRawItem> ProductionPlanRawItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanRawItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanRawItem>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanRawItem", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -24210,16 +24271,16 @@ namespace DBLayer
         /// </summary>
         /// <param name="referenceNo">Initial value of the ReferenceNo property.</param>
         /// <param name="finishedItemCode">Initial value of the FinishedItemCode property.</param>
-        /// <param name="quantity">Initial value of the Quantity property.</param>
         /// <param name="rawItemCode">Initial value of the RawItemCode property.</param>
+        /// <param name="quantity">Initial value of the Quantity property.</param>
         /// <param name="costPrice">Initial value of the CostPrice property.</param>
-        public static ProductionPlanRawItem CreateProductionPlanRawItem(global::System.String referenceNo, global::System.String finishedItemCode, global::System.Decimal quantity, global::System.String rawItemCode, global::System.Decimal costPrice)
+        public static ProductionPlanRawItem CreateProductionPlanRawItem(global::System.String referenceNo, global::System.String finishedItemCode, global::System.String rawItemCode, global::System.Decimal quantity, global::System.Decimal costPrice)
         {
             ProductionPlanRawItem productionPlanRawItem = new ProductionPlanRawItem();
             productionPlanRawItem.ReferenceNo = referenceNo;
             productionPlanRawItem.FinishedItemCode = finishedItemCode;
-            productionPlanRawItem.Quantity = quantity;
             productionPlanRawItem.RawItemCode = rawItemCode;
+            productionPlanRawItem.Quantity = quantity;
             productionPlanRawItem.CostPrice = costPrice;
             return productionPlanRawItem;
         }
@@ -24285,6 +24346,33 @@ namespace DBLayer
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RawItemCode
+        {
+            get
+            {
+                return _RawItemCode;
+            }
+            set
+            {
+                if (_RawItemCode != value)
+                {
+                    OnRawItemCodeChanging(value);
+                    ReportPropertyChanging("RawItemCode");
+                    _RawItemCode = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("RawItemCode");
+                    OnRawItemCodeChanged();
+                }
+            }
+        }
+        private global::System.String _RawItemCode;
+        partial void OnRawItemCodeChanging(global::System.String value);
+        partial void OnRawItemCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Decimal Quantity
@@ -24305,30 +24393,6 @@ namespace DBLayer
         private global::System.Decimal _Quantity;
         partial void OnQuantityChanging(global::System.Decimal value);
         partial void OnQuantityChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String RawItemCode
-        {
-            get
-            {
-                return _RawItemCode;
-            }
-            set
-            {
-                OnRawItemCodeChanging(value);
-                ReportPropertyChanging("RawItemCode");
-                _RawItemCode = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("RawItemCode");
-                OnRawItemCodeChanged();
-            }
-        }
-        private global::System.String _RawItemCode;
-        partial void OnRawItemCodeChanging(global::System.String value);
-        partial void OnRawItemCodeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -24441,16 +24505,16 @@ namespace DBLayer
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed")]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed")]
         public ProductionPlanHed ProductionPlanHed
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed").Value = value;
             }
         }
         /// <summary>
@@ -24462,13 +24526,13 @@ namespace DBLayer
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanRawItem", "ProductionPlanHed", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ProductionPlanHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed", value);
                 }
             }
         }

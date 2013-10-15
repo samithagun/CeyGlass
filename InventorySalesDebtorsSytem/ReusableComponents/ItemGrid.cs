@@ -98,6 +98,16 @@ namespace InventorySalesDebtorsSytem
             this.Quantity = Quantity;
         }
 
+        public ItemGrid(Item item, decimal TotalQty, decimal UsedQty, decimal WasteQty)
+        {
+            this.ItemCode = item.ItemCode;
+            this.ItemName = item.ItemName;
+            this.TotalQty = TotalQty;
+            this.UsedQty = UsedQty;
+            this.WasteQty = WasteQty;
+        }
+
+
         public string ItemCode { get; set; }
         public string ItemName { get; set; }
         public string UOM { get; set; }
@@ -115,6 +125,8 @@ namespace InventorySalesDebtorsSytem
         public decimal TotalItemVal { get; set; }
 
         public DateTime Date { get; set; }
-
+        public decimal TotalQty { get; set; }
+        public decimal UsedQty { get; set; }
+        public decimal WasteQty { get; set; }
     }
 }
