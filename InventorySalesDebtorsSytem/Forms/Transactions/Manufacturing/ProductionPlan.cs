@@ -232,15 +232,44 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         {
             try
             {
-                //DispatchHed h = ((DispatchHed)HeaderBindingSource.Current);
+                ProductionPlanHed h = ((ProductionPlanHed)productionPlanHedBindingSource.Current);
 
-                //foreach (DispatchDet d in h.DispatchDets)
-                //{
-                //    db.InvoiceDets.Single(x => x.ReferenceNo == h.InvoiceNo && x.ItemCode == d.ItemCode).BalQty1 -= d.Quantity;
-                //    if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.LocationCode, d.ItemCode, -1 * d.Quantity, (d.TotalItemVal - d.VATItemVal - d.NBTItemVal) / d.Quantity, false))
-                //        throw new Exception("Error @ UpdateQOH");
-                //}
+               
 
+                foreach (ProductionPlanRawItem raw in tmpRawMaterialData)
+                {
+                    ProductionPlanRawItem r = new ProductionPlanRawItem();
+                    r.ReferenceNo = h.ReferenceNo;
+                    r.FinishedItemCode = raw.FinishedItemCode;
+                    r.RawItemCode = raw.RawItemCode;
+                    r.Quantity = raw.Quantity;
+                    r.CostPrice = raw.CostPrice;
+                    db.ProductionPlanRawItems.AddObject(r);
+
+                    //if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.LocationCode, d.ItemCode, -1 * d.Quantity, (d.TotalItemVal - d.VATItemVal - d.NBTItemVal) / d.Quantity, false))
+                    //    throw new Exception("Error @ UpdateQOH");
+                }
+
+                foreach (ReferenceItemGrid r in tmpDetData)
+                {
+                    ProductionPlanSODet s = new ProductionPlanSODet();
+                    s.ReferenceNo = h.ReferenceNo;
+                    s.SORefferenceNo = r.RefferenceNo;
+                    s.ItemCode = r.ItemCode;
+                    s.Quantity = r.Quantity;
+                    db.ProductionPlanSODets.AddObject(s);
+                }
+
+
+                foreach (ReferenceItemGrid r in tmpStdordDetData)
+                {
+                    ProductionPlanStandardDet s = new ProductionPlanStandardDet();
+                    s.ReferenceNo = h.ReferenceNo;
+                    s.StandardOrdereNo = r.RefferenceNo;
+                    s.ItemCode = r.ItemCode;
+                    s.Quantity = r.Quantity;
+                    db.ProductionPlanStandardDets.AddObject(s);
+                }
                 return true;
             }
             catch (Exception ex)
