@@ -164,13 +164,23 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         public override bool AfterDataSave()
         { 
-            var companyData = db.Companies.ToList();
-            Company d = companyData.First();
+            var companyData = db.Companies.FirstOrDefault();
 
             try
             {
-                if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, d.StoresLoc.ToString(), txtItemCode.Text, Convert.ToInt16(txtTotalQty.Text), 0, false))
+                //update finish good qty
+                if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.StoresLoc.ToString(), txtItemCode.Text, Convert.ToInt16(txtTotalQty.Text), 0, false))
                 throw new Exception("Error @ UpdateQOH");
+
+                //update raw material qty
+                ProductionNoteHed h = ((ProductionNoteHed)PNBindingSource.Current);
+
+                foreach (ProductionNoteDet p in h.ProductionNoteDets)
+                {
+                    //db.InvoiceDets.Single(x => x.ReferenceNo == h.InvoiceNo && x.ItemCode == d.ItemCode).BalQty1 -= d.Quantity;
+                    if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.StoresLoc.ToString(), p.ItemCode, -1 * p.TotalQty, 0, false))
+                        throw new Exception("Error @ UpdateQOH");
+                }
 
                 return true;
             }
@@ -179,7 +189,6 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 Helpers.WriteException(ex);
                 return false;
             }
-        }
         }
     }
 }
