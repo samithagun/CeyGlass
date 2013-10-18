@@ -98,13 +98,13 @@ namespace InventorySalesDebtorsSytem
             this.Quantity = Quantity;
         }
 
-        public ItemGrid(Item item, decimal TotalQty, decimal UsedQty, decimal WasteQty)
+        public ItemGrid(Item item, decimal UsedQty, decimal WasteQty, decimal TotalQty)
         {
             this.ItemCode = item.ItemCode;
             this.ItemName = item.ItemName;
-            this.TotalQty = TotalQty;
             this.UsedQty = UsedQty;
             this.WasteQty = WasteQty;
+            this.TotalQty = TotalQty;
         }
 
 

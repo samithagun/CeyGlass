@@ -39,8 +39,13 @@
             System.Windows.Forms.Label remarksLabel;
             System.Windows.Forms.Label txnDateLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PNDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.formInitializer1 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
+            this.PNDataGridView = new System.Windows.Forms.DataGridView();
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtTotalQty = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -64,7 +69,6 @@
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.txnDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PNDataGridView = new System.Windows.Forms.DataGridView();
             this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,15 +85,42 @@
             txnDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).BeginInit();
             this.PNBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // PNBindingSource
             // 
             this.PNBindingSource.DataSource = typeof(DBLayer.ProductionNoteHed);
+            // 
+            // formInitializer1
+            // 
+            this.formInitializer1.Location = new System.Drawing.Point(273, 168);
+            this.formInitializer1.Name = "formInitializer1";
+            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer1.TabIndex = 106;
+            // 
+            // PNDataGridView
+            // 
+            this.PNDataGridView.AllowUserToAddRows = false;
+            this.PNDataGridView.AllowUserToResizeColumns = false;
+            this.PNDataGridView.AllowUserToResizeRows = false;
+            this.PNDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PNDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemCode,
+            this.ItemName,
+            this.UsedQty,
+            this.WasteQty,
+            this.TotalQty});
+            this.PNDataGridView.Location = new System.Drawing.Point(21, 193);
+            this.PNDataGridView.Name = "PNDataGridView";
+            this.PNDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.PNDataGridView.Size = new System.Drawing.Size(733, 252);
+            this.PNDataGridView.TabIndex = 105;
+            this.PNDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellContentClick);
+            this.PNDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellEndEdit);
             // 
             // txtBranchCode
             // 
@@ -116,6 +147,7 @@
             // 
             // txtTotalQty
             // 
+            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "Quantity", true));
             this.txtTotalQty.Location = new System.Drawing.Point(123, 164);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Size = new System.Drawing.Size(131, 20);
@@ -124,9 +156,9 @@
             // txtItemName
             // 
             this.txtItemName.Enabled = false;
-            this.txtItemName.Location = new System.Drawing.Point(260, 137);
+            this.txtItemName.Location = new System.Drawing.Point(262, 136);
             this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(494, 20);
+            this.txtItemName.Size = new System.Drawing.Size(492, 20);
             this.txtItemName.TabIndex = 84;
             // 
             // label4
@@ -137,6 +169,7 @@
             label4.Size = new System.Drawing.Size(69, 13);
             label4.TabIndex = 81;
             label4.Text = "Damage Qty:";
+            label4.Visible = false;
             // 
             // txtDamageQty
             // 
@@ -145,6 +178,7 @@
             this.txtDamageQty.Name = "txtDamageQty";
             this.txtDamageQty.Size = new System.Drawing.Size(131, 20);
             this.txtDamageQty.TabIndex = 80;
+            this.txtDamageQty.Visible = false;
             // 
             // label3
             // 
@@ -154,6 +188,7 @@
             label3.Size = new System.Drawing.Size(62, 13);
             label3.TabIndex = 79;
             label3.Text = "Usable Qty:";
+            label3.Visible = false;
             // 
             // txtUsableQty
             // 
@@ -162,6 +197,7 @@
             this.txtUsableQty.Name = "txtUsableQty";
             this.txtUsableQty.Size = new System.Drawing.Size(131, 20);
             this.txtUsableQty.TabIndex = 78;
+            this.txtUsableQty.Visible = false;
             // 
             // label2
             // 
@@ -171,6 +207,7 @@
             label2.Size = new System.Drawing.Size(52, 13);
             label2.TabIndex = 77;
             label2.Text = "BOQ Qty:";
+            label2.Visible = false;
             // 
             // txtBOQQty
             // 
@@ -179,10 +216,12 @@
             this.txtBOQQty.Name = "txtBOQQty";
             this.txtBOQQty.Size = new System.Drawing.Size(131, 20);
             this.txtBOQQty.TabIndex = 76;
+            this.txtBOQQty.Visible = false;
             // 
             // txtItemCode
             // 
             this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ItemCode", true));
             this.txtItemCode.filterCondition = null;
             this.txtItemCode.Location = new System.Drawing.Point(123, 136);
             this.txtItemCode.Name = "txtItemCode";
@@ -196,6 +235,7 @@
             // txtProPlan
             // 
             this.txtProPlan.codeFieldName = null;
+            this.txtProPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ProPlanNo", true));
             this.txtProPlan.filterCondition = null;
             this.txtProPlan.Location = new System.Drawing.Point(123, 107);
             this.txtProPlan.Name = "txtProPlan";
@@ -369,6 +409,7 @@
             // 
             // txtManualNo
             // 
+            this.txtManualNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ManualNo", true));
             this.txtManualNo.Location = new System.Drawing.Point(606, 78);
             this.txtManualNo.Name = "txtManualNo";
             this.txtManualNo.Size = new System.Drawing.Size(148, 20);
@@ -384,6 +425,7 @@
             // 
             // txnDateTimePicker
             // 
+            this.txnDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "TxnDate", true));
             this.txnDateTimePicker.Location = new System.Drawing.Point(334, 77);
             this.txnDateTimePicker.Name = "txnDateTimePicker";
             this.txnDateTimePicker.Size = new System.Drawing.Size(160, 20);
@@ -392,24 +434,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // PNDataGridView
-            // 
-            this.PNDataGridView.AllowUserToAddRows = false;
-            this.PNDataGridView.AllowUserToResizeColumns = false;
-            this.PNDataGridView.AllowUserToResizeRows = false;
-            this.PNDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PNDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemCode,
-            this.ItemName,
-            this.UsedQty,
-            this.WasteQty,
-            this.TotalQty});
-            this.PNDataGridView.Location = new System.Drawing.Point(21, 229);
-            this.PNDataGridView.Name = "PNDataGridView";
-            this.PNDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.PNDataGridView.Size = new System.Drawing.Size(733, 216);
-            this.PNDataGridView.TabIndex = 105;
             // 
             // ItemCode
             // 
@@ -427,20 +451,30 @@
             // 
             // UsedQty
             // 
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.UsedQty.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsedQty.HeaderText = "Used Qty";
             this.UsedQty.Name = "UsedQty";
             this.UsedQty.Width = 120;
             // 
             // WasteQty
             // 
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.WasteQty.DefaultCellStyle = dataGridViewCellStyle5;
             this.WasteQty.HeaderText = "Wasted Qty";
             this.WasteQty.Name = "WasteQty";
             this.WasteQty.Width = 120;
             // 
             // TotalQty
             // 
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.TotalQty.DefaultCellStyle = dataGridViewCellStyle6;
             this.TotalQty.HeaderText = "Total Qty";
             this.TotalQty.Name = "TotalQty";
+            this.TotalQty.ReadOnly = true;
             this.TotalQty.Width = 120;
             // 
             // ProductionNote
@@ -448,6 +482,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 457);
+            this.Controls.Add(this.formInitializer1);
             this.Controls.Add(this.PNDataGridView);
             this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(label1);
@@ -471,16 +506,23 @@
             this.Controls.Add(this.txtManualNo);
             this.Controls.Add(this.referenceNoTextBox);
             this.Controls.Add(this.txnDateTimePicker);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProductionNote";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Production Note";
             this.Load += new System.EventHandler(this.ProductionNote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNDetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PNBindingNavigator)).EndInit();
             this.PNBindingNavigator.ResumeLayout(false);
             this.PNBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PNDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,6 +556,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.BindingSource PNDetBindingSource;
         private System.Windows.Forms.DataGridView PNDataGridView;
+        private ReusableComponents.FormInitializer formInitializer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsedQty;

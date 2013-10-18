@@ -68,6 +68,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnAddItem = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.formInitializer1 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
@@ -445,11 +446,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // formInitializer1
+            // 
+            this.formInitializer1.Location = new System.Drawing.Point(245, 150);
+            this.formInitializer1.Name = "formInitializer1";
+            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer1.TabIndex = 76;
+            // 
             // BOQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 408);
+            this.Controls.Add(this.formInitializer1);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.numQty);
             this.Controls.Add(this.label9);
@@ -530,5 +539,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private ReusableComponents.FormInitializer formInitializer1;
     }
 }

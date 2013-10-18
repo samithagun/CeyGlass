@@ -18,7 +18,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         BindingList<ItemGrid> tmpDetData = new BindingList<ItemGrid>();
 
         bool alreadyFilling = false;
-        
+
         public ProductionNote()
         {
             InitializeComponent();
@@ -41,20 +41,20 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             txtProPlan.codeFieldName = "ReferenceNo";
             txtProPlan.controlList.Add(txtProPlan);
 
-            txtItemCode.varList = from i in db.Items join p in db.ProductionPlanFinishedGoodDets on i.ItemCode equals p.ItemCode join b in db.BoqHeds on i.ItemCode equals b.BoqCode where p.ReferenceNo == txtProPlan.Text select new { i.ItemCode, i.ItemName, p.Quantity, b.ToalQty, b.UsableQty, b.DamageQty };
+            txtItemCode.varList = from i in db.Items join p in db.ProductionPlanFinishedGoodDets on i.ItemCode equals p.ItemCode where p.ReferenceNo == txtProPlan.Text select new { i.ItemCode, i.ItemName, p.Quantity };
             txtItemCode.codeFieldName = "ItemCode";
             txtItemCode.controlList.Add(txtItemName);
             txtItemCode.fieldList.Add("ItemName");
             txtItemCode.controlList.Add(txtTotalQty);
             txtItemCode.fieldList.Add("Quantity");
-            txtItemCode.controlList.Add(txtDamageQty);
-            txtItemCode.fieldList.Add("DamageQty");
-            txtItemCode.controlList.Add(txtUsableQty);
-            txtItemCode.fieldList.Add("UsableQty");
-            txtItemCode.controlList.Add(txtBOQQty);
-            txtItemCode.fieldList.Add("ToalQty");
+            //txtItemCode.controlList.Add(txtDamageQty);
+            //txtItemCode.fieldList.Add("DamageQty");
+            //txtItemCode.controlList.Add(txtUsableQty);
+            //txtItemCode.fieldList.Add("UsableQty");
+            //txtItemCode.controlList.Add(txtBOQQty);
+            //txtItemCode.fieldList.Add("ToalQty");
 
-            PNBindingSource.DataSource = db.SPSHeds;
+            PNBindingSource.DataSource = db.ProductionNoteHeds;
             PNDetBindingSource.DataSource = tmpDetData;
             PNDataGridView.DataSource = PNDetBindingSource;
 
@@ -88,10 +88,10 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
-            var itemData = db.ProductionPlanRawItems.Single(h => h.ReferenceNo == txtProPlan.Text);
+            var itemData = db.ProductionPlanRawItems.Where(h => h.ReferenceNo == txtProPlan.Text);
 
-            //foreach (var Item in itemData)
-            tmpDetData.Add(new ItemGrid(itemData.Item1, itemData.Quantity, itemData.Quantity, itemData.Quantity));
+            foreach (var Item in itemData)
+                tmpDetData.Add(new ItemGrid(Item.Item1, Item.Quantity, 0, Item.Quantity));
         }
 
         public override void ViewClick()
@@ -111,10 +111,75 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 var detData = hedData.ProductionNoteDets.ToList();
 
                 foreach (ProductionNoteDet d in detData)
-                tmpDetData.Add(new ItemGrid(d.Item,d.TotalQty,d.UsedQty,d.WasteQty));
+                    tmpDetData.Add(new ItemGrid(d.Item, d.TotalQty, d.UsedQty, d.WasteQty));
             }
 
             alreadyFilling = false;
+        }
+
+        public override bool BeforeDataSave()
+        {
+
+            ((ProductionNoteHed)PNBindingSource.Current).ReferenceNo = referenceNoTextBox.Text;
+
+            ((ProductionNoteHed)PNBindingSource.Current).UserID = Program.UserID;
+
+            ((ProductionNoteHed)PNBindingSource.Current).AddedDate = DateTime.Now;
+
+            ((ProductionNoteHed)PNBindingSource.Current).AddedMachineInfo = Program.MachineName;
+
+            ProductionNoteDet d;
+
+            foreach (var x in tmpDetData)
+            {
+                d = new ProductionNoteDet();
+                d.ReferenceNo = referenceNoTextBox.Text;
+                d.ItemCode = x.ItemCode;
+                d.UsedQty = x.UsedQty;
+                d.WasteQty = x.WasteQty;
+                d.TotalQty = x.TotalQty;
+                ((ProductionNoteHed)PNBindingSource.Current).ProductionNoteDets.Add(d);
+            }
+
+            if (transactionToolBar1.mode == "Add")
+                db.ProductionNoteHeds.AddObject((ProductionNoteHed)PNBindingSource.Current);
+            return true;
+        }
+
+        private void PNDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PNDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (PNDataGridView.Columns[e.ColumnIndex].Name == "WasteQty")
+            {
+                decimal totalqty = 0;
+
+                totalqty = Convert.ToDecimal(PNDataGridView.Rows[e.RowIndex].Cells["WasteQty"].Value) + Convert.ToDecimal(PNDataGridView.Rows[e.RowIndex].Cells["UsedQty"].Value);
+                PNDataGridView.Rows[e.RowIndex].Cells["TotalQty"].Value = totalqty;
+            }
+        }
+
+        public override bool AfterDataSave()
+        { 
+            var companyData = db.Companies.ToList();
+            Company d = companyData.First();
+
+            try
+            {
+                if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, d.StoresLoc.ToString(), txtItemCode.Text, Convert.ToInt16(txtTotalQty.Text), 0, false))
+                throw new Exception("Error @ UpdateQOH");
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Helpers.WriteException(ex);
+                return false;
+            }
+        }
         }
     }
 }
