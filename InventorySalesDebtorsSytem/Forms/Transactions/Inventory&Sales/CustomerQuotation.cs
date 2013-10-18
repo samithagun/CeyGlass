@@ -105,7 +105,7 @@ namespace InventorySalesDebtorsSytem
         private void GenerateItemCodeVarList()
         {
             if (txtBranchCode.Text != "" && txtLocationCode.Text != "")
-                txtItemCode.varList = (from i in db.Items join s in db.ItemQOHs.Where(q => q.BranchCode == txtBranchCode.Text && q.LocationCode == txtLocationCode.Text) on i.ItemCode equals s.ItemCode where i.Status == "Active" select new { i.ItemCode, i.ItemName, s.QOH, SellingPrice = i.SelPrice }).ToList();
+                txtItemCode.varList = (from i in db.Items join s in db.ItemQOHs.Where(q => q.BranchCode == txtBranchCode.Text && q.LocationCode == txtLocationCode.Text) on i.ItemCode equals s.ItemCode where i.Status == "Active" && i.IsRawMaterial==false select new { i.ItemCode, i.ItemName, s.QOH, SellingPrice = i.SelPrice }).ToList();
             else
                 txtItemCode.varList = null;
             tmpDetData.Clear();

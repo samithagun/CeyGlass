@@ -411,14 +411,17 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void txtTypeCode_Leave(object sender, EventArgs e)
         {
-            try
+            if ((txtTypeCode.Text != string.Empty) && (txtBranchCode.Text != string.Empty))
             {
-                if (ValidateEnteredData())
-                    GetReleventSalesOrders();
-            }
-            catch (Exception ex)
-            {
-                Helpers.WriteException(ex);
+                try
+                {
+                    if (ValidateEnteredData())
+                        GetReleventSalesOrders();
+                }
+                catch (Exception ex)
+                {
+                    Helpers.WriteException(ex);
+                }
             }
         }
 
@@ -439,7 +442,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void txnDateDateTimePicker_Leave(object sender, EventArgs e)
         {
-            if (txtTypeCode.Text != string.Empty)
+            if ((txtTypeCode.Text != string.Empty) && (txtBranchCode.Text!=string.Empty))
             {
                 try
                 {
@@ -455,7 +458,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void txtBranchCode_Leave(object sender, EventArgs e)
         {
-            if (txtTypeCode.Text != string.Empty)
+            if ((txtTypeCode.Text != string.Empty) && (txtBranchCode.Text != string.Empty))
             {
                 try
                 {
