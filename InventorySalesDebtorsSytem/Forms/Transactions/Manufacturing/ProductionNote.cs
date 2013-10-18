@@ -88,7 +88,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
-            var itemData = db.ProductionPlanRawItems.Where(h => h.ReferenceNo == txtProPlan.Text);
+            var itemData = db.ProductionPlanRawItems.Where(h => h.ReferenceNo == txtProPlan.Text && h.FinishedItemCode == txtItemCode.Text);
 
             foreach (var Item in itemData)
                 tmpDetData.Add(new ItemGrid(Item.Item1, Item.Quantity, 0, Item.Quantity));
@@ -169,7 +169,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             try
             {
                 //update finish good qty
-                if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.StoresLoc.ToString(), txtItemCode.Text, Convert.ToInt16(txtTotalQty.Text), 0, false))
+                if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.StoresLoc.ToString(), txtItemCode.Text, Convert.ToDecimal(txtTotalQty.Text), 0, false))
                 throw new Exception("Error @ UpdateQOH");
 
                 //update raw material qty
@@ -178,7 +178,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 foreach (ProductionNoteDet p in h.ProductionNoteDets)
                 {
                     //db.InvoiceDets.Single(x => x.ReferenceNo == h.InvoiceNo && x.ItemCode == d.ItemCode).BalQty1 -= d.Quantity;
-                    if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.StoresLoc.ToString(), p.ItemCode, -1 * p.TotalQty, 0, false))
+                    if (!BusinessRules.UpdateQOH(db, txtBranchCode.Text, companyData.ProductionLoc.ToString(), p.ItemCode, -1 * p.TotalQty, 0, false))
                         throw new Exception("Error @ UpdateQOH");
                 }
 

@@ -38,14 +38,19 @@
             System.Windows.Forms.Label referenceNoLabel;
             System.Windows.Forms.Label remarksLabel;
             System.Windows.Forms.Label txnDateLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionNote));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PNDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.formInitializer1 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
             this.PNDataGridView = new System.Windows.Forms.DataGridView();
+            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UsedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WasteQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtTotalQty = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -69,11 +74,6 @@
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.txnDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WasteQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label1 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -91,51 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // PNBindingSource
-            // 
-            this.PNBindingSource.DataSource = typeof(DBLayer.ProductionNoteHed);
-            // 
-            // formInitializer1
-            // 
-            this.formInitializer1.Location = new System.Drawing.Point(273, 168);
-            this.formInitializer1.Name = "formInitializer1";
-            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
-            this.formInitializer1.TabIndex = 106;
-            // 
-            // PNDataGridView
-            // 
-            this.PNDataGridView.AllowUserToAddRows = false;
-            this.PNDataGridView.AllowUserToResizeColumns = false;
-            this.PNDataGridView.AllowUserToResizeRows = false;
-            this.PNDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PNDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemCode,
-            this.ItemName,
-            this.UsedQty,
-            this.WasteQty,
-            this.TotalQty});
-            this.PNDataGridView.Location = new System.Drawing.Point(21, 193);
-            this.PNDataGridView.Name = "PNDataGridView";
-            this.PNDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.PNDataGridView.Size = new System.Drawing.Size(733, 252);
-            this.PNDataGridView.TabIndex = 105;
-            this.PNDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellContentClick);
-            this.PNDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellEndEdit);
-            // 
-            // txtBranchCode
-            // 
-            this.txtBranchCode.codeFieldName = null;
-            this.txtBranchCode.filterCondition = null;
-            this.txtBranchCode.Location = new System.Drawing.Point(606, 107);
-            this.txtBranchCode.Name = "txtBranchCode";
-            this.txtBranchCode.Size = new System.Drawing.Size(148, 20);
-            this.txtBranchCode.sortOrder = null;
-            this.txtBranchCode.TabIndex = 104;
-            this.txtBranchCode.Text = "100";
-            this.txtBranchCode.valid = true;
-            this.txtBranchCode.varList = null;
-            this.txtBranchCode.Visible = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -144,22 +99,6 @@
             label1.Size = new System.Drawing.Size(53, 13);
             label1.TabIndex = 86;
             label1.Text = "Total Qty:";
-            // 
-            // txtTotalQty
-            // 
-            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "Quantity", true));
-            this.txtTotalQty.Location = new System.Drawing.Point(123, 164);
-            this.txtTotalQty.Name = "txtTotalQty";
-            this.txtTotalQty.Size = new System.Drawing.Size(131, 20);
-            this.txtTotalQty.TabIndex = 85;
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Enabled = false;
-            this.txtItemName.Location = new System.Drawing.Point(262, 136);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(492, 20);
-            this.txtItemName.TabIndex = 84;
             // 
             // label4
             // 
@@ -171,15 +110,6 @@
             label4.Text = "Damage Qty:";
             label4.Visible = false;
             // 
-            // txtDamageQty
-            // 
-            this.txtDamageQty.Enabled = false;
-            this.txtDamageQty.Location = new System.Drawing.Point(623, 193);
-            this.txtDamageQty.Name = "txtDamageQty";
-            this.txtDamageQty.Size = new System.Drawing.Size(131, 20);
-            this.txtDamageQty.TabIndex = 80;
-            this.txtDamageQty.Visible = false;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -190,15 +120,6 @@
             label3.Text = "Usable Qty:";
             label3.Visible = false;
             // 
-            // txtUsableQty
-            // 
-            this.txtUsableQty.Enabled = false;
-            this.txtUsableQty.Location = new System.Drawing.Point(359, 193);
-            this.txtUsableQty.Name = "txtUsableQty";
-            this.txtUsableQty.Size = new System.Drawing.Size(131, 20);
-            this.txtUsableQty.TabIndex = 78;
-            this.txtUsableQty.Visible = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -208,42 +129,6 @@
             label2.TabIndex = 77;
             label2.Text = "BOQ Qty:";
             label2.Visible = false;
-            // 
-            // txtBOQQty
-            // 
-            this.txtBOQQty.Enabled = false;
-            this.txtBOQQty.Location = new System.Drawing.Point(123, 193);
-            this.txtBOQQty.Name = "txtBOQQty";
-            this.txtBOQQty.Size = new System.Drawing.Size(131, 20);
-            this.txtBOQQty.TabIndex = 76;
-            this.txtBOQQty.Visible = false;
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.codeFieldName = null;
-            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ItemCode", true));
-            this.txtItemCode.filterCondition = null;
-            this.txtItemCode.Location = new System.Drawing.Point(123, 136);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(131, 20);
-            this.txtItemCode.sortOrder = null;
-            this.txtItemCode.TabIndex = 71;
-            this.txtItemCode.valid = false;
-            this.txtItemCode.varList = null;
-            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
-            // 
-            // txtProPlan
-            // 
-            this.txtProPlan.codeFieldName = null;
-            this.txtProPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ProPlanNo", true));
-            this.txtProPlan.filterCondition = null;
-            this.txtProPlan.Location = new System.Drawing.Point(123, 107);
-            this.txtProPlan.Name = "txtProPlan";
-            this.txtProPlan.Size = new System.Drawing.Size(131, 20);
-            this.txtProPlan.sortOrder = null;
-            this.txtProPlan.TabIndex = 70;
-            this.txtProPlan.valid = false;
-            this.txtProPlan.varList = null;
             // 
             // manualNoLabel
             // 
@@ -289,6 +174,163 @@
             txnDateLabel.Size = new System.Drawing.Size(33, 13);
             txnDateLabel.TabIndex = 47;
             txnDateLabel.Text = "Date:";
+            // 
+            // PNBindingSource
+            // 
+            this.PNBindingSource.DataSource = typeof(DBLayer.ProductionNoteHed);
+            // 
+            // formInitializer1
+            // 
+            this.formInitializer1.Location = new System.Drawing.Point(273, 168);
+            this.formInitializer1.Name = "formInitializer1";
+            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer1.TabIndex = 106;
+            // 
+            // PNDataGridView
+            // 
+            this.PNDataGridView.AllowUserToAddRows = false;
+            this.PNDataGridView.AllowUserToResizeColumns = false;
+            this.PNDataGridView.AllowUserToResizeRows = false;
+            this.PNDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PNDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemCode,
+            this.ItemName,
+            this.UsedQty,
+            this.WasteQty,
+            this.TotalQty});
+            this.PNDataGridView.Location = new System.Drawing.Point(21, 193);
+            this.PNDataGridView.Name = "PNDataGridView";
+            this.PNDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.PNDataGridView.Size = new System.Drawing.Size(733, 252);
+            this.PNDataGridView.TabIndex = 105;
+            this.PNDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellContentClick);
+            this.PNDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.PNDataGridView_CellEndEdit);
+            // 
+            // ItemCode
+            // 
+            this.ItemCode.HeaderText = "Item Code";
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.ReadOnly = true;
+            this.ItemCode.Width = 120;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 210;
+            // 
+            // UsedQty
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.UsedQty.DefaultCellStyle = dataGridViewCellStyle1;
+            this.UsedQty.HeaderText = "Used Qty";
+            this.UsedQty.Name = "UsedQty";
+            this.UsedQty.Width = 120;
+            // 
+            // WasteQty
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.WasteQty.DefaultCellStyle = dataGridViewCellStyle2;
+            this.WasteQty.HeaderText = "Wasted Qty";
+            this.WasteQty.Name = "WasteQty";
+            this.WasteQty.Width = 120;
+            // 
+            // TotalQty
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.TotalQty.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TotalQty.HeaderText = "Total Qty";
+            this.TotalQty.Name = "TotalQty";
+            this.TotalQty.ReadOnly = true;
+            this.TotalQty.Width = 120;
+            // 
+            // txtBranchCode
+            // 
+            this.txtBranchCode.codeFieldName = null;
+            this.txtBranchCode.filterCondition = null;
+            this.txtBranchCode.Location = new System.Drawing.Point(606, 107);
+            this.txtBranchCode.Name = "txtBranchCode";
+            this.txtBranchCode.Size = new System.Drawing.Size(148, 20);
+            this.txtBranchCode.sortOrder = null;
+            this.txtBranchCode.TabIndex = 104;
+            this.txtBranchCode.Text = "100       ";
+            this.txtBranchCode.valid = true;
+            this.txtBranchCode.varList = null;
+            this.txtBranchCode.Visible = false;
+            // 
+            // txtTotalQty
+            // 
+            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "Quantity", true));
+            this.txtTotalQty.Location = new System.Drawing.Point(123, 164);
+            this.txtTotalQty.Name = "txtTotalQty";
+            this.txtTotalQty.Size = new System.Drawing.Size(131, 20);
+            this.txtTotalQty.TabIndex = 85;
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Enabled = false;
+            this.txtItemName.Location = new System.Drawing.Point(262, 136);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(492, 20);
+            this.txtItemName.TabIndex = 84;
+            // 
+            // txtDamageQty
+            // 
+            this.txtDamageQty.Enabled = false;
+            this.txtDamageQty.Location = new System.Drawing.Point(623, 193);
+            this.txtDamageQty.Name = "txtDamageQty";
+            this.txtDamageQty.Size = new System.Drawing.Size(131, 20);
+            this.txtDamageQty.TabIndex = 80;
+            this.txtDamageQty.Visible = false;
+            // 
+            // txtUsableQty
+            // 
+            this.txtUsableQty.Enabled = false;
+            this.txtUsableQty.Location = new System.Drawing.Point(359, 193);
+            this.txtUsableQty.Name = "txtUsableQty";
+            this.txtUsableQty.Size = new System.Drawing.Size(131, 20);
+            this.txtUsableQty.TabIndex = 78;
+            this.txtUsableQty.Visible = false;
+            // 
+            // txtBOQQty
+            // 
+            this.txtBOQQty.Enabled = false;
+            this.txtBOQQty.Location = new System.Drawing.Point(123, 193);
+            this.txtBOQQty.Name = "txtBOQQty";
+            this.txtBOQQty.Size = new System.Drawing.Size(131, 20);
+            this.txtBOQQty.TabIndex = 76;
+            this.txtBOQQty.Visible = false;
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ItemCode", true));
+            this.txtItemCode.filterCondition = null;
+            this.txtItemCode.Location = new System.Drawing.Point(123, 136);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(131, 20);
+            this.txtItemCode.sortOrder = null;
+            this.txtItemCode.TabIndex = 71;
+            this.txtItemCode.valid = false;
+            this.txtItemCode.varList = null;
+            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
+            // 
+            // txtProPlan
+            // 
+            this.txtProPlan.codeFieldName = null;
+            this.txtProPlan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.PNBindingSource, "ProPlanNo", true));
+            this.txtProPlan.filterCondition = null;
+            this.txtProPlan.Location = new System.Drawing.Point(123, 107);
+            this.txtProPlan.Name = "txtProPlan";
+            this.txtProPlan.Size = new System.Drawing.Size(131, 20);
+            this.txtProPlan.sortOrder = null;
+            this.txtProPlan.TabIndex = 70;
+            this.txtProPlan.valid = false;
+            this.txtProPlan.varList = null;
             // 
             // transactionToolBar1
             // 
@@ -434,48 +476,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.HeaderText = "Item Code";
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.ReadOnly = true;
-            this.ItemCode.Width = 120;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Item Name";
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 210;
-            // 
-            // UsedQty
-            // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.UsedQty.DefaultCellStyle = dataGridViewCellStyle4;
-            this.UsedQty.HeaderText = "Used Qty";
-            this.UsedQty.Name = "UsedQty";
-            this.UsedQty.Width = 120;
-            // 
-            // WasteQty
-            // 
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.WasteQty.DefaultCellStyle = dataGridViewCellStyle5;
-            this.WasteQty.HeaderText = "Wasted Qty";
-            this.WasteQty.Name = "WasteQty";
-            this.WasteQty.Width = 120;
-            // 
-            // TotalQty
-            // 
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.TotalQty.DefaultCellStyle = dataGridViewCellStyle6;
-            this.TotalQty.HeaderText = "Total Qty";
-            this.TotalQty.Name = "TotalQty";
-            this.TotalQty.ReadOnly = true;
-            this.TotalQty.Width = 120;
             // 
             // ProductionNote
             // 

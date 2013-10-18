@@ -14,6 +14,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
     {
         public string ProdLocation;
         public string StoresLocation;
+        bool alreadyFilling = false;
+
         InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
 
         BindingList<ProductionPlanHed> tmpHedData = new BindingList<ProductionPlanHed>();
@@ -97,6 +99,18 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
 
         #region Methods
+
+        public override void ClearData()
+        {
+            tmpHedData.Clear();
+            tmpDetData.Clear();
+            tmpStdordDetData.Clear();
+            tmpSummaryDetData.Clear();
+            tmpSummaryFinishGData.Clear();
+            tmpRawMaterialData.Clear();
+            tmpSummaryRawMatData.Clear();
+        }
+
         private void GetReleventSalesOrders()
         {
             DateTime delDate = txnDateDateTimePicker.Value.Date;
@@ -110,7 +124,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                                    join i in db.Items on h.ItemCode equals i.ItemCode
                                    join d in db.SPSDets
                                    on h.ReferenceNo equals d.ReferenceNo
-                                   where i.TypeCode == txtTypeCode.Text && d.Date == delDate
+                                   where i.TypeCode == txtTypeCode.Text.Trim() && d.Date == delDate
                                    select new { d.ReferenceNo, h.ItemCode, i.ItemName, d.Qty }).ToList();
 
             tmpDetData.Clear();
@@ -305,18 +319,62 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 return false;
             }
         }
+
+        private bool ValidateEnteredData()
+        {
+             DateTime delDate = txnDateDateTimePicker.Value.Date;
+             var get = (from a in db.ProductionPlanHeds
+                        where a.TxnDate == delDate && a.TypeCode == this.txtTypeCode.Text
+                        select a.ReferenceNo).ToList();
+
+             if (get.Count > 0)
+             {
+                 MessageBox.Show("Already entered data for this date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                 return false;
+             }
+             else
+                 return true;
+        }
+
+        private void FillDetails(ProductionPlanHed hedData)
+        {
+            alreadyFilling = true;
+
+            if (hedData != null)
+            {
+                tmpSummaryFinishGData.Clear();
+
+                var detData = hedData.ProductionPlanFinishedGoodDets.ToList();
+
+                foreach (var sumItem in detData)
+                    tmpSummaryFinishGData.Add(new ItemGrid(sumItem.ItemCode, sumItem.Item.ItemName, sumItem.Quantity, 0));
+
+                var rawDet = hedData.ProductionPlanRawItems.ToList();
+
+
+            }
+
+            alreadyFilling = false;
+        }
+
+        public override void ViewClick()
+        {
+            productionPlanHedBindingSource.DataSource = db.ProductionPlanHeds.ToList();
+            FillDetails((ProductionPlanHed)productionPlanHedBindingSource.Current);
+        }
         #endregion
 
         private void txtTypeCode_Leave(object sender, EventArgs e)
         {
             try
             {
-                GetReleventSalesOrders();
+                if (ValidateEnteredData())
+                    GetReleventSalesOrders();
             }
             catch (Exception ex)
             {
-                Helpers.WriteException(ex);               
-            }          
+                Helpers.WriteException(ex);
+            }           
         }
 
         private void SoDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -332,6 +390,22 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         private void FinishedGoodDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             Helpers.FillGridRecordNo(FinishedGoodDataGridView, "FinishGRecNo");
+        }
+
+        private void txnDateDateTimePicker_Leave(object sender, EventArgs e)
+        {
+            if (txtTypeCode.Text != string.Empty)
+            {
+                try
+                {
+                   if(ValidateEnteredData())
+                        GetReleventSalesOrders();
+                }
+                catch (Exception ex)
+                {
+                    Helpers.WriteException(ex);
+                }    
+            }
         }
     }
 }
