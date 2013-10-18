@@ -198,34 +198,58 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         }
 
+        private bool ValidateQty()
+        {
+            bool IsEnoughQOH = true;
+            foreach (var items in tmpSummaryRawMatData)
+            { 
+                if (items.Quantity>items.QOH)
+                    IsEnoughQOH = false;
+            }
+            if (!IsEnoughQOH)
+            {
+                MessageBox.Show("There are items with less QOH. Please check inventory", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // return false;
+
+            }
+            return IsEnoughQOH;
+        }
+
         public override bool BeforeDataSave()
         {
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ReferenceNo = referenceNoTextBox.Text;
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionLocation = ProdLocation;
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).StoresLocation = StoresLocation;
-
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).UserID = Program.UserID;
-
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedDate = DateTime.Now;
-
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedMachineInfo = Program.MachineName;
-
-            ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Clear();
-
-            ProductionPlanFinishedGoodDet d;
-
-            foreach (var x in tmpSummaryFinishGData)
+            if (ValidateQty())
             {
-                d = new ProductionPlanFinishedGoodDet();
-                d.ItemCode = x.ItemCode;
-                d.Quantity = x.Quantity;
-                ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Add(d);
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).ReferenceNo = referenceNoTextBox.Text;
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionLocation = ProdLocation;
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).StoresLocation = StoresLocation;
+
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).UserID = Program.UserID;
+
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedDate = DateTime.Now;
+
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).AddedMachineInfo = Program.MachineName;
+
+                ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Clear();
+
+                ProductionPlanFinishedGoodDet d;
+
+                foreach (var x in tmpSummaryFinishGData)
+                {
+                    d = new ProductionPlanFinishedGoodDet();
+                    d.ItemCode = x.ItemCode;
+                    d.Quantity = x.Quantity;
+                    ((ProductionPlanHed)productionPlanHedBindingSource.Current).ProductionPlanFinishedGoodDets.Add(d);
+                }
+
+                if (transactionToolBar1.mode == "Add")
+                    db.ProductionPlanHeds.AddObject((ProductionPlanHed)productionPlanHedBindingSource.Current);
+
+                return true;
             }
-
-            if (transactionToolBar1.mode == "Add")
-                db.ProductionPlanHeds.AddObject((ProductionPlanHed)productionPlanHedBindingSource.Current);
-
-            return true;
+            else
+            {
+                return false;
+            }
         }
 
         public override bool AfterDataSave()
@@ -246,8 +270,11 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                     r.CostPrice = raw.CostPrice;
                     db.ProductionPlanRawItems.AddObject(r);
 
-                    //if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.LocationCode, d.ItemCode, -1 * d.Quantity, (d.TotalItemVal - d.VATItemVal - d.NBTItemVal) / d.Quantity, false))
-                    //    throw new Exception("Error @ UpdateQOH");
+                    if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.StoresLocation, r.RawItemCode, -1 * r.Quantity, 0, false))
+                        throw new Exception("Error @ UpdateQOH");
+
+                    if (!BusinessRules.UpdateQOH(db, h.BranchCode, h.ProductionLocation, r.RawItemCode, r.Quantity, 0, false))
+                        throw new Exception("Error @ UpdateQOH");
                 }
 
                 foreach (ReferenceItemGrid r in tmpDetData)
