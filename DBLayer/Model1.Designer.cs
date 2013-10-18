@@ -182,6 +182,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_Item1", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
 [assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanRawItem_ProductionPlanHed", "ProductionPlanHed", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.ProductionPlanHed), "ProductionPlanRawItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanRawItem), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanStandardDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanStandardDet), true)]
+[assembly: EdmRelationshipAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanSODet_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(DBLayer.Item), "ProductionPlanSODet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(DBLayer.ProductionPlanSODet), true)]
 
 #endregion
 
@@ -18503,6 +18505,50 @@ namespace DBLayer
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_Item", "ProductionPlanStandardDet")]
+        public EntityCollection<ProductionPlanStandardDet> ProductionPlanStandardDets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanStandardDet>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "ProductionPlanStandardDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanStandardDet>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "ProductionPlanStandardDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanSODet_Item", "ProductionPlanSODet")]
+        public EntityCollection<ProductionPlanSODet> ProductionPlanSODets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductionPlanSODet>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "ProductionPlanSODet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductionPlanSODet>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "ProductionPlanSODet", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -24757,6 +24803,44 @@ namespace DBLayer
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanSODet_Item", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanSODet_Item", "Item", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -24975,6 +25059,44 @@ namespace DBLayer
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SPSHed>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_SPSHed", "SPSHed", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("InventorySalesDebtorsSystemModel", "FK_ProductionPlanStandardDet_Item", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("InventorySalesDebtorsSystemModel.FK_ProductionPlanStandardDet_Item", "Item", value);
                 }
             }
         }

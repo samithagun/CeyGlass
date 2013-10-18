@@ -109,6 +109,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             tmpSummaryFinishGData.Clear();
             tmpRawMaterialData.Clear();
             tmpSummaryRawMatData.Clear();
+
+            txtBranchCode.Validate();
         }
 
         private void GetReleventSalesOrders()
@@ -216,8 +218,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         {
             bool IsEnoughQOH = true;
             foreach (var items in tmpSummaryRawMatData)
-            { 
-                if (items.Quantity>items.QOH)
+            {
+                if (items.Quantity > items.QOH)
                     IsEnoughQOH = false;
             }
             if (!IsEnoughQOH)
@@ -272,7 +274,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             {
                 ProductionPlanHed h = ((ProductionPlanHed)productionPlanHedBindingSource.Current);
 
-               
+
 
                 foreach (ProductionPlanRawItem raw in tmpRawMaterialData)
                 {
@@ -322,18 +324,27 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private bool ValidateEnteredData()
         {
-             DateTime delDate = txnDateDateTimePicker.Value.Date;
-             var get = (from a in db.ProductionPlanHeds
-                        where a.TxnDate == delDate && a.TypeCode == this.txtTypeCode.Text
-                        select a.ReferenceNo).ToList();
+            DateTime delDate = txnDateDateTimePicker.Value.Date;
+            var get = (from a in db.ProductionPlanHeds
+                       where a.TxnDate == delDate && a.TypeCode == this.txtTypeCode.Text
+                       select a.ReferenceNo).ToList();
 
-             if (get.Count > 0)
-             {
-                 MessageBox.Show("Already entered data for this date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                 return false;
-             }
-             else
-                 return true;
+            if (get.Count > 0)
+            {
+                MessageBox.Show("Already entered data for this date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public override void LoadData()
+        {
+            var hedData = db.ProductionPlanHeds.Single(h => h.ReferenceNo == referenceNoTextBox.Text);
+
+            tmpHedData.Add(hedData);
+
+            productionPlanHedBindingSource.MoveLast();
         }
 
         private void FillDetails(ProductionPlanHed hedData)
@@ -349,9 +360,30 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 foreach (var sumItem in detData)
                     tmpSummaryFinishGData.Add(new ItemGrid(sumItem.ItemCode, sumItem.Item.ItemName, sumItem.Quantity, 0));
 
-                var rawDet = hedData.ProductionPlanRawItems.ToList();
+                var rawDet = (from a in db.ProductionPlanRawItems
+                              where a.ReferenceNo == hedData.ReferenceNo
+                              select new { a }).ToList();
+
+                tmpSummaryRawMatData.Clear();
+                foreach (var rawS in rawDet)
+                    tmpSummaryRawMatData.Add(new ItemGrid(rawS.a.RawItemCode, rawS.a.Item.ItemName, rawS.a.Quantity, 0));
+
+                tmpStdordDetData.Clear();
+                var StdOrdders = (from a in db.ProductionPlanStandardDets
+                                  where a.ReferenceNo == hedData.ReferenceNo
+                                  select new { a }).ToList();
+
+                foreach (var stdItem in StdOrdders)
+                    tmpStdordDetData.Add(new ReferenceItemGrid(stdItem.a.StandardOrdereNo, stdItem.a.ItemCode, stdItem.a.Item.ItemName, stdItem.a.Quantity));
 
 
+                tmpDetData.Clear();
+                var SoOrdders = (from a in db.ProductionPlanSODets
+                                 where a.ReferenceNo == hedData.ReferenceNo
+                                 select new { a }).ToList();
+
+                foreach (var item in SoOrdders)
+                    tmpDetData.Add(new ReferenceItemGrid(item.a.SORefferenceNo, item.a.ItemCode, item.a.Item.ItemName, item.a.Quantity));
             }
 
             alreadyFilling = false;
@@ -361,7 +393,20 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         {
             productionPlanHedBindingSource.DataSource = db.ProductionPlanHeds.ToList();
             FillDetails((ProductionPlanHed)productionPlanHedBindingSource.Current);
+
         }
+
+
+        private void productionPlanHedBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (!alreadyFilling)
+                FillDetails((ProductionPlanHed)productionPlanHedBindingSource.Current);
+        }
+        //private void HeaderBindingSource_CurrentChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
         #endregion
 
         private void txtTypeCode_Leave(object sender, EventArgs e)
@@ -374,7 +419,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             catch (Exception ex)
             {
                 Helpers.WriteException(ex);
-            }           
+            }
         }
 
         private void SoDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -398,14 +443,31 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             {
                 try
                 {
-                   if(ValidateEnteredData())
+                    if (ValidateEnteredData())
                         GetReleventSalesOrders();
                 }
                 catch (Exception ex)
                 {
                     Helpers.WriteException(ex);
-                }    
+                }
             }
         }
+
+        private void txtBranchCode_Leave(object sender, EventArgs e)
+        {
+            if (txtTypeCode.Text != string.Empty)
+            {
+                try
+                {
+                    if (ValidateEnteredData())
+                        GetReleventSalesOrders();
+                }
+                catch (Exception ex)
+                {
+                    Helpers.WriteException(ex);
+                }
+            }
+        }
+
     }
 }
