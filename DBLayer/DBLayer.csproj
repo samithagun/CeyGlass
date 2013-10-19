@@ -44,16 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\MasterFiles\BOQ.cs" />
-    <Compile Include="BusinessLogic\Transactions\AdjustmentHed.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Branch.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Brand.cs" />
-    <Compile Include="BusinessLogic\MasterFiles\Bank.cs" />
     <Compile Include="BusinessLogic\MasterFiles\Customer.cs" />
-    <Compile Include="BusinessLogic\MasterFiles\CreditCardType.cs" />
     <Compile Include="BusinessLogic\MasterFiles\CustomerGroup.cs" />
     <Compile Include="BusinessLogic\MasterFiles\CustomerType.cs" />
-    <Compile Include="BusinessLogic\Transactions\CusAdAllocationHed.cs" />
-    <Compile Include="BusinessLogic\Transactions\CusAdvance.cs" />
     <Compile Include="BusinessLogic\Transactions\CusCreditNoteHed.cs" />
     <Compile Include="BusinessLogic\Transactions\CusDebitNote.cs" />
     <Compile Include="BusinessLogic\Transactions\CusReceiptHed.cs" />
@@ -81,8 +76,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BusinessLogic\Transactions\QuotationHed.cs" />
     <Compile Include="BusinessLogic\Transactions\SalesOrderHed.cs" />
-    <Compile Include="BusinessLogic\Transactions\SalesReturnHed.cs" />
-    <Compile Include="BusinessLogic\Transactions\TransferHed.cs" />
     <Compile Include="BusinessLogic\MasterFiles\User.cs" />
   </ItemGroup>
   <ItemGroup>

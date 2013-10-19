@@ -36,11 +36,11 @@
             System.Windows.Forms.Label txnDateLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionPlan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionPlan));
             this.productionPlanHedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SOItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StdOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,10 +68,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FinishedGoodDataGridView = new System.Windows.Forms.DataGridView();
-            this.FinishGRecNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FgQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.RawMaterialDataGridView = new System.Windows.Forms.DataGridView();
             this.RItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,6 +92,10 @@
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.txtTypeCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
+            this.FinishGRecNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FgQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             finishGoodTypeLabel = new System.Windows.Forms.Label();
             manualNoLabel = new System.Windows.Forms.Label();
             referenceNoLabel = new System.Windows.Forms.Label();
@@ -406,46 +406,6 @@
             this.FinishedGoodDataGridView.TabIndex = 10;
             this.FinishedGoodDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.FinishedGoodDataGridView_RowsAdded);
             // 
-            // FinishGRecNo
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.FinishGRecNo.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FinishGRecNo.FillWeight = 75F;
-            this.FinishGRecNo.Frozen = true;
-            this.FinishGRecNo.HeaderText = "Rec No";
-            this.FinishGRecNo.Name = "FinishGRecNo";
-            this.FinishGRecNo.ReadOnly = true;
-            this.FinishGRecNo.Width = 70;
-            // 
-            // FgItemCode
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.FgItemCode.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FgItemCode.Frozen = true;
-            this.FgItemCode.HeaderText = "ItemCode";
-            this.FgItemCode.Name = "FgItemCode";
-            this.FgItemCode.ReadOnly = true;
-            this.FgItemCode.Width = 150;
-            // 
-            // FgItemName
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.FgItemName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FgItemName.HeaderText = "Item Name";
-            this.FgItemName.Name = "FgItemName";
-            this.FgItemName.ReadOnly = true;
-            this.FgItemName.Width = 300;
-            // 
-            // FgQuantity
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.FgQuantity.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FgQuantity.HeaderText = "Quantity";
-            this.FgQuantity.Name = "FgQuantity";
-            this.FgQuantity.ReadOnly = true;
-            this.FgQuantity.Width = 75;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.RawMaterialDataGridView);
@@ -685,6 +645,48 @@
             this.transactionToolBar1.ReferenceID = null;
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 2;
+            // 
+            // FinishGRecNo
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.FinishGRecNo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FinishGRecNo.FillWeight = 75F;
+            this.FinishGRecNo.Frozen = true;
+            this.FinishGRecNo.HeaderText = "Rec No";
+            this.FinishGRecNo.Name = "FinishGRecNo";
+            this.FinishGRecNo.ReadOnly = true;
+            this.FinishGRecNo.Width = 70;
+            // 
+            // FgItemCode
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.FgItemCode.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FgItemCode.Frozen = true;
+            this.FgItemCode.HeaderText = "ItemCode";
+            this.FgItemCode.Name = "FgItemCode";
+            this.FgItemCode.ReadOnly = true;
+            this.FgItemCode.Width = 150;
+            // 
+            // FgItemName
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.FgItemName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FgItemName.Frozen = true;
+            this.FgItemName.HeaderText = "Item Name";
+            this.FgItemName.Name = "FgItemName";
+            this.FgItemName.ReadOnly = true;
+            this.FgItemName.Width = 300;
+            // 
+            // FgQuantity
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.FgQuantity.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FgQuantity.Frozen = true;
+            this.FgQuantity.HeaderText = "Quantity";
+            this.FgQuantity.Name = "FgQuantity";
+            this.FgQuantity.ReadOnly = true;
+            this.FgQuantity.Width = 75;
             // 
             // ProductionPlan
             // 

@@ -37,7 +37,7 @@ namespace InventorySalesDebtorsSytem
                 case "TRSInv":
                     return new Invoice();
                 case "TRSDis":
-                    return new Dispatch();
+                    return new Dispatch();                  
 
 
                 #endregion

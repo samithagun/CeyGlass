@@ -15,6 +15,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
         public string ProdLocation;
         public string StoresLocation;
         bool alreadyFilling = false;
+        bool OverWeight = false;
 
         InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
 
@@ -111,6 +112,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             tmpSummaryRawMatData.Clear();
 
             txtBranchCode.Validate();
+            OverWeight = false;
         }
 
         private void GetReleventSalesOrders()
@@ -158,13 +160,14 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
             tmpRawMaterialData.Clear();
             tmpSummaryRawMatData.Clear();
+            decimal bottleWeight = 0;
             foreach (ItemGrid i in tmpSummaryFinishGData)
             {
                 var boqData = from d in db.BoqDets
                               join h in db.BoqHeds on
                               d.BoqCode equals h.BoqCode
                               where h.BoqCode == i.ItemCode
-                              select new { h.BoqCode, h.UsableQty, h.ToalQty, d.ItemCode, d.Quantity, d.Item.CostPrice };
+                              select new { h.BoqCode,h.Weight, h.UsableQty, h.ToalQty, d.ItemCode, d.Quantity, d.Item.CostPrice };
                 foreach (var raw in boqData)
                 {
                     ProductionPlanRawItem rItem = new ProductionPlanRawItem();
@@ -175,6 +178,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                         reqQty = (raw.Quantity / raw.UsableQty) * i.Quantity;
                     else
                         reqQty = (raw.Quantity / 1) * i.Quantity;
+
+                    bottleWeight = bottleWeight + (raw.Weight * i.Quantity);
 
                     rItem.Quantity = reqQty;
                     rItem.CostPrice = raw.CostPrice;
@@ -203,6 +208,14 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
             }
 
+            OverWeight = false;
+
+            if (bottleWeight > 907185)
+            {
+                OverWeight = true;
+                MessageBox.Show("Over weighted. Maximum Quantity is 250 ton. Reconside sales orders", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
         }
 
@@ -227,6 +240,12 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                 MessageBox.Show("There are items with less QOH. Please check inventory", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 // return false;
 
+            }
+
+            if (OverWeight)
+            {
+                MessageBox.Show("Over weighted. Maximum Quantity is 250 ton. Reconside sales orders", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                IsEnoughQOH = false;
             }
             return IsEnoughQOH;
         }
