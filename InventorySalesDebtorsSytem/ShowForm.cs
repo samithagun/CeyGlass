@@ -91,7 +91,7 @@ namespace InventorySalesDebtorsSytem
                     return new ProductionPlan();
 
                 case "TRMSPS":
-                    return new SPS();
+                    return new StandardProSchedule();
 
                 case "TRMProductionNote":
                     return new ProductionNote();

@@ -92,11 +92,11 @@
     <Compile Include="Forms\MasterFiles\Debtors\CustomerMasterFile.Designer.cs">
       <DependentUpon>CustomerMasterFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MasterFiles\Manufacturing\BOQ.cs">
+    <Compile Include="Forms\MasterFiles\Manufacturing\BillOfQuantity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MasterFiles\Manufacturing\BOQ.designer.cs">
-      <DependentUpon>BOQ.cs</DependentUpon>
+    <Compile Include="Forms\MasterFiles\Manufacturing\BillOfQuantity.designer.cs">
+      <DependentUpon>BillOfQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Reports\Inventory&amp;Sales\StockBalanceReport.cs">
       <SubType>Form</SubType>
@@ -176,11 +176,11 @@
     <Compile Include="Forms\Transactions\Manufacturing\ProductionPlan.Designer.cs">
       <DependentUpon>ProductionPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Transactions\Manufacturing\SPS.cs">
+    <Compile Include="Forms\Transactions\Manufacturing\StandardProSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Transactions\Manufacturing\SPS.Designer.cs">
-      <DependentUpon>SPS.cs</DependentUpon>
+    <Compile Include="Forms\Transactions\Manufacturing\StandardProSchedule.Designer.cs">
+      <DependentUpon>StandardProSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\CommonMasterFile.cs">
       <DependentUpon>CommonMasterFile.rpt</DependentUpon>
@@ -590,8 +590,8 @@
     <EmbeddedResource Include="Forms\MasterFiles\Debtors\CustomerMasterFile.resx">
       <DependentUpon>CustomerMasterFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MasterFiles\Manufacturing\BOQ.resx">
-      <DependentUpon>BOQ.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MasterFiles\Manufacturing\BillOfQuantity.resx">
+      <DependentUpon>BillOfQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\Inventory&amp;Sales\StockBalanceReport.resx">
       <DependentUpon>StockBalanceReport.cs</DependentUpon>
@@ -635,8 +635,8 @@
     <EmbeddedResource Include="Forms\Transactions\Manufacturing\ProductionPlan.resx">
       <DependentUpon>ProductionPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Transactions\Manufacturing\SPS.resx">
-      <DependentUpon>SPS.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Transactions\Manufacturing\StandardProSchedule.resx">
+      <DependentUpon>StandardProSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

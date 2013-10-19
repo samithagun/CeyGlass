@@ -131,10 +131,6 @@
             <End Role="Item" EntitySet="Item" />
             <End Role="BoqDet" EntitySet="BoqDet" />
           </AssociationSet>
-          <AssociationSet Name="FK_BoqHed_Item" Association="InventorySalesDebtorsSystemModel.Store.FK_BoqHed_Item">
-            <End Role="Item" EntitySet="Item" />
-            <End Role="BoqHed" EntitySet="BoqHed" />
-          </AssociationSet>
           <AssociationSet Name="FK_Branch_User" Association="InventorySalesDebtorsSystemModel.Store.FK_Branch_User">
             <End Role="User" EntitySet="User" />
             <End Role="Branch" EntitySet="Branch" />
@@ -798,6 +794,7 @@
           <Property Name="Duration" Type="numeric" Nullable="false" Precision="3" />
           <Property Name="StdCost" Type="numeric" Nullable="false" Scale="2" />
           <Property Name="ToalQty" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="Weight" Type="numeric" Nullable="false" Precision="6" Scale="2" />
           <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="AddedDate" Type="datetime" Nullable="false" />
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
@@ -1958,18 +1955,6 @@
             </Principal>
             <Dependent Role="BoqDet">
               <PropertyRef Name="ItemCode" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_BoqHed_Item">
-          <End Role="Item" Type="InventorySalesDebtorsSystemModel.Store.Item" Multiplicity="1" />
-          <End Role="BoqHed" Type="InventorySalesDebtorsSystemModel.Store.BoqHed" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Item">
-              <PropertyRef Name="ItemCode" />
-            </Principal>
-            <Dependent Role="BoqHed">
-              <PropertyRef Name="BoqCode" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -8083,6 +8068,7 @@
           <Property Type="String" Name="UserID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="AddedDate" Nullable="false" Precision="3" />
           <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Weight" Nullable="false" Precision="6" Scale="2" />
         </EntityType>
         <Association Name="FK_BoqDet_BoqHed">
           <End Type="InventorySalesDebtorsSystemModel.BoqHed" Role="BoqHed" Multiplicity="1" />
@@ -9329,6 +9315,7 @@
           <EntitySetMapping Name="BoqHeds">
             <EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.BoqHed">
               <MappingFragment StoreEntitySet="BoqHed">
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
                 <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
                 <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />

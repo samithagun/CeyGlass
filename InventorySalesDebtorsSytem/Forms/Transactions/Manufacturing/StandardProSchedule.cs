@@ -10,7 +10,7 @@ using DBLayer;
 
 namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 {
-    public partial class SPS : TransactionForm
+    public partial class StandardProSchedule : TransactionForm
     {
         private InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
 
@@ -19,7 +19,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         bool alreadyFilling = false;
 
-        public SPS()
+        public StandardProSchedule()
         {
             InitializeComponent();
         }
@@ -62,6 +62,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 
         private void dateTimeToPicker_ValueChanged(object sender, EventArgs e)
         {
+            tmpDetData.Clear();
+
             if (transactionToolBar1.mode == "Add")
             {
                 DateTime dateFrom = dateTimeFromPicker.Value.Date;
@@ -73,13 +75,14 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
                     Qty = Convert.ToDecimal(txtTotalQty.Text);
                 }
 
-                if (dateTo > dateFrom && Qty > 0)
+                if (dateTo >= dateFrom && Qty > 0)
                 {
-
                     double Days = (dateTo - dateFrom).TotalDays;
+                    
+                    if (Days == 0)
+                        Days = 1;
+                    
                     decimal dayQty = Math.Round(Qty / Convert.ToDecimal(Days), 2);
-
-                    tmpDetData.Clear();
 
                     for (int i = 0; i < Days; i++)
                     {
@@ -148,6 +151,11 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             dateTimeToPicker.Value = DateTime.Today.Date;
             txtTotalQty.Text = "";
             referenceNoTextBox.Text = "";
+        }
+
+        public override void AddClick()
+        {
+            //tmpDetData.Clear();
         }
     }
 }

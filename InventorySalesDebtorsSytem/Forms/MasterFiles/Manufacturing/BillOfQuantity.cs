@@ -26,8 +26,6 @@ namespace InventorySalesDebtorsSytem
 
         private void BOQ_Load(object sender, EventArgs e)
         {
-            BOQBindingSource.DataSource = db.BoqHeds;
-
             transactionToolBar1.bindingNavigator = BOQBindingNavigator;
             transactionToolBar1.hedObjectBindingSource = BOQBindingSource;
             transactionToolBar1.detObjectBindingSource = BOQDetBindingSource;
@@ -39,7 +37,7 @@ namespace InventorySalesDebtorsSytem
             //transactionToolBar1.branchCodeControl = txtBranchCode;
             //transactionToolBar1.ReferenceID = "S-INV";
 
-            txtItemCode.varList = from i in db.Items where i.IsRawMaterial == false select new { i.ItemCode, i.ItemName };
+            txtItemCode.varList = from i in db.Items where i.IsRawMaterial == false && !db.BoqHeds.Any(b => b.BoqCode == i.ItemCode) select new { i.ItemCode, i.ItemName };
             txtItemCode.codeFieldName = "ItemCode";
             txtItemCode.controlList.Add(txtItemName);
             txtItemCode.fieldList.Add("ItemName");
@@ -47,6 +45,7 @@ namespace InventorySalesDebtorsSytem
             txtRawItemCode.varList = from i in db.Items where i.IsRawMaterial == true select new { i.ItemCode, i.ItemName };
             txtRawItemCode.codeFieldName = "ItemCode";
 
+            BOQBindingSource.DataSource = db.BoqHeds;
             BOQDetBindingSource.DataSource = tmpDetData;
             BOQDataGridView.DataSource = BOQDetBindingSource;
 
@@ -64,7 +63,7 @@ namespace InventorySalesDebtorsSytem
             txtDamageQty.Enabled = enable;
             txtDuration.Enabled = enable;
             txtStdCost.Enabled = enable;
-            txtTotalQty.Enabled = enable;
+            txtTotalQty.Enabled = false;
 
             txtRawItemCode.Enabled = enable;
             numQty.Enabled = enable;
@@ -178,5 +177,35 @@ namespace InventorySalesDebtorsSytem
             return true;
         }
 
+        private decimal Cal_TotalQty()
+        {
+            decimal totQty, useQty, damQty;
+
+            totQty = 0;
+            useQty = 0;
+            damQty = 0;
+
+            if (!String.IsNullOrEmpty(txtUsableQty.Text))
+                useQty = Convert.ToDecimal(txtUsableQty.Text); 
+
+            if (!String.IsNullOrEmpty(txtDamageQty.Text))
+                damQty = Convert.ToDecimal(txtDamageQty.Text); 
+
+            totQty = useQty + damQty;
+
+            return totQty;
+        }
+
+        private void txtTotalQty_TextChanged(object sender, EventArgs e)
+        {
+            if (transactionToolBar1.mode == "Add")
+                txtTotalQty.Text = Cal_TotalQty().ToString();
+        }
+
+        private void txtDamageQty_TextChanged(object sender, EventArgs e)
+        {
+            if (transactionToolBar1.mode == "Add")
+                txtTotalQty.Text = Cal_TotalQty().ToString();
+        }
     }
 }

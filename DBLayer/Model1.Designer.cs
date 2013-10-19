@@ -4622,7 +4622,8 @@ namespace DBLayer
         /// <param name="userID">Initial value of the UserID property.</param>
         /// <param name="addedDate">Initial value of the AddedDate property.</param>
         /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
-        public static BoqHed CreateBoqHed(global::System.String boqCode, global::System.Decimal usableQty, global::System.String uOM, global::System.Decimal damageQty, global::System.Decimal duration, global::System.Decimal stdCost, global::System.Decimal toalQty, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
+        /// <param name="weight">Initial value of the Weight property.</param>
+        public static BoqHed CreateBoqHed(global::System.String boqCode, global::System.Decimal usableQty, global::System.String uOM, global::System.Decimal damageQty, global::System.Decimal duration, global::System.Decimal stdCost, global::System.Decimal toalQty, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo, global::System.Decimal weight)
         {
             BoqHed boqHed = new BoqHed();
             boqHed.BoqCode = boqCode;
@@ -4635,6 +4636,7 @@ namespace DBLayer
             boqHed.UserID = userID;
             boqHed.AddedDate = addedDate;
             boqHed.AddedMachineInfo = addedMachineInfo;
+            boqHed.Weight = weight;
             return boqHed;
         }
 
@@ -4884,6 +4886,30 @@ namespace DBLayer
         private global::System.String _AddedMachineInfo;
         partial void OnAddedMachineInfoChanging(global::System.String value);
         partial void OnAddedMachineInfoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Weight
+        {
+            get
+            {
+                return _Weight;
+            }
+            set
+            {
+                OnWeightChanging(value);
+                ReportPropertyChanging("Weight");
+                _Weight = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Weight");
+                OnWeightChanged();
+            }
+        }
+        private global::System.Decimal _Weight;
+        partial void OnWeightChanging(global::System.Decimal value);
+        partial void OnWeightChanged();
 
         #endregion
 

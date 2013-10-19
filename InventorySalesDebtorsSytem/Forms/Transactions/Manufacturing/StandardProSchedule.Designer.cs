@@ -1,6 +1,6 @@
 ﻿namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
 {
-    partial class SPS
+    partial class StandardProSchedule
     {
         /// <summary>
         /// Required designer variable.
@@ -34,16 +34,17 @@
             System.Windows.Forms.Label itemCodeLabel;
             System.Windows.Forms.Label referenceNoLabel;
             System.Windows.Forms.Label label3;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SPS));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StandardProSchedule));
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.SPSDataGridView = new System.Windows.Forms.DataGridView();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtTotalQty = new System.Windows.Forms.TextBox();
+            this.SPSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.referenceNoTextBox = new System.Windows.Forms.TextBox();
             this.dateTimeFromPicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimeToPicker = new System.Windows.Forms.DateTimePicker();
@@ -59,8 +60,8 @@
             this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
             this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
             this.SPSDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SPSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtBranchCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.formInitializer1 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             itemCodeLabel = new System.Windows.Forms.Label();
@@ -68,10 +69,10 @@
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SPSDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SPSBindingNavigator)).BeginInit();
             this.SPSBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SPSDetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -130,37 +131,37 @@
             // SPSDataGridView
             // 
             this.SPSDataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SPSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SPSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SPSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SPSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.Quantity});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SPSDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SPSDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.SPSDataGridView.Location = new System.Drawing.Point(75, 190);
             this.SPSDataGridView.Name = "SPSDataGridView";
             this.SPSDataGridView.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SPSDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SPSDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.SPSDataGridView.Size = new System.Drawing.Size(454, 208);
             this.SPSDataGridView.TabIndex = 89;
             // 
@@ -191,6 +192,10 @@
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Size = new System.Drawing.Size(124, 20);
             this.txtTotalQty.TabIndex = 78;
+            // 
+            // SPSBindingSource
+            // 
+            this.SPSBindingSource.DataSource = typeof(DBLayer.SPSHed);
             // 
             // referenceNoTextBox
             // 
@@ -241,7 +246,7 @@
             this.SPSBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.SPSBindingNavigator.Name = "SPSBindingNavigator";
             this.SPSBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.SPSBindingNavigator.Size = new System.Drawing.Size(233, 28);
+            this.SPSBindingNavigator.Size = new System.Drawing.Size(202, 28);
             this.SPSBindingNavigator.TabIndex = 102;
             // 
             // bindingNavigatorCountItem
@@ -345,10 +350,6 @@
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 92;
             // 
-            // SPSBindingSource
-            // 
-            this.SPSBindingSource.DataSource = typeof(DBLayer.SPSHed);
-            // 
             // txtBranchCode
             // 
             this.txtBranchCode.codeFieldName = null;
@@ -363,11 +364,19 @@
             this.txtBranchCode.varList = null;
             this.txtBranchCode.Visible = false;
             // 
-            // SPS
+            // formInitializer1
+            // 
+            this.formInitializer1.Location = new System.Drawing.Point(568, 190);
+            this.formInitializer1.Name = "formInitializer1";
+            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer1.TabIndex = 104;
+            // 
+            // StandardProSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 412);
+            this.Controls.Add(this.formInitializer1);
             this.Controls.Add(this.txtBranchCode);
             this.Controls.Add(this.SPSBindingNavigator);
             this.Controls.Add(this.dateTimeToPicker);
@@ -383,16 +392,23 @@
             this.Controls.Add(label1);
             this.Controls.Add(itemCodeLabel);
             this.Controls.Add(this.txtTotalQty);
-            this.Name = "SPS";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "StandardProSchedule";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Standard Production Schedule";
             this.Load += new System.EventHandler(this.SPS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SPSDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SPSBindingNavigator)).EndInit();
             this.SPSBindingNavigator.ResumeLayout(false);
             this.SPSBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SPSDetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SPSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,5 +439,6 @@
         private System.Windows.Forms.BindingSource SPSDetBindingSource;
         private System.Windows.Forms.BindingSource SPSBindingSource;
         private MasterDataTextBox txtBranchCode;
+        private ReusableComponents.FormInitializer formInitializer1;
     }
 }

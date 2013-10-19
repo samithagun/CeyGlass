@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label label10;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label6;
@@ -37,19 +38,14 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label itemCodeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BOQ));
-            this.label7 = new System.Windows.Forms.Label();
-            this.BOQDataGridView = new System.Windows.Forms.DataGridView();
-            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BOQDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtTotalQty = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtStdCost = new System.Windows.Forms.TextBox();
-            this.txtDuration = new System.Windows.Forms.TextBox();
-            this.txtDamageQty = new System.Windows.Forms.TextBox();
-            this.txtUOM = new System.Windows.Forms.TextBox();
-            this.txtUsableQty = new System.Windows.Forms.TextBox();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.numQty = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.BOQBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -59,16 +55,24 @@
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
-            this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.txtRawItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numQty = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAddItem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BOQDataGridView = new System.Windows.Forms.DataGridView();
+            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTotalQty = new System.Windows.Forms.TextBox();
+            this.txtStdCost = new System.Windows.Forms.TextBox();
+            this.txtDuration = new System.Windows.Forms.TextBox();
+            this.txtDamageQty = new System.Windows.Forms.TextBox();
+            this.txtUOM = new System.Windows.Forms.TextBox();
+            this.txtUsableQty = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.formInitializer2 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
             this.formInitializer1 = new InventorySalesDebtorsSytem.ReusableComponents.FormInitializer();
+            this.txtRawItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.txtItemCode = new InventorySalesDebtorsSytem.MasterDataTextBox();
+            this.transactionToolBar1 = new InventorySalesDebtorsSytem.TransactionToolBar();
+            label10 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
@@ -76,19 +80,28 @@
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             itemCodeLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQDetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingNavigator)).BeginInit();
             this.BOQBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(319, 190);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(62, 13);
+            label10.TabIndex = 78;
+            label10.Text = "Weight (g) :";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(319, 164);
+            label4.Location = new System.Drawing.Point(12, 164);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(56, 13);
             label4.TabIndex = 62;
@@ -110,12 +123,12 @@
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(78, 13);
             label6.TabIndex = 58;
-            label6.Text = "Duration (min) :";
+            label6.Text = "Duration (Hrs) :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(12, 164);
+            label3.Location = new System.Drawing.Point(12, 138);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(72, 13);
             label3.TabIndex = 56;
@@ -124,11 +137,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 138);
+            label2.Location = new System.Drawing.Point(319, 164);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(38, 13);
+            label2.Size = new System.Drawing.Size(93, 13);
             label2.TabIndex = 54;
-            label2.Text = "UOM :";
+            label2.Text = "Unit of Messaure :";
             // 
             // label1
             // 
@@ -148,106 +161,69 @@
             itemCodeLabel.TabIndex = 51;
             itemCodeLabel.Text = "Item Code :";
             // 
-            // label7
+            // textBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Raw Materials";
-            // 
-            // BOQDataGridView
-            // 
-            this.BOQDataGridView.AllowUserToAddRows = false;
-            this.BOQDataGridView.AutoGenerateColumns = false;
-            this.BOQDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BOQDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemCode,
-            this.ItemName,
-            this.Quantity});
-            this.BOQDataGridView.DataSource = this.BOQDetBindingSource;
-            this.BOQDataGridView.Location = new System.Drawing.Point(12, 242);
-            this.BOQDataGridView.Name = "BOQDataGridView";
-            this.BOQDataGridView.ReadOnly = true;
-            this.BOQDataGridView.Size = new System.Drawing.Size(576, 153);
-            this.BOQDataGridView.TabIndex = 64;
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.Frozen = true;
-            this.ItemCode.HeaderText = "Item Code";
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.ReadOnly = true;
-            this.ItemCode.Width = 165;
-            // 
-            // ItemName
-            // 
-            this.ItemName.Frozen = true;
-            this.ItemName.HeaderText = "Item Name";
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 250;
-            // 
-            // Quantity
-            // 
-            this.Quantity.Frozen = true;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Width = 115;
-            // 
-            // txtTotalQty
-            // 
-            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "ToalQty", true));
-            this.txtTotalQty.Location = new System.Drawing.Point(446, 161);
-            this.txtTotalQty.Name = "txtTotalQty";
-            this.txtTotalQty.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalQty.TabIndex = 63;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Weight", true));
+            this.textBox1.Location = new System.Drawing.Point(446, 187);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 79;
             // 
             // BOQBindingSource
             // 
             this.BOQBindingSource.DataSource = typeof(DBLayer.BoqHed);
             // 
-            // txtStdCost
+            // btnAddItem
             // 
-            this.txtStdCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "StdCost", true));
-            this.txtStdCost.Location = new System.Drawing.Point(446, 135);
-            this.txtStdCost.Name = "txtStdCost";
-            this.txtStdCost.Size = new System.Drawing.Size(100, 20);
-            this.txtStdCost.TabIndex = 61;
+            this.btnAddItem.Enabled = false;
+            this.btnAddItem.Location = new System.Drawing.Point(400, 230);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(50, 23);
+            this.btnAddItem.TabIndex = 75;
+            this.btnAddItem.Text = "Add";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // txtDuration
+            // numQty
             // 
-            this.txtDuration.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Duration", true));
-            this.txtDuration.Location = new System.Drawing.Point(446, 109);
-            this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(100, 20);
-            this.txtDuration.TabIndex = 59;
+            this.numQty.DecimalPlaces = 2;
+            this.numQty.Location = new System.Drawing.Point(315, 233);
+            this.numQty.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.numQty.Name = "numQty";
+            this.numQty.Size = new System.Drawing.Size(60, 20);
+            this.numQty.TabIndex = 73;
+            this.numQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numQty.ThousandsSeparator = true;
             // 
-            // txtDamageQty
+            // label9
             // 
-            this.txtDamageQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "DamageQty", true));
-            this.txtDamageQty.Location = new System.Drawing.Point(121, 161);
-            this.txtDamageQty.Name = "txtDamageQty";
-            this.txtDamageQty.Size = new System.Drawing.Size(100, 20);
-            this.txtDamageQty.TabIndex = 57;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(259, 237);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "Quantity :";
             // 
-            // txtUOM
+            // label8
             // 
-            this.txtUOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UOM", true));
-            this.txtUOM.Location = new System.Drawing.Point(121, 135);
-            this.txtUOM.Name = "txtUOM";
-            this.txtUOM.Size = new System.Drawing.Size(100, 20);
-            this.txtUOM.TabIndex = 55;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "Item Code :";
             // 
-            // txtUsableQty
+            // txtItemName
             // 
-            this.txtUsableQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UsableQty", true));
-            this.txtUsableQty.Location = new System.Drawing.Point(121, 109);
-            this.txtUsableQty.Name = "txtUsableQty";
-            this.txtUsableQty.Size = new System.Drawing.Size(100, 20);
-            this.txtUsableQty.TabIndex = 53;
+            this.txtItemName.Enabled = false;
+            this.txtItemName.Location = new System.Drawing.Point(227, 83);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(319, 20);
+            this.txtItemName.TabIndex = 70;
             // 
             // BOQBindingNavigator
             // 
@@ -341,6 +317,150 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(25, 25);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 216);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "Raw Materials";
+            // 
+            // BOQDataGridView
+            // 
+            this.BOQDataGridView.AllowUserToAddRows = false;
+            this.BOQDataGridView.AutoGenerateColumns = false;
+            this.BOQDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BOQDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemCode,
+            this.ItemName,
+            this.Quantity});
+            this.BOQDataGridView.DataSource = this.BOQDetBindingSource;
+            this.BOQDataGridView.Location = new System.Drawing.Point(12, 260);
+            this.BOQDataGridView.Name = "BOQDataGridView";
+            this.BOQDataGridView.ReadOnly = true;
+            this.BOQDataGridView.Size = new System.Drawing.Size(576, 153);
+            this.BOQDataGridView.TabIndex = 64;
+            // 
+            // ItemCode
+            // 
+            this.ItemCode.Frozen = true;
+            this.ItemCode.HeaderText = "Item Code";
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.ReadOnly = true;
+            this.ItemCode.Width = 165;
+            // 
+            // ItemName
+            // 
+            this.ItemName.Frozen = true;
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 250;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Frozen = true;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 115;
+            // 
+            // txtTotalQty
+            // 
+            this.txtTotalQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "ToalQty", true));
+            this.txtTotalQty.Enabled = false;
+            this.txtTotalQty.Location = new System.Drawing.Point(121, 161);
+            this.txtTotalQty.Name = "txtTotalQty";
+            this.txtTotalQty.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalQty.TabIndex = 63;
+            this.txtTotalQty.TextChanged += new System.EventHandler(this.txtTotalQty_TextChanged);
+            // 
+            // txtStdCost
+            // 
+            this.txtStdCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "StdCost", true));
+            this.txtStdCost.Location = new System.Drawing.Point(446, 135);
+            this.txtStdCost.Name = "txtStdCost";
+            this.txtStdCost.Size = new System.Drawing.Size(100, 20);
+            this.txtStdCost.TabIndex = 61;
+            // 
+            // txtDuration
+            // 
+            this.txtDuration.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Duration", true));
+            this.txtDuration.Location = new System.Drawing.Point(446, 109);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.Size = new System.Drawing.Size(100, 20);
+            this.txtDuration.TabIndex = 59;
+            // 
+            // txtDamageQty
+            // 
+            this.txtDamageQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "DamageQty", true));
+            this.txtDamageQty.Location = new System.Drawing.Point(121, 135);
+            this.txtDamageQty.Name = "txtDamageQty";
+            this.txtDamageQty.Size = new System.Drawing.Size(100, 20);
+            this.txtDamageQty.TabIndex = 57;
+            this.txtDamageQty.TextChanged += new System.EventHandler(this.txtDamageQty_TextChanged);
+            // 
+            // txtUOM
+            // 
+            this.txtUOM.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UOM", true));
+            this.txtUOM.Location = new System.Drawing.Point(446, 161);
+            this.txtUOM.Name = "txtUOM";
+            this.txtUOM.Size = new System.Drawing.Size(100, 20);
+            this.txtUOM.TabIndex = 55;
+            // 
+            // txtUsableQty
+            // 
+            this.txtUsableQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "UsableQty", true));
+            this.txtUsableQty.Location = new System.Drawing.Point(121, 109);
+            this.txtUsableQty.Name = "txtUsableQty";
+            this.txtUsableQty.Size = new System.Drawing.Size(100, 20);
+            this.txtUsableQty.TabIndex = 53;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // formInitializer2
+            // 
+            this.formInitializer2.Location = new System.Drawing.Point(210, 188);
+            this.formInitializer2.Name = "formInitializer2";
+            this.formInitializer2.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer2.TabIndex = 77;
+            // 
+            // formInitializer1
+            // 
+            this.formInitializer1.Location = new System.Drawing.Point(245, 150);
+            this.formInitializer1.Name = "formInitializer1";
+            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
+            this.formInitializer1.TabIndex = 76;
+            // 
+            // txtRawItemCode
+            // 
+            this.txtRawItemCode.codeFieldName = null;
+            this.txtRawItemCode.Enabled = false;
+            this.txtRawItemCode.filterCondition = null;
+            this.txtRawItemCode.Location = new System.Drawing.Point(80, 232);
+            this.txtRawItemCode.Name = "txtRawItemCode";
+            this.txtRawItemCode.Size = new System.Drawing.Size(141, 20);
+            this.txtRawItemCode.sortOrder = null;
+            this.txtRawItemCode.TabIndex = 72;
+            this.txtRawItemCode.valid = false;
+            this.txtRawItemCode.varList = null;
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.codeFieldName = null;
+            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "BoqCode", true));
+            this.txtItemCode.filterCondition = null;
+            this.txtItemCode.Location = new System.Drawing.Point(121, 83);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(100, 20);
+            this.txtItemCode.sortOrder = null;
+            this.txtItemCode.TabIndex = 69;
+            this.txtItemCode.valid = false;
+            this.txtItemCode.varList = null;
+            // 
             // transactionToolBar1
             // 
             this.transactionToolBar1.bindingNavigator = null;
@@ -364,100 +484,14 @@
             this.transactionToolBar1.Size = new System.Drawing.Size(388, 52);
             this.transactionToolBar1.TabIndex = 67;
             // 
-            // txtItemCode
-            // 
-            this.txtItemCode.codeFieldName = null;
-            this.txtItemCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "BoqCode", true));
-            this.txtItemCode.filterCondition = null;
-            this.txtItemCode.Location = new System.Drawing.Point(121, 83);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(100, 20);
-            this.txtItemCode.sortOrder = null;
-            this.txtItemCode.TabIndex = 69;
-            this.txtItemCode.valid = false;
-            this.txtItemCode.varList = null;
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Enabled = false;
-            this.txtItemName.Location = new System.Drawing.Point(227, 83);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(319, 20);
-            this.txtItemName.TabIndex = 70;
-            // 
-            // txtRawItemCode
-            // 
-            this.txtRawItemCode.codeFieldName = null;
-            this.txtRawItemCode.Enabled = false;
-            this.txtRawItemCode.filterCondition = null;
-            this.txtRawItemCode.Location = new System.Drawing.Point(80, 217);
-            this.txtRawItemCode.Name = "txtRawItemCode";
-            this.txtRawItemCode.Size = new System.Drawing.Size(141, 20);
-            this.txtRawItemCode.sortOrder = null;
-            this.txtRawItemCode.TabIndex = 72;
-            this.txtRawItemCode.valid = false;
-            this.txtRawItemCode.varList = null;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 220);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "Item Code :";
-            // 
-            // numQty
-            // 
-            this.numQty.DecimalPlaces = 2;
-            this.numQty.Location = new System.Drawing.Point(315, 218);
-            this.numQty.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numQty.Name = "numQty";
-            this.numQty.Size = new System.Drawing.Size(60, 20);
-            this.numQty.TabIndex = 73;
-            this.numQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numQty.ThousandsSeparator = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(259, 222);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 74;
-            this.label9.Text = "Quantity :";
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Enabled = false;
-            this.btnAddItem.Location = new System.Drawing.Point(400, 215);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(50, 23);
-            this.btnAddItem.TabIndex = 75;
-            this.btnAddItem.Text = "Add";
-            this.btnAddItem.UseVisualStyleBackColor = true;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // formInitializer1
-            // 
-            this.formInitializer1.Location = new System.Drawing.Point(245, 150);
-            this.formInitializer1.Name = "formInitializer1";
-            this.formInitializer1.Size = new System.Drawing.Size(10, 10);
-            this.formInitializer1.TabIndex = 76;
-            // 
             // BOQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 408);
+            this.ClientSize = new System.Drawing.Size(600, 425);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(label10);
+            this.Controls.Add(this.formInitializer2);
             this.Controls.Add(this.formInitializer1);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.numQty);
@@ -493,13 +527,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bill Of Quantity";
             this.Load += new System.EventHandler(this.BOQ_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQDetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOQBindingNavigator)).EndInit();
             this.BOQBindingNavigator.ResumeLayout(false);
             this.BOQBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BOQDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -540,5 +574,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private ReusableComponents.FormInitializer formInitializer1;
+        private ReusableComponents.FormInitializer formInitializer2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
