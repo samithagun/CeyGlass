@@ -63,6 +63,8 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             PNDataGridView.Columns["TotalQty"].DataPropertyName = "TotalQty";
             PNDataGridView.Columns["WasteQty"].DataPropertyName = "WasteQty";
             PNDataGridView.Columns["UsedQty"].DataPropertyName = "UsedQty";
+
+            ClearData();
         }
 
         public override void EnableControls(bool enable)

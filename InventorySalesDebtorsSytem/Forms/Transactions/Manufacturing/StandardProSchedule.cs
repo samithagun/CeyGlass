@@ -49,6 +49,7 @@ namespace InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing
             SPSDataGridView.Columns["Date"].DataPropertyName = "Date";
             SPSDataGridView.Columns["Quantity"].DataPropertyName = "Quantity";
 
+            ClearData();
         }
 
         public override void EnableControls(bool enable)

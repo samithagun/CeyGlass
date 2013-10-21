@@ -199,6 +199,7 @@
             // 
             // referenceNoTextBox
             // 
+            this.referenceNoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SPSBindingSource, "ReferenceNo", true));
             this.referenceNoTextBox.Location = new System.Drawing.Point(95, 76);
             this.referenceNoTextBox.Name = "referenceNoTextBox";
             this.referenceNoTextBox.ReadOnly = true;

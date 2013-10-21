@@ -39,7 +39,7 @@
             System.Windows.Forms.Label itemCodeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BOQ));
             this.BOQDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtWeight = new System.Windows.Forms.TextBox();
             this.BOQBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAddItem = new System.Windows.Forms.Button();
             this.numQty = new System.Windows.Forms.NumericUpDown();
@@ -161,13 +161,13 @@
             itemCodeLabel.TabIndex = 51;
             itemCodeLabel.Text = "Item Code :";
             // 
-            // textBox1
+            // txtWeight
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Weight", true));
-            this.textBox1.Location = new System.Drawing.Point(446, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 79;
+            this.txtWeight.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BOQBindingSource, "Weight", true));
+            this.txtWeight.Location = new System.Drawing.Point(446, 187);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(100, 20);
+            this.txtWeight.TabIndex = 79;
             // 
             // BOQBindingSource
             // 
@@ -489,7 +489,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 425);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtWeight);
             this.Controls.Add(label10);
             this.Controls.Add(this.formInitializer2);
             this.Controls.Add(this.formInitializer1);
@@ -575,6 +575,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private ReusableComponents.FormInitializer formInitializer1;
         private ReusableComponents.FormInitializer formInitializer2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtWeight;
     }
 }

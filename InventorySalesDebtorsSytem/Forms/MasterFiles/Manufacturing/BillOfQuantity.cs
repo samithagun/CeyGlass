@@ -52,6 +52,8 @@ namespace InventorySalesDebtorsSytem
             BOQDataGridView.Columns["ItemCode"].DataPropertyName = "ItemCode";
             BOQDataGridView.Columns["ItemName"].DataPropertyName = "ItemName";
             BOQDataGridView.Columns["Quantity"].DataPropertyName = "Quantity";
+
+            ClearData();
         }
 
         public override void EnableControls(bool enable)
@@ -113,12 +115,16 @@ namespace InventorySalesDebtorsSytem
 
         public override void ClearData()
         {
-            txtItemCode.Enabled = false;
-            btnAddItem.Enabled = false;
-
             txtItemCode.Text = "";
             txtRawItemCode.Text = "";
             txtItemName.Text = "";
+            txtTotalQty.Text = "";
+            txtDamageQty.Text = "";
+            txtUOM.Text = "";
+            txtUsableQty.Text = "";
+            txtStdCost.Text = "";
+            txtDuration.Text = "";
+            txtWeight.Text = "";
         }
 
         public override bool BeforeDataSave()
