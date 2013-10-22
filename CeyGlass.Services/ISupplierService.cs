@@ -1,15 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CeyGlass.DataTransfer.Requests;
+using CeyGlass.DataTransfer.Responses;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CeyGlass.Services
 {
+    /// <summary>
+    /// Supplier Service Interface
+    /// </summary>
+    [ServiceContract]
     public interface ISupplierService
     {
+        /// <summary>
+        /// Signs the in.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>
+        /// Sign in response
+        /// </returns>
         [OperationContract]
-        void DoWork();
+        SignInResponseDto SignIn(SignInRequestDto request);
     }
 }
