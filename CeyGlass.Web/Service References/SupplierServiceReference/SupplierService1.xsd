@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CeyGlass.DataTransfer.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CeyGlass.DataTransfer.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SignInResponseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PendingPurchaseOrders" nillable="true" type="tns:ArrayOfPendingPurchaseOrderDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SignInResponseDto" nillable="true" type="tns:SignInResponseDto" />
+  <xs:complexType name="ArrayOfPendingPurchaseOrderDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PendingPurchaseOrderDto" nillable="true" type="tns:PendingPurchaseOrderDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPendingPurchaseOrderDto" nillable="true" type="tns:ArrayOfPendingPurchaseOrderDto" />
+  <xs:complexType name="PendingPurchaseOrderDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManualNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TxnDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PendingPurchaseOrderDto" nillable="true" type="tns:PendingPurchaseOrderDto" />
+</xs:schema>
