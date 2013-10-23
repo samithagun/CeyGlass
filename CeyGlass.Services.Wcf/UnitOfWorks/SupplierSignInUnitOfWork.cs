@@ -85,9 +85,9 @@ namespace CeyGlass.Services.Wcf.UnitOfWorks
         /// </summary>
         public override void Execute()
         {
-            Supplier supplier = this.Database.Suppliers.Single(s => s.UserName == this.Request.UserName);
+            Supplier supplier = this.Database.Suppliers.FirstOrDefault(s => s.UserName == this.Request.UserName);
 
-            if (Helpers.Encrypt(this.Request.Password) == supplier.Password)
+            if (supplier != null && Helpers.Encrypt(this.Request.Password) == supplier.Password)
             {
                 this.Supplier = supplier;
 

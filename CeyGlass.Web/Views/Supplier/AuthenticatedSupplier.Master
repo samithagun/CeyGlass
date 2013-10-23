@@ -44,8 +44,6 @@
                                         runat="server">Sign Out</asp:LinkButton></li>
                             </ul>
                         </li>
-                        <%--<li><a href="../navbar/">
-                            <asp:Label ID="lblUserName" runat="server" /></a></li>--%>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

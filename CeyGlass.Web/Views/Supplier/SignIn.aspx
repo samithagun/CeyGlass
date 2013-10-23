@@ -21,28 +21,14 @@
 <body>
     <form id="form1" runat="server" class="form-signin">
         <div id="main" class="container">
-            <%--<table>
-                <tr>
-                    <td>Username: </td>
-                    <td>--%>
             <h2 class="form-signin-heading">Please sign in</h2>
             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" />
-            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator_txtUsername" ControlToValidate="txtUsername" runat="server" ErrorMessage="*" CssClass="form-control" />--%>
-            <%--</td>
-                </tr>
-                <tr>
-                    <td>Password: </td>
-                    <td>--%>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" />
-            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator_txtPassword" ControlToValidate="txtPassword" runat="server" ErrorMessage="*" />--%>
-            <%--</td>
-                </tr>
-                <tr>
-                    <td colspan="2">--%>
-            <asp:Button ID="btnSignIn" Text="Sign In" runat="server" OnClick="btnSignIn_Click" CssClass="btn btn-lg btn-primary btn-block" />
-            <%--</td>
-                </tr>
-            </table>--%>
+            <asp:Button ID="btnSignIn" Text="Sign In" runat="server" OnClick="btnSignIn_Click"
+                CssClass="btn btn-lg btn-primary btn-block" />
+            <div id="errorDiv" class="alert alert-danger" runat="server">
+                <asp:Label ID="lblError" Text="Invalid Username or Password" runat="server" />
+            </div>
         </div>
     </form>
 </body>

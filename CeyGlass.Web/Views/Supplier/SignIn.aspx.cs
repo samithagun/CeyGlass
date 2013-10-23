@@ -43,6 +43,12 @@ namespace CeyGlass.Web.Views.Supplier
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!this.IsPostBack)
+            {
+                this.errorDiv.Visible = false;
+                this.lblError.Visible = false;
+            }
+
             if (SessionHelper.SignInResponse.IsSuccessful)
             {
                 Response.Redirect("PendingPO.aspx");
@@ -57,16 +63,31 @@ namespace CeyGlass.Web.Views.Supplier
         /// <param name="e">The <see cref="ImageClickEventArgs"/> instance containing the event data.</param>
         protected void btnSignIn_Click(object sender, ImageClickEventArgs e)
         {
+            this.lblError.Visible = false;
+            this.errorDiv.Visible = false;
+
             string userName = this.txtUsername.Text;
             string password = this.txtPassword.Text;
 
-            if (this.Presenter.SignIn(userName, password))
+            bool isSuccessful = false;
+
+            try
+            {
+                isSuccessful = this.Presenter.SignIn(userName, password);
+            }
+            catch (Exception)
+            {
+                
+            }
+            
+            if (isSuccessful)
             {
                 Response.Redirect("PendingPO.aspx");
             }
             else
             {
-
+                this.lblError.Visible = true;
+                this.errorDiv.Visible = true;
             }
         }
 

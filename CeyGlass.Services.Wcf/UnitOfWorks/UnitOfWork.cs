@@ -41,7 +41,7 @@ namespace CeyGlass.Services.Wcf.UnitOfWorks
 
                 Helpers.WriteException(ex);
 
-                throw ex;
+                ////throw ex;
             }
             finally
             {
