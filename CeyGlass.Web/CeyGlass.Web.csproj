@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\tablegrid.css" />
     <Content Include="Content\navbar-static-top.css" />
     <Content Include="Content\signin.css" />
     <Content Include="Content\Site.css" />
@@ -207,6 +208,8 @@
     <Content Include="Properties\DataSources\CeyGlass.DataTransfer.Responses.SignInResponseDto.datasource" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\respond.min.js" />
     <Content Include="Service References\SupplierServiceReference\SupplierService.disco" />
     <Content Include="Service References\SupplierServiceReference\configuration91.svcinfo" />
     <Content Include="Service References\SupplierServiceReference\configuration.svcinfo" />
@@ -424,7 +427,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3462</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:15960/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -20,5 +20,17 @@ namespace CeyGlass.Web.Views.Supplier
 
             this.lblUserName.Text = SessionHelper.SignInResponse.UserName;
         }
+
+        /// <summary>
+        /// Handles the Click event of the linkButtonSignOut control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        protected void linkButtonSignOut_Click(object sender, EventArgs e)
+        {
+            SessionHelper.SignInResponse = new DataTransfer.Responses.SignInResponseDto();
+
+            Response.Redirect("SignIn.aspx");
+        }
     }
 }

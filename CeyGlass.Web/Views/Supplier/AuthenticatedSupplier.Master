@@ -4,40 +4,64 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
     <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/navbar-static-top.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/tablegrid.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <title></title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../Scripts/html5shiv.js"></script>
+      <script src="../../Scripts/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CeyGlass</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="PendingPO.aspx">Pending Orders</a></li>
+                        <li><a href="#about">Completed Orders</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <asp:Label ID="lblUserName" runat="server" />
+                                <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <asp:LinkButton ID="linkButtonSignOut" OnClick="linkButtonSignOut_Click"
+                                        runat="server">Sign Out</asp:LinkButton></li>
+                            </ul>
+                        </li>
+                        <%--<li><a href="../navbar/">
+                            <asp:Label ID="lblUserName" runat="server" /></a></li>--%>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="PendingPO.aspx">Pending Orders</a></li>
-                    <li><a href="#about">Completed Orders</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../navbar/"><asp:Label ID="lblUserName" runat="server" /></a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
         </div>
-    </div>
 
-    <div class="container">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-    <!-- /container -->
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- /container -->
+    </form>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../Scripts/jquery-1.7.1.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
 </body>
 </html>
