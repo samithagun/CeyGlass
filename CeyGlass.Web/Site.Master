@@ -38,12 +38,12 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
+                   <%-- <a runat="server" href="~/">your logo here</a>--%>
                 </p>
             </div>
             <div class="float-right">
                 <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <%--<asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
                                 <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
@@ -57,13 +57,13 @@
                                 <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                             </p>
                         </LoggedInTemplate>
-                    </asp:LoginView>
+                    </asp:LoginView>--%>
                 </section>
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li><a runat="server" href="~/Views/Supplier/SignIn.aspx">Sign In</a></li>
+                       <%-- <li><a runat="server" href="~/Contact.aspx">Contact</a></li>--%>
                     </ul>
                 </nav>
             </div>
@@ -78,7 +78,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - CEYGLASS</p>
             </div>
         </div>
     </footer>
