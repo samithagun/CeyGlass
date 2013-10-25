@@ -98,6 +98,12 @@
     <Compile Include="Forms\MasterFiles\Manufacturing\BillOfQuantity.designer.cs">
       <DependentUpon>BillOfQuantity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reports\Inventory&amp;Sales\DailyItemOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Inventory&amp;Sales\DailyItemOrderReport.Designer.cs">
+      <DependentUpon>DailyItemOrderReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reports\Inventory&amp;Sales\StockBalanceReport.cs">
       <SubType>Form</SubType>
     </Compile>

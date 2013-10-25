@@ -44,14 +44,14 @@ namespace InventorySalesDebtorsSytem
 
                 #region Reports
 
-                //case "RptStkMvt":
-                //    return new StockMovementReport();
-                //case "RptStkBal":
-                //    return new StockBalanceReport();
-                //case "RptSales":
-                //    return new SalesReport();
-                //case "RptMSales":
-                //    return new MonthlySalesReport();
+                case "RptStkMvt":
+                    return new StockMovementReport();
+                case "RptStkBal":
+                    return new StockBalanceReport();
+                case "RptSales":
+                    return new SalesReport();
+                case "RptMSales":
+                    return new MonthlySalesReport();
 
                 #endregion
 
