@@ -599,6 +599,9 @@
     <EmbeddedResource Include="Forms\MasterFiles\Manufacturing\BillOfQuantity.resx">
       <DependentUpon>BillOfQuantity.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Inventory&amp;Sales\DailyItemOrderReport.resx">
+      <DependentUpon>DailyItemOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\Inventory&amp;Sales\StockBalanceReport.resx">
       <DependentUpon>StockBalanceReport.cs</DependentUpon>
     </EmbeddedResource>

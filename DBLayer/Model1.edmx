@@ -131,6 +131,10 @@
             <End Role="Item" EntitySet="Item" />
             <End Role="BoqDet" EntitySet="BoqDet" />
           </AssociationSet>
+          <AssociationSet Name="FK_BoqHed_Item" Association="InventorySalesDebtorsSystemModel.Store.FK_BoqHed_Item">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="BoqHed" EntitySet="BoqHed" />
+          </AssociationSet>
           <AssociationSet Name="FK_Branch_User" Association="InventorySalesDebtorsSystemModel.Store.FK_Branch_User">
             <End Role="User" EntitySet="User" />
             <End Role="Branch" EntitySet="Branch" />
@@ -794,10 +798,10 @@
           <Property Name="Duration" Type="numeric" Nullable="false" Precision="3" />
           <Property Name="StdCost" Type="numeric" Nullable="false" Scale="2" />
           <Property Name="ToalQty" Type="numeric" Nullable="false" Scale="2" />
-          <Property Name="Weight" Type="numeric" Nullable="false" Precision="6" Scale="2" />
           <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="AddedDate" Type="datetime" Nullable="false" />
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Weight" Type="numeric" Nullable="false" Precision="6" Scale="2" />
         </EntityType>
         <EntityType Name="Branch">
           <Key>
@@ -832,7 +836,7 @@
           <Property Name="DateCreated" Type="datetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'InventorySalesDebtorsSystem.dbo.Company' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'CeyGlass.dbo.Company' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="Company">
           <Key>
@@ -1406,6 +1410,7 @@
           <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="20" />
           <Property Name="AddedDate" Type="datetime" Nullable="false" />
           <Property Name="AddedMachineInfo" Type="varchar(max)" Nullable="false" />
+          <Property Name="DeliveryDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="PORequisitionDet">
           <Key>
@@ -1955,6 +1960,18 @@
             </Principal>
             <Dependent Role="BoqDet">
               <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BoqHed_Item">
+          <End Role="Item" Type="InventorySalesDebtorsSystemModel.Store.Item" Multiplicity="1" />
+          <End Role="BoqHed" Type="InventorySalesDebtorsSystemModel.Store.BoqHed" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="BoqHed">
+              <PropertyRef Name="BoqCode" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5335,6 +5352,7 @@
           <Property Type="DateTime" Name="AddedDate" Nullable="false" Precision="3" />
           <Property Type="String" Name="AddedMachineInfo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="User" Relationship="InventorySalesDebtorsSystemModel.FK_POHed_User" FromRole="POHed" ToRole="User" />
+          <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="PORequisitionDet">
           <Key>
@@ -8583,7 +8601,8 @@
             <ScalarProperty Name="TotalItemVal" ColumnName="TotalItemVal" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="POHeds"><EntityTypeMapping TypeName="InventorySalesDebtorsSystemModel.POHed"><MappingFragment StoreEntitySet="POHed">
-            <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
+            <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="AddedMachineInfo" ColumnName="AddedMachineInfo" />
                 <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="POReqNo" ColumnName="POReqNo" />

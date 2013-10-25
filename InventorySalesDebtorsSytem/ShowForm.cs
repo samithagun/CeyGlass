@@ -1,4 +1,5 @@
-﻿using InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing;
+﻿using InventorySalesDebtorsSytem.Forms.Reports.Inventory_Sales;
+using InventorySalesDebtorsSytem.Forms.Transactions.Manufacturing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,8 @@ namespace InventorySalesDebtorsSytem
                     return new SalesReport();
                 case "RptMSales":
                     return new MonthlySalesReport();
+                case "RptDOrd":
+                    return new DailyItemOrderReport();
 
                 #endregion
 

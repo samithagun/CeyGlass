@@ -21616,7 +21616,8 @@ namespace DBLayer
         /// <param name="userID">Initial value of the UserID property.</param>
         /// <param name="addedDate">Initial value of the AddedDate property.</param>
         /// <param name="addedMachineInfo">Initial value of the AddedMachineInfo property.</param>
-        public static POHed CreatePOHed(global::System.String referenceNo, global::System.DateTime txnDate, global::System.String supplierCode, global::System.String branchCode, global::System.String locationCode, global::System.String manualNo, global::System.String remarks, global::System.Decimal itemDiscTotVal, global::System.Decimal hedDiscPer, global::System.Decimal hedDiscTotVal, global::System.Decimal nBTVal, global::System.Decimal vATVal, global::System.Decimal totalVal, global::System.String pOReqNo, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo)
+        /// <param name="deliveryDate">Initial value of the DeliveryDate property.</param>
+        public static POHed CreatePOHed(global::System.String referenceNo, global::System.DateTime txnDate, global::System.String supplierCode, global::System.String branchCode, global::System.String locationCode, global::System.String manualNo, global::System.String remarks, global::System.Decimal itemDiscTotVal, global::System.Decimal hedDiscPer, global::System.Decimal hedDiscTotVal, global::System.Decimal nBTVal, global::System.Decimal vATVal, global::System.Decimal totalVal, global::System.String pOReqNo, global::System.String userID, global::System.DateTime addedDate, global::System.String addedMachineInfo, global::System.DateTime deliveryDate)
         {
             POHed pOHed = new POHed();
             pOHed.ReferenceNo = referenceNo;
@@ -21636,6 +21637,7 @@ namespace DBLayer
             pOHed.UserID = userID;
             pOHed.AddedDate = addedDate;
             pOHed.AddedMachineInfo = addedMachineInfo;
+            pOHed.DeliveryDate = deliveryDate;
             return pOHed;
         }
 
@@ -22053,6 +22055,30 @@ namespace DBLayer
         private global::System.String _AddedMachineInfo;
         partial void OnAddedMachineInfoChanging(global::System.String value);
         partial void OnAddedMachineInfoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DeliveryDate
+        {
+            get
+            {
+                return _DeliveryDate;
+            }
+            set
+            {
+                OnDeliveryDateChanging(value);
+                ReportPropertyChanging("DeliveryDate");
+                _DeliveryDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DeliveryDate");
+                OnDeliveryDateChanged();
+            }
+        }
+        private global::System.DateTime _DeliveryDate;
+        partial void OnDeliveryDateChanging(global::System.DateTime value);
+        partial void OnDeliveryDateChanged();
 
         #endregion
 

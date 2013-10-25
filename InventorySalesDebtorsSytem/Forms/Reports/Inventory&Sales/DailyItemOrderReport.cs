@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,8 @@ namespace InventorySalesDebtorsSytem.Forms.Reports.Inventory_Sales
 {
     public partial class DailyItemOrderReport : ReportForm
     {
+        InventorySalesDebtorsSystemEntities db = new InventorySalesDebtorsSystemEntities();
+
         public DailyItemOrderReport()
         {
             InitializeComponent();
@@ -25,6 +28,17 @@ namespace InventorySalesDebtorsSytem.Forms.Reports.Inventory_Sales
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime currentDate = DateTime.Now;
+            DateTime reportDate = dateTimePickerDate.Value;
+
+            var salesOrder = (from s in db.SalesOrderDets
+                             where s.SalesOrderHed.TxnDate == reportDate
+                             select new { 
+                                s.ItemCode,
+                                s.Item.ItemName,
+                                s.Quantity
+                             }).ToList();
+            
+
 
         }
     }
