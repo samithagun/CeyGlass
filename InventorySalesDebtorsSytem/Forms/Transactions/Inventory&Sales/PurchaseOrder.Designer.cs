@@ -44,17 +44,18 @@
             System.Windows.Forms.Label nBTValLabel;
             System.Windows.Forms.Label totalValLabel;
             System.Windows.Forms.Label vATValLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseOrder));
+            System.Windows.Forms.Label label6;
             this.pOHedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtSupplierName = new System.Windows.Forms.TextBox();
@@ -107,6 +108,7 @@
             this.nBTValTextBox = new System.Windows.Forms.TextBox();
             this.totalValTextBox = new System.Windows.Forms.TextBox();
             this.vATValTextBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             branchCodeLabel = new System.Windows.Forms.Label();
@@ -122,6 +124,7 @@
             nBTValLabel = new System.Windows.Forms.Label();
             totalValLabel = new System.Windows.Forms.Label();
             vATValLabel = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pOHedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHedDiscPer)).BeginInit();
@@ -219,7 +222,7 @@
             // txnDateLabel
             // 
             txnDateLabel.AutoSize = true;
-            txnDateLabel.Location = new System.Drawing.Point(264, 63);
+            txnDateLabel.Location = new System.Drawing.Point(289, 63);
             txnDateLabel.Name = "txnDateLabel";
             txnDateLabel.Size = new System.Drawing.Size(33, 13);
             txnDateLabel.TabIndex = 23;
@@ -287,7 +290,7 @@
             // 
             this.numHedDiscPer.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pOHedBindingSource, "HedDiscPer", true));
             this.numHedDiscPer.DecimalPlaces = 2;
-            this.numHedDiscPer.Location = new System.Drawing.Point(434, 163);
+            this.numHedDiscPer.Location = new System.Drawing.Point(418, 164);
             this.numHedDiscPer.Name = "numHedDiscPer";
             this.numHedDiscPer.Size = new System.Drawing.Size(68, 20);
             this.numHedDiscPer.TabIndex = 9;
@@ -382,14 +385,14 @@
             this.poDetDataGridView.Location = new System.Drawing.Point(11, 45);
             this.poDetDataGridView.Name = "poDetDataGridView";
             this.poDetDataGridView.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.poDetDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.poDetDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.poDetDataGridView.Size = new System.Drawing.Size(737, 220);
             this.poDetDataGridView.TabIndex = 6;
             this.poDetDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.poDetDataGridView_RowsAdded);
@@ -397,9 +400,9 @@
             // 
             // RecordNo
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.RecordNo.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.RecordNo.DefaultCellStyle = dataGridViewCellStyle11;
             this.RecordNo.Frozen = true;
             this.RecordNo.HeaderText = "Rec No";
             this.RecordNo.Name = "RecordNo";
@@ -421,64 +424,64 @@
             // 
             // UnitPrice
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle12;
             this.UnitPrice.HeaderText = "Unit Price";
             this.UnitPrice.Name = "UnitPrice";
             this.UnitPrice.ReadOnly = true;
             // 
             // QOH
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.QOH.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.QOH.DefaultCellStyle = dataGridViewCellStyle13;
             this.QOH.HeaderText = "QOH";
             this.QOH.Name = "QOH";
             this.QOH.ReadOnly = true;
             // 
             // Quantity
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle14;
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             // 
             // DiscPer
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.DiscPer.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.DiscPer.DefaultCellStyle = dataGridViewCellStyle15;
             this.DiscPer.HeaderText = "Discount Percentage";
             this.DiscPer.Name = "DiscPer";
             this.DiscPer.ReadOnly = true;
             // 
             // DiscVal
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.DiscVal.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.DiscVal.DefaultCellStyle = dataGridViewCellStyle16;
             this.DiscVal.HeaderText = "Discount Value";
             this.DiscVal.Name = "DiscVal";
             this.DiscVal.ReadOnly = true;
             // 
             // NBTVal
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.NBTVal.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.NBTVal.DefaultCellStyle = dataGridViewCellStyle17;
             this.NBTVal.HeaderText = "NBT Value";
             this.NBTVal.Name = "NBTVal";
             this.NBTVal.ReadOnly = true;
             // 
             // VATVal
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.VATVal.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.VATVal.DefaultCellStyle = dataGridViewCellStyle18;
             this.VATVal.HeaderText = "VAT Value";
             this.VATVal.Name = "VATVal";
             this.VATVal.ReadOnly = true;
             // 
             // TotalVal
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.TotalVal.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.TotalVal.DefaultCellStyle = dataGridViewCellStyle19;
             this.TotalVal.HeaderText = "Total";
             this.TotalVal.Name = "TotalVal";
             this.TotalVal.ReadOnly = true;
@@ -511,6 +514,7 @@
             this.txtItemCode.Location = new System.Drawing.Point(79, 20);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(150, 20);
+            this.txtItemCode.sortOrder = null;
             this.txtItemCode.TabIndex = 0;
             this.txtItemCode.valid = false;
             this.txtItemCode.varList = null;
@@ -568,9 +572,9 @@
             // txnDateDateTimePicker
             // 
             this.txnDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pOHedBindingSource, "TxnDate", true));
-            this.txnDateDateTimePicker.Location = new System.Drawing.Point(300, 59);
+            this.txnDateDateTimePicker.Location = new System.Drawing.Point(328, 59);
             this.txnDateDateTimePicker.Name = "txnDateDateTimePicker";
-            this.txnDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.txnDateDateTimePicker.Size = new System.Drawing.Size(172, 20);
             this.txnDateDateTimePicker.TabIndex = 3;
             // 
             // pOHedBindingNavigator
@@ -680,6 +684,7 @@
             this.txtPOReqNo.Location = new System.Drawing.Point(607, 59);
             this.txtPOReqNo.Name = "txtPOReqNo";
             this.txtPOReqNo.Size = new System.Drawing.Size(150, 20);
+            this.txtPOReqNo.sortOrder = null;
             this.txtPOReqNo.TabIndex = 4;
             this.txtPOReqNo.valid = false;
             this.txtPOReqNo.varList = null;
@@ -694,6 +699,7 @@
             this.txtSupplierCode.Location = new System.Drawing.Point(104, 137);
             this.txtSupplierCode.Name = "txtSupplierCode";
             this.txtSupplierCode.Size = new System.Drawing.Size(150, 20);
+            this.txtSupplierCode.sortOrder = null;
             this.txtSupplierCode.TabIndex = 7;
             this.txtSupplierCode.valid = false;
             this.txtSupplierCode.varList = null;
@@ -707,6 +713,11 @@
             this.transactionToolBar1.detObjectBindingSource = null;
             this.transactionToolBar1.firstFocusControl = null;
             this.transactionToolBar1.hedObjectBindingSource = null;
+            this.transactionToolBar1.HideAddButton = false;
+            this.transactionToolBar1.HideDeleteButton = false;
+            this.transactionToolBar1.HideEditButton = false;
+            this.transactionToolBar1.HidePrintButton = false;
+            this.transactionToolBar1.HideViewButton = false;
             this.transactionToolBar1.Location = new System.Drawing.Point(15, 2);
             this.transactionToolBar1.mode = null;
             this.transactionToolBar1.Name = "transactionToolBar1";
@@ -724,6 +735,7 @@
             this.txtLocationCode.Location = new System.Drawing.Point(104, 111);
             this.txtLocationCode.Name = "txtLocationCode";
             this.txtLocationCode.Size = new System.Drawing.Size(150, 20);
+            this.txtLocationCode.sortOrder = null;
             this.txtLocationCode.TabIndex = 6;
             this.txtLocationCode.valid = false;
             this.txtLocationCode.varList = null;
@@ -738,6 +750,7 @@
             this.txtBranchCode.Location = new System.Drawing.Point(104, 85);
             this.txtBranchCode.Name = "txtBranchCode";
             this.txtBranchCode.Size = new System.Drawing.Size(150, 20);
+            this.txtBranchCode.sortOrder = null;
             this.txtBranchCode.TabIndex = 5;
             this.txtBranchCode.valid = false;
             this.txtBranchCode.varList = null;
@@ -793,11 +806,30 @@
             this.vATValTextBox.TabIndex = 54;
             this.vATValTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(508, 167);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(74, 13);
+            label6.TabIndex = 56;
+            label6.Text = "Delivery Date:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pOHedBindingSource, "DeliveryDate", true));
+            this.dateTimePicker1.Location = new System.Drawing.Point(585, 163);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(172, 20);
+            this.dateTimePicker1.TabIndex = 55;
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 568);
+            this.Controls.Add(label6);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(hedDiscTotValLabel);
             this.Controls.Add(this.txtPOReqNo);
             this.Controls.Add(this.hedDiscTotValTextBox);
@@ -914,5 +946,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NBTVal;
         private System.Windows.Forms.DataGridViewTextBoxColumn VATVal;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalVal;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
